@@ -1,10 +1,10 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
@@ -29,7 +29,23 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
+
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import Teams from "./Pages/Teams/Teams.jsx";
+
+// function App() {
+//   return (
+//     <Router>
+//       <Routes>
+//         {/* <Route path="/" element={<Home />} /> */}
+//         <Route path="/" element={<Teams />} />
+//       </Routes>
+//     </Router>
+//   );
+// }
+
+// export default App;

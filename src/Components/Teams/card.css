@@ -1,0 +1,20 @@
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  background-color: #cad5ca; /* Magnolia color */
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  padding: 16px;
+  text-align: center;
+  transition: transform 0.2s;
+  flex: 1 1 calc(33.333% - 32px); /* Allow the card to grow and shrink, and take up 1/3 of the container */
+  box-sizing: border-box;
+}
