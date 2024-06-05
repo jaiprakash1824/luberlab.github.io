@@ -13,7 +13,7 @@ export const CardProvider = ({ children }) => {
   });
 
   useEffect(() => {
-    Papa.parse("/team_members.csv", {
+    Papa.parse("/team_members_new.csv", {
       download: true,
       header: true,
       skipEmptyLines: true,

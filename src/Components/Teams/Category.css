@@ -1,127 +1,65 @@
-body,
-html {
-  margin: 0;
-  padding: 0;
+.category-team {
   width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.category-team {
+  background-image: url("../../utilities/images/team_background.png");
+  background-size: cover; /* This makes sure the image covers the entire div */
+  background-position: center; /* This centers the image */
+  background-repeat: no-repeat; /* This prevents the image from repeating */
+  /* Add other styling as needed */
+  padding: 20px; /* Example padding */
 }
 
-.category {
-  margin-bottom: 40px;
+.category-title-team {
   text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
-.category-title {
-  font-size: 2em;
-  margin-bottom: 20px;
-  color: #3d3b42;
-  text-align: center;
-}
-
-.category-cards {
+.cover-wrapper-team {
   display: grid;
+  gap: 2rem;
   grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
-  gap: 16px;
-  justify-content: center;
-}
-
-.lead-category .category-cards {
-  display: flex; /* Use flex layout */
-  justify-content: center; /* Center the card horizontally */
-  align-items: center; /* Center the card vertically */
-  /* height: 100vh;  */
-}
-
-.card {
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 400px;
-  height: 500px; /* Set a fixed height for the card */
-  padding: 16px;
-  text-align: center;
-  transition: transform 0.2s;
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Ensure proper spacing of content */
-}
-
-.card:hover {
-  transform: scale(1.05); /* Apply zoom-in effect */
-  /* transition: all 0.2s ease-in-out; */
-}
-
-.card-image-container {
   width: 100%;
-  height: 300px;
-  overflow: hidden;
-  border-radius: 10px 10px 0 0;
 }
-
-.card-image {
+.cover-wrapper-team-top {
+  display: grid;
+  gap: 2rem;
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensure the image covers the container area without distorting */
-  object-position: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-.card-title {
-  font-size: 1.5em;
-  margin-top: 10px 0;
-  color: #3d3b42;
+.cover-wrapper-1-col-team {
+  grid-template-columns: 1fr;
 }
 
-.card-degree,
-.card-role,
-.card-advisor,
-.card-description {
-  font-size: 1em;
-  margin-top: 8px;
-  color: #211a1d; /* Raisin color */
-}
-.card-info {
-  display: flex;
-  justify-content: flex-start;
-}
-.card-description {
-  white-space: pre-wrap;
-  flex-grow: 1;
+.cover-wrapper-2-col-team {
+  grid-template-columns: 1fr 1fr;
 }
 
-.card-advisor {
-  font-style: italic;
+.cover-wrapper-3-col-team {
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
-.card-links {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 16px;
+@media screen and (max-width: 1100px) {
+  .cover-wrapper-team {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
-.card-link {
-  /* background-color: #3d3b42;  */
-  color: #3d3b42;
-  padding: 4px 8px;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.2s;
-}
-
-.card-link:hover {
-  background-color: #7e7c82; /* Indigo color */
-}
-
-/* Media query for mobile devices */
 @media (max-width: 768px) {
-  .category-cards {
-    grid-template-columns: 1fr; /* Single column layout */
-    gap: 16px;
+  .cover-wrapper-team {
+    grid-template-columns: 1fr;
   }
 
-  .lead-category .category-cards {
-    height: auto; /* Remove full height on mobile */
-    display: block; /* Use block layout for single card */
-    gap: 16px;
+  .cover-team {
+    width: 100%;
+    height: auto;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 0rem !important;
+    margin-right: 0rem !important;
   }
 }

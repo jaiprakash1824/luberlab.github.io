@@ -6,7 +6,7 @@ import Card from "../../Components/Teams/Card.jsx";
 const Teams = () => {
   return (
     <CardProvider>
-      <div>
+      <div className="wrapper-class-teams">
         <Card />
       </div>
     </CardProvider>
