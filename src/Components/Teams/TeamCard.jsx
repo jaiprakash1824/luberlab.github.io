@@ -73,6 +73,8 @@ TeamCard.propTypes = {
     twitter: PropTypes.string,
     scholar: PropTypes.string,
     github: PropTypes.string,
+    researchAreas: PropTypes.string,
+    email: PropTypes.string,
   }).isRequired,
   imageUrl: PropTypes.string,
 };

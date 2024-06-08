@@ -9,6 +9,24 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const TeamCard = ({ member, imageUrl }) => {
+  const generateURLParams = (member) => {
+    const params = new URLSearchParams();
+    Object.keys(member).forEach((key) => {
+      if (typeof member[key] === "string" || typeof member[key] === "number") {
+        params.append(key, member[key]);
+      } else if (Array.isArray(member[key])) {
+        params.append(key, member[key].join(","));
+      }
+    });
+    return params.toString();
+  };
+
+  const openMemberPage = () => {
+    const memberParams = generateURLParams(member);
+    const url = `/individual-page?${memberParams}`;
+    window.open(url, "_blank");
+  };
+
   return (
     <div className="team-card">
       <div className="team-card-image">
@@ -25,7 +43,9 @@ const TeamCard = ({ member, imageUrl }) => {
       <div className="team-card-inner">
         <div className="team-card-top">
           <div className="team-card-title">
-            <a href="#">{member.name}</a>
+            <a href="#" onClick={openMemberPage}>
+              {member.name}
+            </a>
           </div>
           <div className="team-card-subtitle">{member.degree}</div>
         </div>
@@ -48,7 +68,7 @@ const TeamCard = ({ member, imageUrl }) => {
           </div>
         </div>
         <div className="team-card-learn-more">
-          <a href="#">
+          <a href="#" onClick={openMemberPage}>
             Learn More <span className="arrow">→</span>
           </a>
         </div>
@@ -69,6 +89,8 @@ TeamCard.propTypes = {
     twitter: PropTypes.string,
     scholar: PropTypes.string,
     github: PropTypes.string,
+    researchAreas: PropTypes.string, // Ensure this is a string
+    email: PropTypes.string,
   }).isRequired,
   imageUrl: PropTypes.string,
 };

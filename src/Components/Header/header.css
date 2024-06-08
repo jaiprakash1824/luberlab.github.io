@@ -1,0 +1,96 @@
+body {
+  background-color: #fff;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  background-color: rgba(44, 5, 80, 0.1);
+  backdrop-filter: blur(80px); /* Blur effect */
+  height: 80px !important;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logoImage {
+  height: 32px;
+  margin-right: 10px;
+}
+
+.logoText {
+  font-size: 24px;
+  font-weight: bold;
+  color: #412272;
+}
+
+.menu {
+  flex: 1;
+  justify-content: flex-end;
+  background-color: transparent;
+}
+
+.ant-menu-title-content {
+  color: #412272;
+}
+
+.menu .ant-menu-item::after {
+  border-bottom: transparent !important; /* Change this color to your desired color */
+}
+
+.menu .ant-menu-item {
+  color: #412272;
+}
+
+.menu .ant-menu-item a {
+  color: inherit;
+  text-decoration: none !important;
+}
+
+.menu .ant-menu-item:hover,
+.menu .ant-menu-item-active,
+.menu .ant-menu-item-selected {
+  background-color: transparent !important;
+  text-decoration: none !important;
+}
+
+.menu .ant-menu-item-selected a,
+.menu .ant-menu-item-active a {
+  color: #1a0738 !important; /* Change active and selected item text color to red */
+}
+
+.menu .ant-menu-item a:hover {
+  color: #b291eb !important;
+}
+
+.contactButton {
+  background: #1b063c;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  padding: 5px 15px;
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+.contactButton:hover {
+  color: #240754 !important; /* Ensure the hover color matches the default text color */
+}
+
+.menuButton {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menuButton {
+    display: block;
+  }
+  .menu {
+    display: none;
+  }
+}

@@ -36,13 +36,19 @@
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Teams from "./Pages/Teams/Teams.jsx";
+import IndividualPage from "./Pages/IndividualPage/IndividualPage.jsx";
+import Home from "./Pages/Home/Home.jsx";
+import Header from "./Components/Header/header.jsx";
 
 function App() {
   return (
     <Router>
+      <Header />
       <Routes>
         {/* <Route path="/" element={<Home />} /> */}
-        <Route path="/" element={<Teams />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/team" element={<Teams />} />
+        <Route path="/individual-page" element={<IndividualPage />} />
       </Routes>
     </Router>
   );
