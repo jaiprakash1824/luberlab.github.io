@@ -1,0 +1,232 @@
+.news-card {
+  height: 275px;
+  width: 300px;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  border-radius: 1.5rem;
+  transition: all 0.3s ease-in-out;
+  margin: 0 auto;
+  animation: fadeIn 1s ease-in-out;
+  border: 2px solid rgba(0, 0, 0, 0.03);
+}
+
+.news-card:hover .news-card-image {
+  background: #007bff;
+}
+
+.news-card-image {
+  display: flex;
+  width: 155px; /* Adjust size as needed */
+  height: 155px; /* Adjust size as needed */
+  justify-content: center;
+  margin: 10px auto;
+  border-radius: 50%;
+  padding: 5px; /* Adjust padding as needed for the border thickness */
+  background: #d3e9f3; /* Outer circle color */
+}
+
+.news-card-image-img {
+  width: 150px; /* Increased size */
+  height: 150px; /* Increased size */
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.news-card:hover {
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: scale(1.03);
+}
+
+.news-card-inner {
+  padding: 0.5rem 1rem 1rem 1rem;
+  display: flex;
+  height: 275px; /* Set the fixed height */
+  overflow: auto;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.news-card-title {
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  font-weight: 600;
+  color: #313131;
+  line-height: 1.3;
+}
+
+.news-card-title a {
+  color: #313131;
+}
+
+.news-card-top a:hover {
+  text-decoration: none !important;
+}
+.news-card-subtitle {
+  text-align: justify;
+  /* Hide the overflow */
+}
+.news-card-subtitle,
+.news-card-role,
+.news-card-advisor {
+  font-size: 0.875rem;
+  color: rgba(0, 0, 0, 0.6);
+  padding-top: 0.35rem;
+  padding-bottom: 0.35rem;
+  line-height: 1.1rem;
+  font-weight: 400;
+}
+
+.news-card-description {
+  font-size: 0.875rem;
+  color: rgba(0, 0, 0, 0.6);
+  padding-top: 0.35rem;
+  padding-bottom: 0.35rem;
+  line-height: 1.1rem;
+  font-weight: 400;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5; /* Limit to 5 lines */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: calc(1.1rem * 5 + 0.35rem * 2);
+}
+
+.news-card-description ul {
+  padding-left: 20px;
+}
+
+.news-card-footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.news-card-links {
+  font-size: 0.75rem;
+}
+
+.news-card-links > .news-card-misc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+.news-card-links > .news-card-misc > a {
+  background-color: #ffffff;
+  padding: 0.25rem 0.55rem 0.25rem 0.55rem !important;
+  border-radius: 1rem;
+  margin-right: 0rem;
+  color: #007bff; /* Link color */
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  border: 1px solid #c9c9c9;
+}
+
+.news-card-links > .news-card-misc > a:hover {
+  color: #ffffff !important;
+  background-color: #007bff; /* Hover background color */
+}
+
+.news-card-learn-more {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.news-card-learn-more a {
+  text-decoration: none;
+  color: #007bff;
+  transition: color 0.3s ease-in-out;
+  font-size: 0.8em;
+}
+
+.news-card-learn-more a .arrow {
+  font-size: 1rem;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.news-card-learn-more a:hover .arrow {
+  margin-left: 5px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.timeline {
+  position: relative;
+  overflow: hidden;
+}
+
+.timeline:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background-color: #007bff; /* Timeline color */
+}
+
+.timeline-event {
+  position: relative;
+  margin-bottom: 50px; /* Adjust as needed */
+}
+
+.timeline-event:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #007bff; /* Event dot color */
+  border: 2px solid #fff; /* Event dot border */
+}
+
+.timeline-content {
+  padding-left: 20px; /* Adjust as needed */
+}
+
+/* Animation */
+.timeline-event {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
