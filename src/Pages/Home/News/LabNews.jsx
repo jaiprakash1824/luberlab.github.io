@@ -1,4 +1,3 @@
-// LabNews.jsx
 import Slider from "react-slick";
 import NewsCard from "./NewsCard";
 import "slick-carousel/slick/slick.css";
@@ -45,7 +44,7 @@ const LabNews = () => {
   };
 
   return (
-    <div className="lab-news-container">
+    <div className="home-lab-news-container">
       <h1>LAB NEWS</h1>
       <Slider {...settings}>
         {newsData.map((news, index) => (
@@ -56,7 +55,7 @@ const LabNews = () => {
           />
         ))}
       </Slider>
-      <button className="view-all-btn">VIEW ALL</button>
+      <button className="home-view-all-btn">VIEW ALL</button>
     </div>
   );
 };
