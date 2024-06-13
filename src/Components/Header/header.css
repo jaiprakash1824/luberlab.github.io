@@ -1,5 +1,8 @@
 body {
-  background-color: #fff;
+  background-color: black;
+  margin: 0; /* Ensure no default margin */
+  padding: 0; /* Ensure no default padding */
+  overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 .header {
@@ -7,11 +10,13 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0 50px;
-  background-color: rgba(44, 5, 80, 0.1);
-  backdrop-filter: blur(80px); /* Blur effect */
   height: 80px !important;
   top: 0;
   z-index: 1000;
+  font-family: "SF Pro Black", sans-serif;
+  color: white;
+  font-weight: 900;
+  letter-spacing: 1.1px;
 }
 
 .logo {
@@ -27,25 +32,28 @@ body {
 .logoText {
   font-size: 24px;
   font-weight: bold;
-  color: #412272;
+  font-family: "SF Pro Black", sans-serif;
+  color: white;
+  letter-spacing: 1.1px;
 }
 
 .menu {
   flex: 1;
-  justify-content: flex-end;
+  justify-content: space-evenly;
   background-color: transparent;
+  font-size: 1.8em;
 }
 
 .ant-menu-title-content {
-  color: #412272;
+  color: white;
 }
 
 .menu .ant-menu-item::after {
-  border-bottom: transparent !important; /* Change this color to your desired color */
+  border-bottom: transparent !important;
 }
 
 .menu .ant-menu-item {
-  color: #412272;
+  color: white;
 }
 
 .menu .ant-menu-item a {
@@ -62,35 +70,84 @@ body {
 
 .menu .ant-menu-item-selected a,
 .menu .ant-menu-item-active a {
-  color: #1a0738 !important; /* Change active and selected item text color to red */
+  color: #0064b1 !important;
 }
 
 .menu .ant-menu-item a:hover {
-  color: #b291eb !important;
+  color: #0064b1 !important;
 }
 
 .contactButton {
-  background: #1b063c;
-  border: 1px solid #d9d9d9;
-  border-radius: 4px;
-  padding: 5px 15px;
-  color: #fff !important;
-  text-decoration: none !important;
+  background: #0064b1;
+  border-radius: 10px;
+  padding: 10px 10px;
+  color: white !important;
+  font-family: "SF Pro Black", sans-serif;
+  font-size: 0.8em;
+  cursor: pointer;
+  font-weight: 900;
+  letter-spacing: 1.1px;
 }
 
 .contactButton:hover {
-  color: #240754 !important; /* Ensure the hover color matches the default text color */
+  color: white !important;
+  background-color: white;
 }
 
 .menuButton {
   display: none;
 }
 
+.ant-drawer-body {
+  background-color: black !important;
+}
+
+.ant-drawer-body .ant-menu {
+  background-color: black !important;
+}
+
+.ant-drawer-body .ant-menu-item {
+  background-color: transparent !important;
+  color: white !important;
+}
+
+.ant-drawer-body .ant-menu-item a {
+  color: white !important;
+}
+
+.ant-drawer-body .ant-menu-item:hover,
+.ant-drawer-body .ant-menu-item-active,
+.ant-drawer-body .ant-menu-item-selected {
+  background-color: transparent !important;
+  color: #0064b1 !important;
+}
+
+.ant-drawer-body .ant-menu-item-selected a,
+.ant-drawer-body .ant-menu-item-active a {
+  color: #0064b1 !important;
+}
+
 @media (max-width: 768px) {
   .menuButton {
     display: block;
+    background: transparent;
+    border: none;
+    font-size: 1.5em;
+    color: white;
   }
+
   .menu {
     display: none;
+  }
+
+  .contactButton {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .ant-drawer-body .ant-menu-inline .ant-menu-item {
+    display: flex;
+    justify-content: center;
   }
 }

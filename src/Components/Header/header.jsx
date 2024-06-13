@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Menu, Drawer, Button } from "antd";
 import { Link } from "react-router-dom";
 import { MenuOutlined } from "@ant-design/icons";
-import "./header.css"; // Import the CSS file
+import "./header.css";
 
 const Header = () => {
   const [visible, setVisible] = useState(false);
@@ -60,7 +60,7 @@ const Header = () => {
       key: "6",
       label: (
         <Link to="/contact" className="contactButton" onClick={closeDrawer}>
-          Contact
+          Join Us
         </Link>
       ),
     },
@@ -84,7 +84,6 @@ const Header = () => {
         placement="right"
         onClose={closeDrawer}
         open={visible}
-        bodyStyle={{ padding: 0 }}
       >
         <Menu mode="inline" items={menuItems} />
       </Drawer>

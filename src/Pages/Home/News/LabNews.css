@@ -1,0 +1,53 @@
+.lab-news-container {
+  text-align: center;
+  background-color: #0064b1;
+  padding: 50px 0;
+}
+
+.lab-news-container h1 {
+  font-size: 3.5em;
+  font-family: "SF Pro Black", sans-serif;
+  color: white;
+  font-weight: 900;
+  margin-bottom: 1em;
+  letter-spacing: 1.1px;
+}
+
+.view-all-btn {
+  background: none;
+  border: 2px solid white;
+  border-radius: 25px;
+  padding: 15px 40px;
+  color: white;
+  font-family: "SF Pro Black", sans-serif;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 5em;
+  font-weight: bold;
+  letter-spacing: 1.1px;
+}
+
+.view-all-btn:hover {
+  background-color: white;
+  color: #0064b1;
+}
+
+.slick-prev,
+.slick-next {
+  z-index: 1;
+}
+
+.slick-dots li button:before {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .lab-news-container h1 {
+    font-size: 2.5em;
+  }
+
+  .view-all-btn {
+    font-size: 0.8em;
+    padding: 8px 16px;
+  }
+}

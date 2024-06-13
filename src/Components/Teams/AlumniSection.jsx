@@ -8,7 +8,7 @@ const AlumniSection = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    Papa.parse("/alumni.csv", {
+    Papa.parse("/assets/alumni.csv", {
       download: true,
       header: true,
       skipEmptyLines: true,

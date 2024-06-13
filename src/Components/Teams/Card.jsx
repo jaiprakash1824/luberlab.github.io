@@ -6,7 +6,6 @@ import { CardContext } from "./CardContext";
 import Category from "./Category";
 // import ParallaxSection from "./ParallaxSection";
 import Carousel from "./TeamCarousel";
-import WhatWeDo from "./WhatWeDo";
 import AlumniSection from "./AlumniSection";
 
 // Define the CategorySection component
@@ -27,7 +26,6 @@ const Card = () => {
   return (
     <div>
       <Carousel />
-      <WhatWeDo />
       <CategorySection title="Director" members={cards.lead} />
       <CategorySection title="Post Doc" members={cards.postDoc} />
       <CategorySection title="PhD" members={cards.phd} />

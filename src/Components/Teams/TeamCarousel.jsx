@@ -6,15 +6,15 @@ import "./TeamCarousel.css";
 const Carousel = () => {
   const slides = [
     {
-      src: "/carousel.webp",
+      src: "/assets/carousel.webp",
       caption: "Innovative Biology Research",
     },
     {
-      src: "/carousel_2.webp",
+      src: "/assets/carousel_2.webp",
       caption: "Exploring Diverse Biomes",
     },
     {
-      src: "/carousel_3.webp",
+      src: "/assets/carousel_3.webp",
       caption: "Cutting-Edge Scientific Discoveries",
     },
   ];

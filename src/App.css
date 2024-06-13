@@ -4,6 +4,12 @@
   padding: 2rem;
   text-align: center;
 }
+@font-face {
+  font-family: "SF Pro Black";
+  src: url("/font/SF-Pro-Display-Black.otf");
+  font-weight: 500;
+  font-style: normal;
+}
 
 .logo {
   height: 6em;

@@ -1,0 +1,94 @@
+.top-video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.top-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  filter: blur(5px);
+}
+
+.top-video-text {
+  position: absolute;
+  top: 20%;
+  margin-left: 10%;
+  color: white;
+  z-index: 1;
+  text-align: left;
+}
+
+.top-video-text h1 {
+  font-size: 8em;
+  margin: 0;
+  font-family: "SF Pro Black", sans-serif;
+  font-weight: 900;
+  letter-spacing: 1.1px;
+  text-align: start;
+  color: white;
+}
+
+.top-video-text p {
+  font-size: 2em;
+  font-family: "SF Pro Black", sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .top-video-text h1 {
+    font-size: 6em;
+  }
+
+  .top-video-text p {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 992px) {
+  .top-video-text h1 {
+    font-size: 4em;
+  }
+
+  .top-video-text p {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-video-text {
+    top: 25%;
+    margin-left: 5%;
+  }
+
+  .top-video-text h1 {
+    font-size: 3em;
+  }
+
+  .top-video-text p {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 576px) {
+  .top-video-text {
+    top: 40%;
+    margin-left: 20%;
+  }
+
+  .top-video-text h1 {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .top-video-text p {
+    font-size: 0.8em;
+  }
+}

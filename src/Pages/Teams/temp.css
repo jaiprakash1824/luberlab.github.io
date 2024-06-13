@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "SF Pro Black";
+  src: url("/fonts/SF-Pro-Black.ttf") format("truetype");
+  font-weight: 900; /* Adjust according to the specific weight of the font file */
+  font-style: normal; /* Adjust if the font is italic, oblique, etc. */
+}
 .cover-wrapper {
   display: grid;
   gap: 1rem;
