@@ -32,20 +32,22 @@
   color: #0064b1;
 }
 
-.home-slick-prev,
-.home-slick-next {
+.home-lab-news-slider .slick-prev,
+.home-lab-news-slider .slick-next {
   z-index: 1;
 }
 
-.home-slick-dots li button:before {
+.home-lab-news-slider .slick-dots li button:before {
   color: white;
 }
 
-.slick-slide {
+.home-lab-news-slider .slick-slide {
   padding: 5px;
+  height: auto;
 }
-.slick-track {
-  height: 100px;
+
+.home-lab-news-slider .slick-track {
+  height: auto;
 }
 
 .home-news-card {

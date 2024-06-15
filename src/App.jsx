@@ -41,10 +41,11 @@ import Home from "./Pages/Home/Home.jsx";
 import Header from "./Components/Header/header.jsx";
 import News from "./Pages/news/News.jsx";
 import Footer from "./Components/Footer/footer.jsx";
-
+import ScrollToTop from "./Components/ScrollToTop/ScrollToTop.jsx";
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Header />
       <Routes>
         {/* <Route path="/" element={<Home />} /> */}

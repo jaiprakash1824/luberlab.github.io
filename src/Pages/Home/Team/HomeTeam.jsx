@@ -1,4 +1,5 @@
 import "./HomeTeam.css";
+import { useNavigate } from "react-router-dom";
 
 const teamMembers = [
   {
@@ -19,6 +20,12 @@ const teamMembers = [
 ];
 
 const Team = () => {
+  const navigate = useNavigate();
+
+  const handleSeeMoreClick = () => {
+    navigate("/team");
+  };
+
   return (
     <div className="home-team-container">
       <h1>TEAM</h1>
@@ -35,7 +42,9 @@ const Team = () => {
           </div>
         ))}
       </div>
-      <button className="home-team-btn">SEE MORE</button>
+      <button className="home-team-btn" onClick={handleSeeMoreClick}>
+        SEE MORE
+      </button>
     </div>
   );
 };
