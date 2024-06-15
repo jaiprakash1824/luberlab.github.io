@@ -70,7 +70,7 @@ const Header = () => {
     <div className="header">
       <div className="logo">
         <img src="/path/to/logo.png" alt="Logo" className="logoImage" />
-        <span className="logoText">Luber Lab</span>
+        {/* <span className="logoText">Luber Lab</span> */}
       </div>
       <Menu mode="horizontal" className="menu" items={menuItems} />
       <Button

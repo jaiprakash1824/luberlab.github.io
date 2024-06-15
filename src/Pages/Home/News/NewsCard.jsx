@@ -1,4 +1,3 @@
-// NewsCard.jsx
 import PropTypes from "prop-types";
 import "./NewsCard.css";
 

@@ -18,6 +18,12 @@ const LabNews = () => {
       description:
         '"SpatialVisVR - An Immersive, Multiplexed Medical Image Viewer With Contextual Similar-Patient Search" for presentation at 21st IEEE CIBCB 2024 to be held in Natal, Brazil!',
     },
+    {
+      title:
+        "Congratulations to Jai Prakash Veerla on the acceptance of his paper!",
+      description:
+        '"SpatialVisVR - An Immersive, Multiplexed Medical Image Viewer With Contextual Similar-Patient Search" for presentation at 21st IEEE CIBCB 2024 to be held in Natal, Brazil!',
+    },
     // Add more news items as needed
   ];
 
@@ -25,21 +31,21 @@ const LabNews = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 2,
     slidesToScroll: 1,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
           slidesToShow: 1,
         },
       },
+      // {
+      //   breakpoint: 768,
+      //   settings: {
+      //     slidesToShow: 1,
+      //   },
+      // },
     ],
   };
 

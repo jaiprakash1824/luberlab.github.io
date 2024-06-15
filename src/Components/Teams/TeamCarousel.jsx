@@ -1,3 +1,4 @@
+// TeamCarousel.jsx
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -30,12 +31,12 @@ const Carousel = () => {
   };
 
   return (
-    <div className="carousel">
+    <div className="teams-top-carousel">
       <Slider {...settings}>
         {slides.map((slide, index) => (
-          <div key={index} className="carousel-slide">
+          <div key={index} className="teams-top-carousel-slide">
             <img src={slide.src} alt={`Slide ${index + 1}`} />
-            <div className="carousel-caption">{slide.caption}</div>
+            <div className="teams-top-carousel-caption">{slide.caption}</div>
           </div>
         ))}
       </Slider>

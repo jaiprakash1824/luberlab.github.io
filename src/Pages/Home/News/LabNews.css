@@ -42,7 +42,10 @@
 }
 
 .slick-slide {
-  padding: 20px;
+  padding: 5px;
+}
+.slick-track {
+  height: 100px;
 }
 
 .home-news-card {

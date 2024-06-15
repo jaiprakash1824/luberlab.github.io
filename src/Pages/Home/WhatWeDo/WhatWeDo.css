@@ -66,6 +66,9 @@
   .what-we-do p {
     font-size: 14px;
   }
+  .what-we-do-img {
+    max-width: 60%;
+  }
 }
 
 @media (max-width: 480px) {

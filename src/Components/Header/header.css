@@ -1,5 +1,5 @@
 body {
-  background-color: black;
+  background-color: transparent;
   margin: 0; /* Ensure no default margin */
   padding: 0; /* Ensure no default padding */
   overflow-x: hidden; /* Prevent horizontal overflow */

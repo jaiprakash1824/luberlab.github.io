@@ -40,6 +40,7 @@ import IndividualPage from "./Pages/IndividualPage/IndividualPage.jsx";
 import Home from "./Pages/Home/Home.jsx";
 import Header from "./Components/Header/header.jsx";
 import News from "./Pages/news/News.jsx";
+import Footer from "./Components/Footer/footer.jsx";
 
 function App() {
   return (
@@ -52,6 +53,7 @@ function App() {
         <Route path="/individual-page" element={<IndividualPage />} />
         <Route path="/news" element={<News />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }

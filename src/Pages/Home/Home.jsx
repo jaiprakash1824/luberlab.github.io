@@ -2,6 +2,7 @@ import LabNews from "./News/LabNews";
 import OurResearch from "./Research/OurResearch";
 import WhatWeDo from "./WhatWeDo/WhatWeDo";
 import TopVideo from "./TopVideo/TopVideo";
+import HomeTeam from "./Team/HomeTeam";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <OurResearch />
       <WhatWeDo />
       <LabNews />
+      <HomeTeam />
     </div>
   );
 };
