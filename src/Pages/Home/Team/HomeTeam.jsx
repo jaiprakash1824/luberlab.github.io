@@ -3,19 +3,19 @@ import { useNavigate } from "react-router-dom";
 
 const teamMembers = [
   {
-    name: "Person 1",
-    role: "PhD In XYZ\nDoing abcd",
-    imgSrc: "src/utilities/images/veerla.jpg",
+    name: "Dr Jacod Luber",
+    role: "Director, HDSL",
+    imgSrc: "/assets/data/images/jacob.jpg",
   },
   {
-    name: "Person 2",
-    role: "PhD In XYZ\nDoing ABCD",
-    imgSrc: "src/utilities/images/veerla.jpg",
+    name: "Helen Shang",
+    role: "Visiting Assistant Professor",
+    imgSrc: "/assets/data/images/shang.jpeg",
   },
   {
-    name: "Person 3",
-    role: "PhD In XYZ\nDoing ABCD",
-    imgSrc: "src/utilities/images/veerla.jpg",
+    name: "Mohammad Nasr",
+    role: "Post Doctoral Fellow",
+    imgSrc: "/assets/data/images/nasr.jpg",
   },
 ];
 

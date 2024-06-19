@@ -1,35 +1,23 @@
-import { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import "./IndividualPage.css";
-
-const useQuery = () => {
-  return new URLSearchParams(useLocation().search);
-};
+import { MemberContext } from "../../Components/Teams/MemberContext";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faLinkedin,
+  faTwitter,
+  faGoogle,
+  faGithub,
+} from "@fortawesome/free-brands-svg-icons";
 
 const IndividualPage = () => {
   const [newsOpen, setNewsOpen] = useState(false);
   const [achievementsOpen, setAchievementsOpen] = useState(false);
   const [publicationOpen, setPublicationOpen] = useState(false);
-  const query = useQuery();
+  const { selectedMember: member } = useContext(MemberContext);
+  const navigate = useNavigate();
 
-  const member = {
-    name: query.get("name"),
-    image: query.get("image"),
-    degree: query.get("degree"),
-    role: query.get("role"),
-    advisor: query.get("advisor"),
-    description: query.get("description"),
-    linkedin: query.get("linkedin"),
-    twitter: query.get("twitter"),
-    scholar: query.get("scholar"),
-    github: query.get("github"),
-    researchAreas: query.get("researchAreas")
-      ? query.get("researchAreas").split(",")
-      : [],
-    email: query.get("email"),
-  };
-
-  if (!member.name) {
+  if (!member) {
     return <div>Member not found</div>;
   }
 
@@ -37,34 +25,61 @@ const IndividualPage = () => {
     <div className="individual-page">
       <div className="first-section">
         <div className="profile-section">
-          <img src={member.image} alt="Profile" className="profile-pic" />
+          <img src={member.imageUrl} alt="Profile" className="profile-pic" />
 
           <p className="designation">
-            {member.role}
+            {member.Designation}
             <br />
-            {member.degree}
+            {member.Degree}
           </p>
           <p className="email">
             <a href={`mailto:${member.email}`}>{member.email}</a>
           </p>
-          <p className="research-areas">
-            Research Areas:
-            <br />
-            {member.researchAreas.join(", ")}
-          </p>
+          <div className="individual-page-link-wrapper">
+            <div className="individual-page-links">
+              <span className="individual-page-misc">
+                <a
+                  href={member.LinkedIn_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon icon={faLinkedin} />
+                </a>
+                <a
+                  href={member.Twitter_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon icon={faTwitter} />
+                </a>
+                <a
+                  href={member.Google_Scholar_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon icon={faGoogle} />
+                </a>
+                <a
+                  href={member.GitHub_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon icon={faGithub} />
+                </a>
+              </span>
+            </div>
+          </div>
         </div>
         <div className="bio-section">
-          <h1>{member.name}</h1>
-          <p>{member.description}</p>
-          <p>Mentored by {member.advisor}</p>
+          <h1>{member.Name}</h1>
+          <p>{member.Bio}</p>
+          <p>Mentored by {member.Mentors}</p>
         </div>
       </div>
       <div className="research-areas">
         <h2>Research Areas</h2>
         <div className="areas">
-          {member.researchAreas.map((area) => (
-            <div key={area}>{area}</div>
-          ))}
+          <div>{member.Research_Category}</div>
         </div>
       </div>
       <div className="other-sections">
@@ -77,7 +92,7 @@ const IndividualPage = () => {
           Achievements
         </h2>
         <div className={`content ${achievementsOpen ? "show" : ""}`}>
-          Achievements content...
+          {member.Achievements}
         </div>
 
         <h2 onClick={() => setPublicationOpen(!publicationOpen)}>
@@ -89,7 +104,7 @@ const IndividualPage = () => {
       </div>
       <footer>
         <p>We have more people who work around the lab</p>
-        <button>Discover our team</button>
+        <button onClick={() => navigate(-1)}>Discover our team</button>
       </footer>
     </div>
   );

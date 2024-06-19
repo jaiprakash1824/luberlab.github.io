@@ -1,39 +1,34 @@
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigationType } from "react-router-dom";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
+  const navigationType = useNavigationType();
 
   useEffect(() => {
-    const handlePopState = () => {
-      const savedPosition = sessionStorage.getItem(pathname);
-      if (savedPosition) {
-        window.scrollTo(0, parseInt(savedPosition, 10));
-      } else {
-        window.scrollTo(0, 0);
-      }
+    const savedPosition = sessionStorage.getItem(`scrollPosition-${pathname}`);
+
+    if (navigationType === "POP" && savedPosition) {
+      // Restore scroll position on backward/forward navigation
+      window.scrollTo(0, parseInt(savedPosition, 10));
+    } else {
+      // Scroll to top on new route navigation
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, navigationType]);
+
+  useEffect(() => {
+    const saveScrollPosition = () => {
+      sessionStorage.setItem(
+        `scrollPosition-${pathname}`,
+        window.scrollY.toString()
+      );
     };
 
-    window.addEventListener("popstate", handlePopState);
-
+    window.addEventListener("beforeunload", saveScrollPosition);
     return () => {
-      window.removeEventListener("popstate", handlePopState);
-    };
-  }, [pathname]);
-
-  useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to top on route change
-  }, [pathname]);
-
-  useEffect(() => {
-    const savePosition = () => {
-      sessionStorage.setItem(pathname, window.scrollY.toString());
-    };
-
-    window.addEventListener("beforeunload", savePosition);
-
-    return () => {
-      window.removeEventListener("beforeunload", savePosition);
+      saveScrollPosition();
+      window.removeEventListener("beforeunload", saveScrollPosition);
     };
   }, [pathname]);
 

@@ -1,30 +1,22 @@
-// Category.jsx
 import PropTypes from "prop-types";
 import "./Category.css";
 import { useEffect, useState } from "react";
 import NewCard from "./new_card"; // Use the correct import for new_card
 
-// Dynamically import all images
-const images = import.meta.glob("../../utilities/images/*.{png,jpg,jpeg,svg}");
-
-const getImageUrl = async (imageName) => {
-  const imageKey = `../../utilities/images/${imageName}`;
-  if (images[imageKey]) {
-    const module = await images[imageKey]();
-    return module.default;
-  }
-  return null;
+// Since we are using images from the public directory, we will directly use URLs
+const getImageUrl = (imageName) => {
+  return `/assets/data/images/${imageName}`;
 };
 
 const Category = ({ title, members }) => {
   const [imageUrls, setImageUrls] = useState({});
 
   useEffect(() => {
-    const loadImages = async () => {
+    const loadImages = () => {
       const urls = {};
       for (const member of members) {
-        const url = await getImageUrl(member.image);
-        urls[member.image] = url;
+        const url = getImageUrl(member.photo);
+        urls[member.photo] = url;
       }
       setImageUrls(urls);
     };
@@ -34,7 +26,6 @@ const Category = ({ title, members }) => {
   return (
     <div className="category-team">
       <h2 className="category-title-team">{title}</h2>
-      {/* <div className="cover-wrapper-team"> */}
       <div
         className={`${
           title.toLowerCase() === "masters" || title.toLowerCase() === "phd"
@@ -46,7 +37,7 @@ const Category = ({ title, members }) => {
           <NewCard
             key={index}
             member={member}
-            imageUrl={imageUrls[member.image]}
+            imageUrl={imageUrls[member.photo]}
           />
         ))}
       </div>
@@ -58,16 +49,25 @@ Category.propTypes = {
   title: PropTypes.string.isRequired,
   members: PropTypes.arrayOf(
     PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      image: PropTypes.string.isRequired,
-      degree: PropTypes.string,
-      role: PropTypes.string,
-      advisor: PropTypes.string,
-      description: PropTypes.string,
-      linkedin: PropTypes.string,
-      twitter: PropTypes.string,
-      scholar: PropTypes.string,
-      github: PropTypes.string,
+      Achievements: PropTypes.string,
+      Areas_of_Research_Interest: PropTypes.string,
+      Bio: PropTypes.string,
+      Degree: PropTypes.string,
+      Designation: PropTypes.string,
+      Dissertation_Committee_Members: PropTypes.string,
+      Dissertation_topic: PropTypes.string,
+      GitHub_URL: PropTypes.string,
+      Google_Scholar_URL: PropTypes.string,
+      Graduation_Date: PropTypes.string,
+      LinkedIn_URL: PropTypes.string,
+      Mentors: PropTypes.string,
+      Name: PropTypes.string.isRequired,
+      Education: PropTypes.string,
+      Research_Category: PropTypes.string,
+      Resume_CV: PropTypes.string,
+      Twitter_URL: PropTypes.string,
+      email: PropTypes.string,
+      photo: PropTypes.string.isRequired,
     })
   ).isRequired,
 };

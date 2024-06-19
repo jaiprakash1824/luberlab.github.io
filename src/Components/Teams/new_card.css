@@ -106,7 +106,7 @@
 
 .team-card-footer-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .team-card-links {

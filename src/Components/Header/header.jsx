@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { Menu, Drawer, Button } from "antd";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { MenuOutlined } from "@ant-design/icons";
 import "./header.css";
 
 const Header = () => {
   const [visible, setVisible] = useState(false);
+  const location = useLocation();
 
   const showDrawer = () => {
     setVisible(true);
@@ -17,7 +18,7 @@ const Header = () => {
 
   const menuItems = [
     {
-      key: "1",
+      key: "/",
       label: (
         <Link to="/" onClick={closeDrawer}>
           Home
@@ -25,7 +26,7 @@ const Header = () => {
       ),
     },
     {
-      key: "2",
+      key: "/research",
       label: (
         <Link to="/research" onClick={closeDrawer}>
           Research
@@ -33,7 +34,7 @@ const Header = () => {
       ),
     },
     {
-      key: "3",
+      key: "/publications",
       label: (
         <Link to="/publications" onClick={closeDrawer}>
           Publications
@@ -41,7 +42,7 @@ const Header = () => {
       ),
     },
     {
-      key: "4",
+      key: "/team",
       label: (
         <Link to="/team" onClick={closeDrawer}>
           Team
@@ -49,7 +50,7 @@ const Header = () => {
       ),
     },
     {
-      key: "5",
+      key: "/news",
       label: (
         <Link to="/news" onClick={closeDrawer}>
           News
@@ -57,7 +58,7 @@ const Header = () => {
       ),
     },
     {
-      key: "6",
+      key: "/contact",
       label: (
         <Link to="/contact" className="contactButton" onClick={closeDrawer}>
           Join Us
@@ -72,7 +73,12 @@ const Header = () => {
         <img src="/path/to/logo.png" alt="Logo" className="logoImage" />
         {/* <span className="logoText">Luber Lab</span> */}
       </div>
-      <Menu mode="horizontal" className="menu" items={menuItems} />
+      <Menu
+        mode="horizontal"
+        className="menu"
+        items={menuItems}
+        selectedKeys={[location.pathname]}
+      />
       <Button
         className="menuButton"
         type="primary"
@@ -85,7 +91,11 @@ const Header = () => {
         onClose={closeDrawer}
         open={visible}
       >
-        <Menu mode="inline" items={menuItems} />
+        <Menu
+          mode="inline"
+          items={menuItems}
+          selectedKeys={[location.pathname]}
+        />
       </Drawer>
     </div>
   );

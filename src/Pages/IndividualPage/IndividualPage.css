@@ -161,3 +161,34 @@ footer button:hover {
     margin-bottom: 10px;
   }
 }
+
+.individual-page-link-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.individual-page-links {
+  font-size: 0.75rem;
+}
+
+.individual-page-links > .individual-page-misc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+.individual-page-links > .individual-page-misc > a {
+  background-color: #ffffff;
+  padding: 0.25rem 0.55rem 0.25rem 0.55rem !important;
+  border-radius: 1rem;
+  margin-right: 0rem;
+  color: #007bff; /* Link color */
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  border: 1px solid #c9c9c9;
+}
+
+.individual-page-links > .individual-page-misc > a:hover {
+  color: #ffffff !important;
+  background-color: #007bff; /* Hover background color */
+}
