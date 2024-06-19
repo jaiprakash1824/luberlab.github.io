@@ -1,21 +1,21 @@
 import "./HomeTeam.css";
 import { useNavigate } from "react-router-dom";
-
+const baseURL = import.meta.env.BASE_URL;
 const teamMembers = [
   {
     name: "Dr Jacod Luber",
     role: "Director, HDSL",
-    imgSrc: "/assets/data/images/jacob.jpg",
+    imgSrc: baseURL + "assets/data/images/jacob.jpg",
   },
   {
     name: "Helen Shang",
     role: "Visiting Assistant Professor",
-    imgSrc: "/assets/data/images/shang.jpeg",
+    imgSrc: baseURL + "assets/data/images/shang.jpeg",
   },
   {
     name: "Mohammad Nasr",
     role: "Post Doctoral Fellow",
-    imgSrc: "/assets/data/images/nasr.jpg",
+    imgSrc: baseURL + "assets/data/images/nasr.jpg",
   },
 ];
 

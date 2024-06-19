@@ -1,6 +1,8 @@
 import "./WhatWeDo.css";
 
 const WhatWeDo = () => {
+  const baseURL = import.meta.env.BASE_URL;
+
   return (
     <div className="what-we-do-container">
       <section className="what-we-do">
@@ -16,7 +18,7 @@ const WhatWeDo = () => {
       </section>
       <div className="what-we-do-image">
         <img
-          src="/assets/molecule.png"
+          src={`${baseURL}assets/molecule.png`}
           alt="molecule"
           className="what-we-do-img"
         />

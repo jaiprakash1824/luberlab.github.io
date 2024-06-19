@@ -7,10 +7,11 @@ import News from "./Pages/news/News.jsx";
 import Footer from "./Components/Footer/footer.jsx";
 import ScrollToTop from "./Components/ScrollToTop/ScrollToTop.jsx";
 import { MemberProvider } from "./Components/Teams/MemberContext"; // Adjust the path as needed
+// import "./App.css";
 
 function App() {
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <ScrollToTop />
       <Header />
       <MemberProvider>
