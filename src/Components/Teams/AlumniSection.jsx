@@ -6,9 +6,9 @@ import "./AlumniSection.css";
 const AlumniSection = () => {
   const [alumni, setAlumni] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
-
+  const baseURL = import.meta.env.BASE_URL;
   useEffect(() => {
-    Papa.parse("/assets/alumni.csv", {
+    Papa.parse(`${baseURL}assets/alumni.csv`, {
       download: true,
       header: true,
       skipEmptyLines: true,

@@ -39,7 +39,7 @@ import { createContext, useState, useEffect } from "react";
 import YAML from "js-yaml";
 
 export const CardContext = createContext();
-
+const baseURL = import.meta.env.BASE_URL;
 // Function to fetch and parse YAML file
 const fetchYAML = async (url) => {
   const response = await fetch(url);
@@ -60,7 +60,7 @@ export const CardProvider = ({ children }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await fetchYAML("/assets/members.yml");
+        const data = await fetchYAML(`${baseURL}assets/members.yml`);
 
         const categorizedData = {
           lead: data.filter((card) => card.Degree === "Director"),

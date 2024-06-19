@@ -8,7 +8,7 @@ const TopVideo = () => {
       video.play();
     });
   }, []);
-
+  const baseURL = import.meta.env.BASE_URL;
   return (
     <div className="top-video-container">
       <div className="top-video-text">
@@ -18,7 +18,7 @@ const TopVideo = () => {
       </div>
       {/* <img className="top-video" src="/dna.gif" alt="DNA Animation" /> */}
       <video className="top-video" autoPlay loop muted>
-        <source src="/assets/dna_video.mp4" type="video/mp4" />
+        <source src={`${baseURL}assets/dna_video.mp4`} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </div>

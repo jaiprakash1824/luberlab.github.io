@@ -3,19 +3,19 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./TeamCarousel.css";
-
+const baseURL = import.meta.env.BASE_URL;
 const Carousel = () => {
   const slides = [
     {
-      src: "/assets/carousel.webp",
+      src: baseURL + "assets/carousel.webp",
       caption: "Innovative Biology Research",
     },
     {
-      src: "/assets/carousel_2.webp",
+      src: baseURL + "assets/carousel_2.webp",
       caption: "Exploring Diverse Biomes",
     },
     {
-      src: "/assets/carousel_3.webp",
+      src: baseURL + "assets/carousel_3.webp",
       caption: "Cutting-Edge Scientific Discoveries",
     },
   ];
