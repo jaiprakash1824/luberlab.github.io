@@ -8,10 +8,9 @@ const CsvReader = () => {
   const [sortOrder, setSortOrder] = useState('');
   const [selectedField, setSelectedField] = useState([]);
   const [selectedYears, setSelectedYears] = useState([]);
-  const [selectedType, setSelectedType] = useState('');
+  const [selectedType, setSelectedType] = useState([]);
   const [filtersVisible, setFiltersVisible] = useState(true);
 
-  
   useEffect(() => {
     fetch('/research.csv')
       .then((response) => response.text())
@@ -27,6 +26,11 @@ const CsvReader = () => {
   }, []);
 
   const toggleFiltersVisibility = () => {
+    if (filtersVisible) {
+      setSelectedField([]);
+      setSelectedYears([]);
+      setSelectedType([]);
+    }
     setFiltersVisible((prevVisible) => !prevVisible);
   };
 
@@ -57,7 +61,6 @@ const CsvReader = () => {
         updatedSelectedField = [...selectedField, field];
       }
     }
-
     setSelectedField(updatedSelectedField);
   };
 
@@ -86,8 +89,7 @@ const CsvReader = () => {
   });
 
   const YearFilter = () => {
-    const years = Array.from(new Set(data.map((row) => row.Year))).filter(type => type);
-    
+    const years = Array.from(new Set(data.map((row) => row.Year))).filter((year) => year);
 
     return (
       <div className="filter-option">
@@ -120,11 +122,11 @@ const CsvReader = () => {
 
   const TypeFilter = () => {
     // Get unique fields
-    const uniqueTypes = Array.from(new Set(data.map((row) => row.Paper))).filter(type => !/\s/.test(type));
-  
+    const uniqueTypes = Array.from(new Set(data.map((row) => row.Paper))).filter((type) => !/\s/.test(type));
+
     // Sort unique fields by length
     uniqueTypes.sort((a, b) => a.length - b.length);
-  
+
     return (
       <div className="filter-option">
         <h4>Type</h4>
@@ -156,11 +158,11 @@ const CsvReader = () => {
 
   const FieldFilter = () => {
     // Get unique fields
-    const uniqueFields = Array.from(new Set(data.map((row) => row.Field))).filter(type => /\s/.test(type));
-  
+    const uniqueFields = Array.from(new Set(data.map((row) => row.Field))).filter((type) => /\s/.test(type));
+
     // Sort unique fields by length
     uniqueFields.sort((a, b) => a.length - b.length);
-  
+
     return (
       <div className="filter-option">
         <h4>Publications</h4>
@@ -189,14 +191,13 @@ const CsvReader = () => {
       </div>
     );
   };
-  
 
   return (
     <div className="main">
       <div className="filter-toggle" onClick={toggleFiltersVisibility}>
         {filtersVisible ? <span className="minus">&ndash;</span> : <span className="plus">+</span>}
       </div>
-      <div className={`left-filters ${filtersVisible ? 'show' : 'hide'}`} >
+      <div className={`left-filters ${filtersVisible ? 'show' : 'hide'}`}>
         <div className="filters">
           <div className="search-bar">
             <input
@@ -212,8 +213,8 @@ const CsvReader = () => {
           <FieldFilter />
         </div>
       </div>
-      <div className={`right-content ${filtersVisible ? 'show' : 'hide'}`} >
-        <div className="paper-container" >
+      <div className={`right-content ${filtersVisible ? 'show' : 'hide'}`}>
+        <div className="paper-container">
           {sortedPapers.length > 0 ? (
             sortedPapers.map((row, index) => (
               <div className="paper" key={index}>
@@ -267,6 +268,5 @@ const SortFilter = ({ sortOrder, setSortOrder }) => (
     </label>
   </div>
 );
-
 
 export default CsvReader;

@@ -215,7 +215,7 @@ h2 {
   border-bottom: 1px solid white;
 }
 .right-content {
-  margin-left: 25%;
+  margin-left: 25%; 
 }
 
 .filter-toggle {
@@ -261,6 +261,7 @@ h2 {
   overflow-y: auto; /* Enable vertical scrolling if needed */
   padding: 10px; /* Add padding to right content */
   color: black;
+  height: 3000px;
 }
 
 .right-content.hide {
