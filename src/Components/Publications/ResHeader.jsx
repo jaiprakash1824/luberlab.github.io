@@ -3,11 +3,11 @@ import "./ResHeader.css";
 
 const ResHeader = () => {
   return (
-    <div class="header">
-    <div>
+    <div className="header">
+      <div>
         <h1>All Research</h1>
+      </div>
     </div>
-</div>
   );
 };
 

@@ -4,11 +4,11 @@ import Publicationscard from "../../Components/Publications/publicationscard.jsx
 
 const Publications = () => {
   return (
-    <div class="main1">
+    <div className="main1">
       <div className="wrapper-class-teams">
         <Publicationscard />
       </div>
-      </div>
+    </div>
   );
 };
 
