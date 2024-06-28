@@ -6,6 +6,7 @@ import Header from "./Components/Header/header.jsx";
 import News from "./Pages/news/News.jsx";
 import Footer from "./Components/Footer/footer.jsx";
 import ScrollToTop from "./Components/ScrollToTop/ScrollToTop.jsx";
+import Publications from "./Pages/Publications/Publications.jsx";
 import { MemberProvider } from "./Components/Teams/MemberContext"; // Adjust the path as needed
 import "./App.css";
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="/team" element={<Teams />} />
           <Route path="/individual-page" element={<IndividualPage />} />
           <Route path="/news" element={<News />} />
+          <Route path="/publications" element={<Publications />} />
         </Routes>
       </MemberProvider>
       <Footer />

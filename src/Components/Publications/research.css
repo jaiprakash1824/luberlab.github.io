@@ -1,0 +1,280 @@
+.paper {
+  background-color: white; /* Set background to white */
+  padding: 20px;
+  margin: 20px 0 20px 20px; /* Add margin around each paper */
+  overflow-wrap: break-word;
+  flex-grow: 1;
+  flex-wrap: wrap; 
+  color:black;
+}
+.meta {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  color: rgb(0, 0, 0);
+}
+
+.main{
+  width: 100%;
+  background-color: white;
+  font-family: 'SF Pro Black Italic';
+  height:100%;
+}
+.paper-label {
+  font-weight: bold;
+  margin-right: 10px;
+  color:black
+
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 30px; /* Adjust based on your design */
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 15px; /* Adjust font size */
+  color: black; /* Text color */
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 12px; /* Size of the checkbox */
+  width: 12px; /* Size of the checkbox */
+  background-color: #eee; /* Default background color */
+  border: 1px solid black; /* Border color */
+}
+
+/* On hover, add a grey background color */
+.container:hover .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: black;
+}
+
+/* Create the checkmark/indicator */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+  left: 4px; /* Adjust position horizontally */
+  top: 1px; /* Adjust position vertically */
+  width: 4px; /* Width of the checkmark */
+  height: 8px; /* Height of the checkmark */
+  border: solid white; /* Color of the checkmark */
+  border-width: 0 2px 2px 0; /* Style of the checkmark (right triangle) */
+  transform: rotate(45deg); /* Rotate the checkmark to create a diagonal effect */
+}
+.radio-container {
+  display: block;
+  position: relative;
+  padding-left: 30px; /* Adjust based on your design */
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 15px; /* Adjust font size */
+  color:black; /* Text color */
+}
+
+.radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio-mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 12px; /* Size of the radio button */
+  width: 12px; /* Size of the radio button */
+  background-color: #eee; /* Default background color */
+  border: 1px solid #ccc; /* Border color */
+  border-radius: 50%; /* Ensure it's a circle */
+}
+
+.radio-container:hover .radio-mark {
+  background-color: #ccc;
+}
+
+.radio-container input:checked ~ .radio-mark {
+  background-color:black; /* Blue background color when checked */
+}
+
+.radio-mark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.radio-container input:checked ~ .radio-mark:after {
+  display: block;
+  left: 3px; /* Adjust position horizontally */
+  top: 3px; /* Adjust position vertically */
+  width: 6px; /* Diameter of the circle */
+  height: 6px; /* Diameter of the circle */
+  border-radius: 50%; /* Shape of the circle */
+  background: black; /* Color of the circle */
+}
+
+
+
+.search-bar input[type="text"] {
+  padding: 8px;
+  border: 1px solid black;
+  border-radius: 4px;
+  width: 100%;
+  background-color: white;
+  color:black;
+}
+.search-bar input[type="text"]::placeholder {
+  color:black; /* Replace with your desired placeholder color */
+}
+.sort-order select {
+  padding: 8px;
+  border: 1px solid white;
+  border-radius: 4px;
+  background-color: white;
+  width:25%;
+  cursor: pointer; /* Add pointer cursor to the dropdown menu */
+}
+
+.sort-order {
+  width: 50%; /* Adjust margin as needed */
+  width: 80px;
+  color: white
+}
+
+.sort-order label {
+  margin-right: 5px;
+}
+.filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  flex-direction: column;
+  margin-left:12px;
+}
+
+.papers-container {
+  flex-grow: 1;
+  background-color: white;
+}
+.search-bar {
+  flex: 1; /* Take up remaining space */
+  margin-right:20px;
+}
+
+.papers-container {
+  flex-grow: 1;
+}
+.field {
+  color: #0064b1;
+  margin-right: 10px;
+}
+
+.year {
+  color: black;
+}
+
+h2 {
+  margin: 10px 0;
+  color: white;
+}
+.name{
+  color:black;
+}
+
+.authors {
+  color: rgb(84, 82, 82);
+}
+
+.filter-option {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.filter-option h4{
+  border-bottom: 1px solid white;
+}
+.right-content {
+  margin-left: 25%; 
+}
+
+.filter-toggle {
+  cursor: pointer;
+  font-size: 24px; /* Adjust icon size */
+  line-height: 1; /* Ensure proper alignment */
+  z-index: 1000; /* Ensure it's above other content */
+  padding-bottom: 5px;
+  color: black; 
+  margin-left: 0%;
+}
+
+.filter-toggle span{
+  display: inline-block;
+  width: 20px; /* Adjust width as needed */
+  text-align: center; /* Center align text */
+}
+
+/* Left filters */
+.left-filters {
+  flex: 0 0 auto;
+  width: 23%;
+  float: left;
+  margin-top: 20px;
+  color: black;
+  background-color: white;
+  width: 23%; /* Initial width */
+  transition: width 0.3s ease; /* Smooth transition for width */
+  overflow-y: auto; /* Enable vertical scrolling if needed */
+}
+
+.left-filters.hide {
+  width: 0; /* When hidden, set width to 0 */
+  padding: 0; /* Optionally remove padding */
+  margin : 0;
+  border: none; /* Optionally remove border */
+}
+
+/* Right content */
+.right-content.show {
+  flex: 1 1 auto;
+  transition: margin-left 0.3s ease; /* Smooth transition for margin-left */
+  overflow-y: auto; /* Enable vertical scrolling if needed */
+  padding: 10px; /* Add padding to right content */
+  color: black;
+  height: 3000px;
+}
+
+.right-content.hide {
+  flex: 1 1 auto;
+  transition: margin-left 0.3s ease; /* Smooth transition for margin-left */
+  overflow-y: auto; /* Enable vertical scrolling if needed */
+  padding: 10px; /* Add padding to right content */
+  color: black;
+}
+
+
+/* Adjust right content when filters are hidden */
+.right-content.hide{
+  margin-left: 0; /* Margin set to 0 when filters are hidden */
+}
+
