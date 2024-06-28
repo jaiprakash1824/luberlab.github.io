@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Papa from 'papaparse';
 import './research.css';
 const baseURL = import.meta.env.BASE_URL;
+
 const CsvReader = () => {
   const [data, setData] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
