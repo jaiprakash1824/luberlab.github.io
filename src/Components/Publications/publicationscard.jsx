@@ -6,7 +6,7 @@ import Research from "./research";
 
 const Publicationscard = () => {
   return (
-    <div class="Publish">
+    <div className="Publish">
       <ResCarousel />
       <ResHeader />
       <Research />
