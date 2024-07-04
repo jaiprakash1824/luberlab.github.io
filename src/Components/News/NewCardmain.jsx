@@ -1,30 +1,40 @@
 import PropTypes from "prop-types";
 import "./NewCardMain.css";
+import Utalogo from "../../../public/assets/uta-logo.jpg";
 
 const NewCardMain = ({ member }) => {
   return (
     <div className="news-card">
       <div className="news-card-inner">
-        <div className="news-card-top">
-          <div className="news-card-title">
-            {member.link ? (
-              <a href={member.link} className="link">
-                {member.date}
-              </a>
-            ) : (
-              <span>{member.date}</span>
-            )}
-          </div>
-          <div className="news-card-subtitle">{member.content}</div>
+        <div className="new-card-image">
+          <img src={Utalogo} className="card-image-style"></img>
         </div>
-
-        {member.link && (
-          <div className="news-card-learn-more">
-            <a href={member.link} className="link" target="_blank">
-              Learn More <span className="arrow">→</span>
-            </a>
+        <div>
+          <div className="news-card-top">
+            <div className="news-card-title">
+              {member.link ? (
+                <a href={member.link} className="link">
+                  {member.date}
+                </a>
+              ) : (
+                <span>{member.date}</span>
+              )}
+            </div>
+            <div className="news-card-subtitle">{member.content}</div>
           </div>
-        )}
+          {member.link && (
+            <div className="news-card-learn-more">
+              <a
+                href={member.link}
+                className="link"
+                target="_blank"
+                style={{ color: "white" }}
+              >
+                Learn More <span className="arrow">→</span>
+              </a>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

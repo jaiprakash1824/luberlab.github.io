@@ -1,0 +1,15 @@
+.wrapper-class-teams {
+  background-color: white;
+}
+
+.cover-wrapper-news {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.category-news {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,13 +1,12 @@
+/* Main card styling */
 .news-card {
   height: 275px;
-  width: 300px;
+  width: 90%;
   text-align: center;
-
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  background-color: transparent;
+  background-color: #0064b1;
   border-radius: 1.5rem;
   transition: all 0.3s ease-in-out;
   margin: 0 auto;
@@ -15,45 +14,56 @@
   border: 2px solid rgba(0, 0, 0, 0.03);
 }
 
+/* Image hover effect */
 .news-card:hover .news-card-image {
   background: #007bff;
 }
 
+/* Image container styling */
 .news-card-image {
   display: flex;
-  width: 155px; /* Adjust size as needed */
-  height: 155px; /* Adjust size as needed */
+  width: 155px;
+  height: 155px;
   justify-content: center;
   margin: 10px auto;
   border-radius: 50%;
-  padding: 5px; /* Adjust padding as needed for the border thickness */
+  padding: 5px;
   background: #d3e9f3; /* Outer circle color */
 }
 
+.card-image-style {
+  height: 15rem;
+}
+
+/* Image styling */
 .news-card-image-img {
-  width: 150px; /* Increased size */
-  height: 150px; /* Increased size */
+  width: 150px;
+  height: 150px;
   object-fit: cover;
   border-radius: 50%;
   border: 2px solid #fff;
 }
 
+/* Card hover effect */
 .news-card:hover {
   text-decoration: none;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: #007bff;
   transform: scale(1.03);
 }
 
+/* Inner card styling */
 .news-card-inner {
-  padding: 0.5rem 1rem 1rem 1rem;
-  display: flex;
-  height: 275px; /* Set the fixed height */
+  padding: 0.7rem 1rem 1rem 1rem;
+  display: grid;
+  height: 275px;
   overflow: auto;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   flex-grow: 1;
+  grid-template-columns: 1fr 2fr;
 }
 
+/* Title styling */
 .news-card-title {
   font-size: 1.4rem;
   text-transform: capitalize;
@@ -63,37 +73,36 @@
 }
 
 .news-card-title a {
-  color: #313131;
+  color: #850f0f;
 }
 
+/* Hover effect for title links */
 .news-card-top a:hover {
   text-decoration: none !important;
 }
+
+/* Subtitle styling */
 .news-card-subtitle {
   text-align: justify;
-  /* Hide the overflow */
 }
-.news-card-subtitle,
+
+/* Role, advisor, and description styling */
 .news-card-role,
-.news-card-advisor {
+.news-card-advisor,
+.news-card-description {
   font-size: 0.875rem;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(20, 121, 171, 0.6);
   padding-top: 0.35rem;
   padding-bottom: 0.35rem;
   line-height: 1.1rem;
   font-weight: 400;
 }
 
+/* Description text styling with line clamp */
 .news-card-description {
-  font-size: 0.875rem;
-  color: rgba(0, 0, 0, 0.6);
-  padding-top: 0.35rem;
-  padding-bottom: 0.35rem;
-  line-height: 1.1rem;
-  font-weight: 400;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 5; /* Limit to 5 lines */
+  -webkit-line-clamp: 5;
   overflow: hidden;
   text-overflow: ellipsis;
   max-height: calc(1.1rem * 5 + 0.35rem * 2);
@@ -103,15 +112,18 @@
   padding-left: 20px;
 }
 
+/* Footer styling */
 .news-card-footer-wrapper {
   display: flex;
   justify-content: space-between;
 }
 
+/* Links styling */
 .news-card-links {
   font-size: 0.75rem;
 }
 
+/* Miscellaneous links styling */
 .news-card-links > .news-card-misc {
   display: flex;
   flex-wrap: wrap;
@@ -121,19 +133,19 @@
 
 .news-card-links > .news-card-misc > a {
   background-color: #ffffff;
-  padding: 0.25rem 0.55rem 0.25rem 0.55rem !important;
+  padding: 0.25rem 0.55rem !important;
   border-radius: 1rem;
-  margin-right: 0rem;
-  color: #007bff; /* Link color */
+  color: #007bff;
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
   border: 1px solid #c9c9c9;
 }
 
 .news-card-links > .news-card-misc > a:hover {
-  color: #ffffff !important;
-  background-color: #007bff; /* Hover background color */
+  color: #621d9b !important;
+  background-color: #007bff;
 }
 
+/* Learn more link styling */
 .news-card-learn-more {
   text-align: center;
   margin-top: 15px;
@@ -155,6 +167,7 @@
   margin-left: 5px;
 }
 
+/* Fade-in animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -166,6 +179,7 @@
   }
 }
 
+/* Timeline styling */
 .timeline {
   position: relative;
   overflow: hidden;
@@ -178,12 +192,13 @@
   left: 50%;
   width: 2px;
   height: 100%;
-  background-color: #007bff; /* Timeline color */
+  background-color: #007bff;
 }
 
+/* Timeline event styling */
 .timeline-event {
   position: relative;
-  margin-bottom: 50px; /* Adjust as needed */
+  margin-bottom: 50px;
 }
 
 .timeline-event:before {
@@ -194,30 +209,20 @@
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: #007bff; /* Event dot color */
-  border: 2px solid #fff; /* Event dot border */
+  background-color: #007bff;
+  border: 2px solid #fff;
 }
 
+/* Timeline content styling */
 .timeline-content {
-  padding-left: 20px; /* Adjust as needed */
+  padding-left: 20px;
 }
 
-/* Animation */
+/* Animation for timeline event */
 .timeline-event {
   opacity: 0;
   transform: translateY(50px);
   animation: fadeInUp 1s ease forwards;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 @keyframes fadeInUp {
