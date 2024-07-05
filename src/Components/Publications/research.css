@@ -242,6 +242,8 @@ h2 {
   margin-top: 20px;
   color: black;
   background-color: white;
+  height: 3000px;
+  overflow-y: auto; 
   width: 23%; /* Initial width */
   transition: width 0.3s ease; /* Smooth transition for width */
   overflow-y: auto; /* Enable vertical scrolling if needed */
