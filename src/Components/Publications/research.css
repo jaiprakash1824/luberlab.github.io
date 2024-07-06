@@ -134,7 +134,9 @@
   background: black; /* Color of the circle */
 }
 
-
+a{
+  color: black;
+}
 
 .search-bar input[type="text"] {
   padding: 8px;

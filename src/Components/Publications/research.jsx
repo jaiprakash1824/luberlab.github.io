@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Papa from 'papaparse';
 import './research.css';
+
 const baseURL = import.meta.env.BASE_URL;
 
 const CsvReader = () => {
@@ -224,10 +225,14 @@ const CsvReader = () => {
                   <span className="field">{row.Field}</span>
                   <span className="year">{row.Year}</span>
                 </div>
-                <h2 className="name">{row.Title}</h2>
+                <h2 className="name">
+                  <a href={row.Link} target="_blank" rel="noopener noreferrer" style={{ color: 'black', fontWeight: 'bold',textDecoration: 'none' }}>
+                    {row.Title}
+                  </a>
+                </h2>
                 <p className="authors">
                   {Object.keys(row)
-                    .slice(4) // Assuming authors start from index 4 in your data
+                    .slice(5) // Assuming authors start from index 4 in your data
                     .map((authorKey) => row[authorKey])
                     .join(', ')}
                 </p>
