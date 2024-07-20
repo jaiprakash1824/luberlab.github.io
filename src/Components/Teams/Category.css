@@ -11,6 +11,9 @@
   /* Add other styling as needed */
   padding: 20px; /* Example padding */
 }
+.category-title-team {
+  color: black;
+}
 
 .category-title-team {
   text-align: center;

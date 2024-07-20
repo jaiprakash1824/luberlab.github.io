@@ -2,12 +2,13 @@ import { createContext, useState, useEffect } from "react";
 import Papa from "papaparse";
 
 export const CardContext = createContext();
+const baseURL = import.meta.env.BASE_URL;
 
 export const NewsCardContext = ({ children }) => {
   const [cards, setCards] = useState([]); // Initialize as an array
 
   useEffect(() => {
-    Papa.parse("/news.csv", {
+    Papa.parse(`${baseURL}/news.csv`, {
       download: true,
       header: true,
       skipEmptyLines: true,
