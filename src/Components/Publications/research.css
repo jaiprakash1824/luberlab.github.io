@@ -232,8 +232,9 @@ h2 {
 
 .filter-toggle span{
   display: inline-block;
-  width: 20px; /* Adjust width as needed */
+  width: 100px; /* Adjust width as needed */
   text-align: center; /* Center align text */
+  font-size: 18px;
 }
 
 /* Left filters */
@@ -244,7 +245,7 @@ h2 {
   margin-top: 20px;
   color: black;
   background-color: white;
-  height: 3000px;
+  height: 2000px;
   overflow-y: auto; 
   width: 23%; /* Initial width */
   transition: width 0.3s ease; /* Smooth transition for width */
@@ -265,7 +266,7 @@ h2 {
   overflow-y: auto; /* Enable vertical scrolling if needed */
   padding: 10px; /* Add padding to right content */
   color: black;
-  height: 3000px;
+  height: 2000px;
 }
 
 .right-content.hide {
@@ -282,3 +283,67 @@ h2 {
   margin-left: 0; /* Margin set to 0 when filters are hidden */
 }
 
+
+/* Add mobile-specific styles */
+@media (max-width: 426px) { /* Adjust the breakpoint as needed */
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left-filters {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 60%; /* Adjust width as needed */
+    height: 1900px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    overflow-y: auto; /* Ensure scrolling if needed */
+  }
+
+  .left-filters.show {
+    transform: translate(40px, 16px);
+    width: 80%;
+
+  }
+
+  .filter-toggle {
+    position: relative;
+    top: 40%;
+    left: 10px;
+    background-color: #ffffff;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1001;
+    color: black;
+    width: 100px;
+  }
+
+  .right-content {
+    margin-left: 0; /* Remove margin when filters are visible */
+    padding: 10px;
+    transition: margin-left 0.3s ease;
+    z-index: 100;
+  }
+
+  .right-content.hide {
+    margin-left: 0; /* Ensure content is not shifted */
+  }
+
+  /* Ensure right content remains visible and interactive */
+  .right-content.visible {
+    position: relative;
+  }
+
+  /* Optional: Adjust padding or margins as needed for better visibility */
+  .right-content {
+    padding-left: 10px;
+    padding-right: 10px;
+
+  }
+
+}
