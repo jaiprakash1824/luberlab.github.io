@@ -5,7 +5,7 @@ const ResHeader = () => {
   return (
     <div className="header">
       <div>
-        <p class="head">All Research</p>
+        <p className="head">All Research</p>
       </div>
     </div>
   );

@@ -32,8 +32,8 @@
   width: 100%;
   height: auto;
   margin-bottom: 20px;
-  filter: grayscale(100%); /* Apply black and white filter */
-  transition: filter 0.3s ease; /* Smooth transition */
+  /* Apply black and white filter */
+  /* filter: grayscale(100%); */
 }
 
 .home-team-member:hover .home-team-img {

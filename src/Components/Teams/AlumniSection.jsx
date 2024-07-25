@@ -16,7 +16,7 @@ const AlumniSection = () => {
         setAlumni(results.data);
       },
     });
-  }, []);
+  }, [baseURL]);
 
   const toggleOpen = () => {
     setIsOpen(!isOpen);

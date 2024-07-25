@@ -4,11 +4,12 @@ import Papa from "papaparse";
 export const CardContext = createContext();
 const baseURL = import.meta.env.BASE_URL;
 
+// eslint-disable-next-line react/prop-types
 export const NewsCardContext = ({ children }) => {
   const [cards, setCards] = useState([]); // Initialize as an array
 
   useEffect(() => {
-    Papa.parse(`${baseURL}/news.csv`, {
+    Papa.parse(`${baseURL}news.csv`, {
       download: true,
       header: true,
       skipEmptyLines: true,

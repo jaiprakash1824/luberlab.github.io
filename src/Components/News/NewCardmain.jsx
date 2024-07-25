@@ -1,13 +1,16 @@
 import PropTypes from "prop-types";
 import "./NewCardMain.css";
-import Utalogo from "../../../public/assets/uta-logo.jpg";
+const baseURL = import.meta.env.BASE_URL;
 
 const NewCardMain = ({ member }) => {
   return (
     <div className="news-card">
       <div className="news-card-inner">
         <div className="new-card-image">
-          <img src={Utalogo} className="card-image-style"></img>
+          <img
+            src={baseURL + "assets/logo/uta_engineering.jpg"}
+            className="card-image-style"
+          ></img>
         </div>
         <div>
           <div className="news-card-top">

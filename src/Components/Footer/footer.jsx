@@ -1,24 +1,24 @@
 import "./footer.css";
 
 const Footer = () => {
+  const baseURL = import.meta.env.BASE_URL;
+  const uta_engineering = baseURL + "assets/logo/uta_engineering.jpg";
+  const ut_system = baseURL + "assets/logo/UTSystem.png";
+  const tacc = baseURL + "assets/logo/tacc.png";
   return (
     <footer className="home-footer-container">
       <div className="home-footer-logos">
         <img
-          src="/assets/logo/uta_engineering.jpg"
+          src={uta_engineering}
           alt="UTA Logo"
           className="home-footer-logo"
         />
         <img
-          src="/assets/logo/UTSystem.png"
+          src={ut_system}
           alt="UT System Logo"
           className="home-footer-logo"
         />
-        <img
-          src="/assets/logo/tacc.png"
-          alt="TACC Logo"
-          className="home-footer-logo"
-        />
+        <img src={tacc} alt="TACC Logo" className="home-footer-logo" />
       </div>
       <div className="home-footer-link-container">
         <div className="home-footer-address">
