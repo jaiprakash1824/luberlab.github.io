@@ -17,7 +17,7 @@
 .main{
   width: 100%;
   background-color: white;
-  font-family: 'SF Pro Black Italic';
+  font-family: 'SF Pro Black';
   height:100%;
 }
 .paper-label {
@@ -83,6 +83,7 @@
   border-width: 0 2px 2px 0; /* Style of the checkmark (right triangle) */
   transform: rotate(45deg); /* Rotate the checkmark to create a diagonal effect */
 }
+
 .radio-container {
   display: block;
   position: relative;
@@ -90,7 +91,7 @@
   margin-bottom: 12px;
   cursor: pointer;
   font-size: 15px; /* Adjust font size */
-  color:black; /* Text color */
+  color: black; /* Text color */
 }
 
 .radio-container input {
@@ -115,7 +116,7 @@
 }
 
 .radio-container input:checked ~ .radio-mark {
-  background-color:black; /* Blue background color when checked */
+  background-color: black; /* Background color when checked */
 }
 
 .radio-mark:after {
@@ -142,7 +143,7 @@ a{
   padding: 8px;
   border: 1px solid black;
   border-radius: 4px;
-  width: 90%;
+  width: 92%;
   background-color: white;
   color:black;
 }
@@ -172,7 +173,7 @@ a{
   justify-content: space-between;
   align-items: left;
   flex-direction: column;
-  margin-left:12px;
+  margin:12px;
 }
 
 .papers-container {
@@ -181,7 +182,7 @@ a{
 }
 .search-bar {
   flex: 1; /* Take up remaining space */
-  margin:10px;
+  margin:1px;
 }
 
 .papers-container {
@@ -214,7 +215,7 @@ h2 {
   flex-direction: column;
 }
 .filter-option h4{
-  border-bottom: 1px solid white;
+  border-bottom: 1.5px solid black;
 }
 .right-content {
   margin-left: 25%; 
@@ -222,12 +223,13 @@ h2 {
 
 .filter-toggle {
   cursor: pointer;
-  font-size: 24px; /* Adjust icon size */
+  font-size: 18px; /* Adjust icon size */
   line-height: 1; /* Ensure proper alignment */
   z-index: 1000; /* Ensure it's above other content */
   padding-bottom: 5px;
   color: black; 
-  margin-left: 0%;
+
+
 }
 
 .filter-toggle span{
@@ -245,7 +247,7 @@ h2 {
   margin-top: 20px;
   color: black;
   background-color: white;
-  height: 2000px;
+  height: 3000px;
   overflow-y: auto; 
   width: 23%; /* Initial width */
   transition: width 0.3s ease; /* Smooth transition for width */
@@ -266,7 +268,7 @@ h2 {
   overflow-y: auto; /* Enable vertical scrolling if needed */
   padding: 10px; /* Add padding to right content */
   color: black;
-  height: 2000px;
+  height: 3000px;
 }
 
 .right-content.hide {
@@ -283,44 +285,68 @@ h2 {
   margin-left: 0; /* Margin set to 0 when filters are hidden */
 }
 
+.filter-header-u {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 5px; /* Space between text and underline */
+  cursor: pointer; /* Pointer cursor on hover */
+}
 
-/* Add mobile-specific styles */
+.filter-title {
+  flex: 1; /* Take up all available space */
+}
+
+
+
 @media (max-width: 426px) { /* Adjust the breakpoint as needed */
   .main {
     display: flex;
     flex-direction: column;
+    height: 100%;
   }
 
   .left-filters {
     position: absolute;
-    top: 50%;
     left: 0;
     width: 60%; /* Adjust width as needed */
-    height: 1900px;
+    height: 1100px;
     background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(18, 18, 18, 0.1);
     transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
     z-index: 1000;
     overflow-y: auto; /* Ensure scrolling if needed */
+    border: 2px solid #ccc; 
+    border-radius: 15px;
   }
-
+  .search-bar input[type="text"] {
+    width: 92%;
+}
+  .filter-toggle span{
+    display: inline-block;
+    width: 100px; /* Adjust width as needed */
+    text-align: center; /* Center align text */
+    font-size: 18px;
+  }
   .left-filters.show {
-    transform: translate(40px, 16px);
+    transform: translate(30px, 16px);
     width: 80%;
 
   }
 
+  .filter-option h4 {
+    padding-right: 5px;
+    border-bottom: 1.5px solid black; /* Reduced border-bottom width */
+  }
+
   .filter-toggle {
-    position: relative;
     top: 40%;
     left: 10px;
     background-color: #ffffff;
-    padding: 10px;
     cursor: pointer;
     z-index: 1001;
     color: black;
-    width: 100px;
   }
 
   .right-content {
@@ -332,6 +358,7 @@ h2 {
 
   .right-content.hide {
     margin-left: 0; /* Ensure content is not shifted */
+    
   }
 
   /* Ensure right content remains visible and interactive */
@@ -343,7 +370,17 @@ h2 {
   .right-content {
     padding-left: 10px;
     padding-right: 10px;
-
   }
 
+  .filter-header-u {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 5px; /* Space between text and underline */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  .filter-title {
+    flex: 1; /* Take up all available space */
+  }
 }
