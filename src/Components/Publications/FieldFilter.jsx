@@ -28,7 +28,7 @@ const FieldFilter = ({ data, selectedField, setSelectedField, filterVisibility, 
     <div className="filter-option">
       <h4 className="filter-header-u" onClick={() => toggleFilterSectionVisibility('field')}>
         <span className="filter-title">Publications</span>
-        <span className="filter-toggle">{filterVisibility.field ? '-' : '+'}</span>
+        <span className="filter-toggle1">{filterVisibility.field ? '-' : '+'}</span>
       </h4>
       {filterVisibility.field && (
         <>

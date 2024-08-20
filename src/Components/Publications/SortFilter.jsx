@@ -6,7 +6,7 @@ const SortFilter = ({ sortOrder, setSortOrder, filterVisibility, toggleFilterSec
   <div className="filter-option">
     <h4 className="filter-header-u" onClick={() => toggleFilterSectionVisibility('sort')}>
       <span className="filter-title">Sort By</span>
-      <span className="filter-toggle">{filterVisibility.sort ? '-' : '+'}</span>
+      <span className="filter-toggle1">{filterVisibility.sort ? '-' : '+'}</span>
     </h4>
     {filterVisibility.sort && (
       <div className="sort-options">

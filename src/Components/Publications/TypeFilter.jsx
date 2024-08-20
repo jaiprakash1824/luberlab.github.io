@@ -28,7 +28,7 @@ const TypeFilter = ({ data, selectedType, setSelectedType, filterVisibility, tog
     <div className="filter-option">
       <h4 className="filter-header-u" onClick={() => toggleFilterSectionVisibility('type')}>
         <span className="filter-title">Type</span>
-        <span className="filter-toggle">{filterVisibility.type ? '-' : '+'}</span>
+        <span className="filter-toggle1">{filterVisibility.type ? '-' : '+'}</span>
       </h4>
       {filterVisibility.type && (
         <>

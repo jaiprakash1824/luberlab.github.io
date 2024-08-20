@@ -237,8 +237,15 @@ h2 {
   z-index: 1000; /* Ensure it's above other content */
   padding-bottom: 5px;
   color: black; 
-  width : 23%;
-
+  width: 23%;
+}
+.filter-toggle1 {
+  cursor: pointer;
+  font-size: 15px; /* Adjust icon size */
+  line-height: 1; /* Ensure proper alignment */
+  z-index: 1000; /* Ensure it's above other content */
+  padding-bottom: 5px;
+  color: black; 
 }
 
 .filter-toggle span{

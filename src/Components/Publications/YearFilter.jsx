@@ -17,7 +17,7 @@ const YearFilter = ({ data, selectedYears, setSelectedYears, filterVisibility, t
     <div className="filter-option">
       <h4 className="filter-header-u" onClick={() => toggleFilterSectionVisibility('year')}>
         <span className="filter-title">Year</span>
-        <span className="filter-toggle">{filterVisibility.year ? '-' : '+'}</span>
+        <span className="filter-toggle1">{filterVisibility.year ? '-' : '+'}</span>
       </h4>
       {filterVisibility.year && (
         <>
