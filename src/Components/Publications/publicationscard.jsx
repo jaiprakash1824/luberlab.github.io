@@ -1,13 +1,13 @@
 // Card.js
 import "./publicationscard.css";
-import Research from "./research";
+import CsvReader from "./CsvReader";
 import ResHeader from "./ResHeader";
 
 const Publicationscard = () => {
   return (
     <div className="Publish">
       <ResHeader/>
-      <Research />
+      <CsvReader />
     </div>
   );
 };
