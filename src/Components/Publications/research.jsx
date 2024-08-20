@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import Papa from 'papaparse';
-import './research.css';
+import { useState, useEffect } from "react";
+import Papa from "papaparse";
+import "./research.css";
 
 const baseURL = import.meta.env.BASE_URL;
 
 const CsvReader = () => {
   const [data, setData] = useState([]);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [sortOrder, setSortOrder] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
+  const [sortOrder, setSortOrder] = useState("");
   const [selectedField, setSelectedField] = useState([]);
   const [selectedYears, setSelectedYears] = useState([]);
   const [selectedType, setSelectedType] = useState([]);
@@ -20,7 +20,7 @@ const CsvReader = () => {
   });
 
   useEffect(() => {
-    fetch(`${baseURL}public/research.csv`)
+    fetch(`${baseURL}/research.csv`)
       .then((response) => response.text())
       .then((csv) => {
         Papa.parse(csv, {
@@ -32,7 +32,7 @@ const CsvReader = () => {
         });
       });
 
-    const mediaQuery = window.matchMedia('(max-width: 426px)');
+    const mediaQuery = window.matchMedia("(max-width: 426px)");
     setFiltersVisible(!mediaQuery.matches); // true for desktop, false for mobile
 
     // Add event listener for changes in screen size
@@ -40,11 +40,11 @@ const CsvReader = () => {
       setFiltersVisible(!mediaQuery.matches); // true for desktop, false for mobile
     };
 
-    mediaQuery.addEventListener('change', handleResize);
+    mediaQuery.addEventListener("change", handleResize);
 
     // Clean up event listener on component unmount
     return () => {
-      mediaQuery.removeEventListener('change', handleResize);
+      mediaQuery.removeEventListener("change", handleResize);
     };
   }, []);
 
@@ -62,11 +62,13 @@ const CsvReader = () => {
   const handleTypeSelect = (type) => {
     let updatedSelectedType = [];
 
-    if (type === 'All') {
+    if (type === "All") {
       updatedSelectedType = [];
     } else {
       if (selectedType.includes(type)) {
-        updatedSelectedType = selectedType.filter((selected) => selected !== type);
+        updatedSelectedType = selectedType.filter(
+          (selected) => selected !== type
+        );
       } else {
         updatedSelectedType = [...selectedType, type];
       }
@@ -77,11 +79,13 @@ const CsvReader = () => {
   const handleFieldSelect = (field) => {
     let updatedSelectedField = [];
 
-    if (field === 'All') {
+    if (field === "All") {
       updatedSelectedField = [];
     } else {
       if (selectedField.includes(field)) {
-        updatedSelectedField = selectedField.filter((selected) => selected !== field);
+        updatedSelectedField = selectedField.filter(
+          (selected) => selected !== field
+        );
       } else {
         updatedSelectedField = [...selectedField, field];
       }
@@ -98,15 +102,23 @@ const CsvReader = () => {
   };
 
   const filteredPapers = data
-    .filter((row) => row.Title.toLowerCase().includes(searchQuery.toLowerCase()))
-    .filter((row) => (selectedField.length > 0 ? selectedField.includes(row.Field) : true))
-    .filter((row) => (selectedYears.length > 0 ? selectedYears.includes(row.Year) : true))
-    .filter((row) => (selectedType.length > 0 ? selectedType.includes(row.Paper) : true));
+    .filter((row) =>
+      row.Title.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+    .filter((row) =>
+      selectedField.length > 0 ? selectedField.includes(row.Field) : true
+    )
+    .filter((row) =>
+      selectedYears.length > 0 ? selectedYears.includes(row.Year) : true
+    )
+    .filter((row) =>
+      selectedType.length > 0 ? selectedType.includes(row.Paper) : true
+    );
 
   const sortedPapers = [...filteredPapers].sort((a, b) => {
-    if (sortOrder === 'asc') {
+    if (sortOrder === "asc") {
       return a.Year.localeCompare(b.Year);
-    } else if (sortOrder === 'desc') {
+    } else if (sortOrder === "desc") {
       return b.Year.localeCompare(a.Year);
     } else {
       return 0; // No sorting applied
@@ -114,14 +126,21 @@ const CsvReader = () => {
   });
 
   const YearFilter = () => {
-    const years = Array.from(new Set(data.map((row) => row.Year))).filter((year) => year);
+    const years = Array.from(new Set(data.map((row) => row.Year))).filter(
+      (year) => year
+    );
 
     return (
       <div className="filter-option">
-        <h4 className="filter-header-u" onClick={() => toggleFilterSectionVisibility('year')}>
-      <span className="filter-title">Year</span>
-      <span className="filter-toggle">{filterVisibility.year ? '-' : '+'}</span>
-    </h4>
+        <h4
+          className="filter-header-u"
+          onClick={() => toggleFilterSectionVisibility("year")}
+        >
+          <span className="filter-title">Year</span>
+          <span className="filter-toggle">
+            {filterVisibility.year ? "-" : "+"}
+          </span>
+        </h4>
         {filterVisibility.year && (
           <>
             <label className="container">
@@ -129,7 +148,7 @@ const CsvReader = () => {
                 type="checkbox"
                 value=""
                 checked={selectedYears.length === 0}
-                onChange={() => handleYearSelect('')}
+                onChange={() => handleYearSelect("")}
               />
               All
               <span className="checkmark"></span>
@@ -153,18 +172,23 @@ const CsvReader = () => {
   };
 
   const TypeFilter = () => {
-    const uniqueTypes = Array.from(new Set(data.map((row) => row.Paper))).filter(
-      (type) => !/\s/.test(type)
-    );
+    const uniqueTypes = Array.from(
+      new Set(data.map((row) => row.Paper))
+    ).filter((type) => !/\s/.test(type));
 
     uniqueTypes.sort((a, b) => a.length - b.length);
 
     return (
       <div className="filter-option">
-        <h4 className="filter-header-u" onClick={() => toggleFilterSectionVisibility('type')}>
-      <span className="filter-title">Type</span>
-      <span className="filter-toggle">{filterVisibility.type ? '-' : '+'}</span>
-    </h4>
+        <h4
+          className="filter-header-u"
+          onClick={() => toggleFilterSectionVisibility("type")}
+        >
+          <span className="filter-title">Type</span>
+          <span className="filter-toggle">
+            {filterVisibility.type ? "-" : "+"}
+          </span>
+        </h4>
         {filterVisibility.type && (
           <>
             <label className="container">
@@ -172,7 +196,7 @@ const CsvReader = () => {
                 type="checkbox"
                 value="All"
                 checked={selectedType.length === 0}
-                onChange={() => handleTypeSelect('All')}
+                onChange={() => handleTypeSelect("All")}
               />
               All
               <span className="checkmark"></span>
@@ -196,18 +220,23 @@ const CsvReader = () => {
   };
 
   const FieldFilter = () => {
-    const uniqueFields = Array.from(new Set(data.map((row) => row.Field))).filter(
-      (type) => /\s/.test(type)
-    );
+    const uniqueFields = Array.from(
+      new Set(data.map((row) => row.Field))
+    ).filter((type) => /\s/.test(type));
 
     uniqueFields.sort((a, b) => a.length - b.length);
 
     return (
       <div className="filter-option">
-        <h4 className="filter-header-u" onClick={() => toggleFilterSectionVisibility('field')}>
-      <span className="filter-title">Publications</span>
-      <span className="filter-toggle">{filterVisibility.field ? '-' : '+'}</span>
-    </h4>
+        <h4
+          className="filter-header-u"
+          onClick={() => toggleFilterSectionVisibility("field")}
+        >
+          <span className="filter-title">Publications</span>
+          <span className="filter-toggle">
+            {filterVisibility.field ? "-" : "+"}
+          </span>
+        </h4>
         {filterVisibility.field && (
           <>
             <label className="container">
@@ -215,7 +244,7 @@ const CsvReader = () => {
                 type="checkbox"
                 value="All"
                 checked={selectedField.length === 0}
-                onChange={() => handleFieldSelect('All')}
+                onChange={() => handleFieldSelect("All")}
               />
               All
               <span className="checkmark"></span>
@@ -241,9 +270,13 @@ const CsvReader = () => {
   return (
     <div className="main">
       <div className="filter-toggle" onClick={toggleFiltersVisibility}>
-        {filtersVisible ? <span className="minus">&ndash; Filters</span> : <span className="plus">+ Filters</span>}
+        {filtersVisible ? (
+          <span className="minus">&ndash; Filters</span>
+        ) : (
+          <span className="plus">+ Filters</span>
+        )}
       </div>
-      <div className={`left-filters ${filtersVisible ? 'show' : 'hide'}`}>
+      <div className={`left-filters ${filtersVisible ? "show" : "hide"}`}>
         <div className="filters">
           <div className="search-bar">
             <input
@@ -253,13 +286,18 @@ const CsvReader = () => {
               onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
-          <SortFilter sortOrder={sortOrder} setSortOrder={setSortOrder} filterVisibility={filterVisibility} toggleFilterSectionVisibility={toggleFilterSectionVisibility} />
+          <SortFilter
+            sortOrder={sortOrder}
+            setSortOrder={setSortOrder}
+            filterVisibility={filterVisibility}
+            toggleFilterSectionVisibility={toggleFilterSectionVisibility}
+          />
           <TypeFilter />
           <YearFilter />
           <FieldFilter />
         </div>
       </div>
-      <div className={`right-content ${filtersVisible ? 'show' : 'hide'}`}>
+      <div className={`right-content ${filtersVisible ? "show" : "hide"}`}>
         <div className="paper-container">
           {sortedPapers.length > 0 ? (
             sortedPapers.map((row, index) => (
@@ -270,7 +308,16 @@ const CsvReader = () => {
                   <span className="year">{row.Year}</span>
                 </div>
                 <h2 className="name">
-                  <a href={row.Link} target="_blank" rel="noopener noreferrer" style={{ color: 'black', fontWeight: 'bold',textDecoration: 'none' }}>
+                  <a
+                    href={row.Link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      color: "black",
+                      fontWeight: "bold",
+                      textDecoration: "none",
+                    }}
+                  >
                     {row.Title}
                   </a>
                 </h2>
@@ -278,7 +325,7 @@ const CsvReader = () => {
                   {Object.keys(row)
                     .slice(5) // Assuming authors start from index 5 in your data
                     .map((authorKey) => row[authorKey])
-                    .join(', ')}
+                    .join(", ")}
                 </p>
               </div>
             ))
@@ -291,38 +338,45 @@ const CsvReader = () => {
   );
 };
 
-const SortFilter = ({ sortOrder, setSortOrder, filterVisibility, toggleFilterSectionVisibility }) => (
+const SortFilter = ({
+  sortOrder,
+  setSortOrder,
+  filterVisibility,
+  toggleFilterSectionVisibility,
+}) => (
   <div className="filter-option">
-    <h4 className="filter-header-u" onClick={() => toggleFilterSectionVisibility('sort')}>
+    <h4
+      className="filter-header-u"
+      onClick={() => toggleFilterSectionVisibility("sort")}
+    >
       <span className="filter-title">Sort By</span>
-      <span className="filter-toggle">{filterVisibility.sort ? '-' : '+'}</span>
+      <span className="filter-toggle">{filterVisibility.sort ? "-" : "+"}</span>
     </h4>
 
     {filterVisibility.sort && (
       <>
         <label className="radio-container" htmlFor="sort-newest">
-  <input
-    type="radio"
-    id="sort-newest"
-    value="desc"
-    checked={sortOrder === 'desc'}
-    onChange={() => setSortOrder('desc')}
-  />
-  Newest
-  <span className="radio-mark"></span>
-</label>
-<label className="radio-container" htmlFor="sort-oldest">
-  <input
-    type="radio"
-    id="sort-oldest"
-    value="asc"
-    checked={sortOrder === 'asc'}
-    onChange={() => setSortOrder('asc')}
-  />
-  Oldest
-  <span className="radio-mark"></span>
-</label>
-
+          <input
+            type="radio"
+            id="sort-newest"
+            value="desc"
+            checked={sortOrder === "desc"}
+            onChange={() => setSortOrder("desc")}
+          />
+          Newest
+          <span className="radio-mark"></span>
+        </label>
+        <label className="radio-container" htmlFor="sort-oldest">
+          <input
+            type="radio"
+            id="sort-oldest"
+            value="asc"
+            checked={sortOrder === "asc"}
+            onChange={() => setSortOrder("asc")}
+          />
+          Oldest
+          <span className="radio-mark"></span>
+        </label>
       </>
     )}
   </div>
