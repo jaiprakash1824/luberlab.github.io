@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Papa from "papaparse";
 import "./research.css";
+import PropTypes from "prop-types";
 
 const baseURL = import.meta.env.BASE_URL;
 
@@ -381,5 +382,16 @@ const SortFilter = ({
     )}
   </div>
 );
+SortFilter.propTypes = {
+  sortOrder: PropTypes.string.isRequired,
+  setSortOrder: PropTypes.func.isRequired,
+  filterVisibility: PropTypes.shape({
+    sort: PropTypes.bool.isRequired,
+    type: PropTypes.bool.isRequired,
+    year: PropTypes.bool.isRequired,
+    field: PropTypes.bool.isRequired,
+  }).isRequired,
+  toggleFilterSectionVisibility: PropTypes.func.isRequired,
+};
 
 export default CsvReader;
