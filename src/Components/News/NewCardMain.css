@@ -1,17 +1,28 @@
 /* Main card styling */
+/* Main card styling */
 .news-card {
-  height: 275px;
-  width: 90%;
+  width: 100%; /* Full width within grid cell */
   text-align: center;
+  display: flex; /* Flexbox for internal layout */
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  background-color: #0064b1;
+  background-color: #046fc1;
   border-radius: 1.5rem;
   transition: all 0.3s ease-in-out;
   margin: 0 auto;
   animation: fadeIn 1s ease-in-out;
   border: 2px solid rgba(0, 0, 0, 0.03);
+}
+
+.news-card-container {
+  display: grid; /* Use grid layout for the container */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Responsive grid with flexible columns */
+  gap: 20px; /* Space between grid items */
+  padding: 20px; /* Padding around the container */
 }
 
 /* Image hover effect */
@@ -20,10 +31,11 @@
 }
 
 /* Image container styling */
+
 .news-card-image {
   display: flex;
-  width: 155px;
-  height: 155px;
+  width: 60px; /* Adjust width */
+  height: 60px; /* Adjust height */
   justify-content: center;
   margin: 10px auto;
   border-radius: 50%;
@@ -32,13 +44,13 @@
 }
 
 .card-image-style {
-  height: 15rem;
+  height: 12rem;
 }
 
 /* Image styling */
 .news-card-image-img {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
   border-radius: 50%;
   border: 2px solid #fff;
@@ -55,12 +67,10 @@
 .news-card-inner {
   padding: 0.7rem 1rem 1rem 1rem;
   display: grid;
-  height: 275px;
+  height: 100%; /* Use full height available */
   overflow: auto;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-grow: 1;
-  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 2fr; /* Two-column grid layout inside the card */
+  gap: 1rem;
 }
 
 /* Title styling */
@@ -100,9 +110,7 @@
 
 /* Description text styling with line clamp */
 .news-card-description {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 5;
+  display: grid;
   overflow: hidden;
   text-overflow: ellipsis;
   max-height: calc(1.1rem * 5 + 0.35rem * 2);
@@ -125,7 +133,7 @@
 
 /* Miscellaneous links styling */
 .news-card-links > .news-card-misc {
-  display: flex;
+  display: grid;
   flex-wrap: wrap;
   gap: 0.5rem;
   align-items: flex-start;
