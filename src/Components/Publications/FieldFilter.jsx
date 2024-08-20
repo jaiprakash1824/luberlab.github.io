@@ -1,13 +1,8 @@
-import PropTypes from "prop-types";
-import "./research.css";
+import React from 'react';
+import PropTypes from 'prop-types';
+import "./research.css"
 
-const FieldFilter = ({
-  data,
-  selectedField,
-  setSelectedField,
-  filterVisibility,
-  toggleFilterSectionVisibility,
-}) => {
+const FieldFilter = ({ data, selectedField, setSelectedField, filterVisibility, toggleFilterSectionVisibility }) => {
   const uniqueFields = Array.from(new Set(data.map((row) => row.Field))).filter(
     (type) => /\s/.test(type)
   );
@@ -17,13 +12,11 @@ const FieldFilter = ({
   const handleFieldSelect = (field) => {
     let updatedSelectedField = [];
 
-    if (field === "All") {
+    if (field === 'All') {
       updatedSelectedField = [];
     } else {
       if (selectedField.includes(field)) {
-        updatedSelectedField = selectedField.filter(
-          (selected) => selected !== field
-        );
+        updatedSelectedField = selectedField.filter((selected) => selected !== field);
       } else {
         updatedSelectedField = [...selectedField, field];
       }
@@ -33,31 +26,22 @@ const FieldFilter = ({
 
   return (
     <div className="filter-option">
-      <h4
-        className="filter-header-u"
-        onClick={() => toggleFilterSectionVisibility("field")}
-      >
+      <h4 className="filter-header-u" onClick={() => toggleFilterSectionVisibility('field')}>
         <span className="filter-title">Publications</span>
-        <span className="filter-toggle1">
-          {filterVisibility.field ? "-" : "+"}
-        </span>
+        <span className="filter-toggle1">{filterVisibility.field ? '-' : '+'}</span>
       </h4>
       {filterVisibility.field && (
         <>
           <div
-            className={`sort-option ${
-              selectedField.length === 0 ? "active" : ""
-            }`}
-            onClick={() => handleFieldSelect("All")}
+            className={`sort-option ${selectedField.length === 0 ? 'active' : ''}`}
+            onClick={() => handleFieldSelect('All')}
           >
             All
           </div>
           {uniqueFields.map((field) => (
             <div
               key={field}
-              className={`sort-option ${
-                selectedField.includes(field) ? "active" : ""
-              }`}
+              className={`sort-option ${selectedField.includes(field) ? 'active' : ''}`}
               onClick={() => handleFieldSelect(field)}
             >
               {field}
