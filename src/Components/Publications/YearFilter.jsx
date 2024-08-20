@@ -1,16 +1,22 @@
 import React from 'react';
-import "./research.css";
 import PropTypes from 'prop-types';
 
 const YearFilter = ({ data, selectedYears, setSelectedYears, filterVisibility, toggleFilterSectionVisibility }) => {
+  // Get all unique years from the data
   const years = Array.from(new Set(data.map((row) => row.Year))).filter((year) => year);
-  
-  const handleYearSelect = (year) => {
-    const updatedYears = selectedYears.includes(year)
-      ? selectedYears.filter((selectedYear) => selectedYear !== year)
-      : [...selectedYears, year];
 
-    setSelectedYears(updatedYears);
+  // Function to handle the selection of years
+  const handleYearSelect = (year) => {
+    if (year === 'All') {
+        setSelectedYears([]);
+    } else {
+      // Otherwise, toggle the selection of individual years
+      const updatedYears = selectedYears.includes(year)
+        ? selectedYears.filter((selectedYear) => selectedYear !== year)
+        : [...selectedYears, year];
+
+      setSelectedYears(updatedYears);
+    }
   };
 
   return (
@@ -23,7 +29,7 @@ const YearFilter = ({ data, selectedYears, setSelectedYears, filterVisibility, t
         <>
           <div
             className={`sort-option ${selectedYears.length === 0 ? 'active' : ''}`}
-            onClick={() => handleYearSelect('')}
+            onClick={() => handleYearSelect('All')}
           >
             All
           </div>

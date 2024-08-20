@@ -84,6 +84,7 @@ const CsvReader = () => {
       <div className="filter-toggle" onClick={toggleFiltersVisibility}>
         {filtersVisible ? <span className="minus">&ndash; Filters</span> : <span className="plus">+ Filters</span>}
       </div>
+      <div className='manage'>
       <div className={`left-filters ${filtersVisible ? 'show' : 'hide'}`}>
         <div className="filters">
           <div className="search-bar">
@@ -127,6 +128,7 @@ const CsvReader = () => {
             <p>No papers found</p>
           )}
         </div>
+      </div>
       </div>
     </div>
   );

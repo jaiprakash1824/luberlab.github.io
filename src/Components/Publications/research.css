@@ -19,6 +19,7 @@
   background-color: white;
   font-family: 'SF Pro Black';
   height:100%;
+  
 }
 .paper-label {
   font-weight: bold;
@@ -35,8 +36,12 @@
   cursor: pointer;
   font-size: 15px; /* Adjust font size */
   color: black; /* Text color */
-}
 
+}
+.manage{
+  display: flex;
+  align-items: stretch; 
+}
 /* Hide the browser's default checkbox */
 .container input {
   position: absolute;
@@ -226,9 +231,6 @@ h2 {
 .filter-option h4{
   border-bottom: 1.5px solid black;
 }
-.right-content {
-  margin-left: 25%; 
-}
 
 .filter-toggle {
   cursor: pointer;
@@ -264,7 +266,7 @@ h2 {
   margin-top: 20px;
   color: black;
   background-color: white;
-  height: 3000px;
+  height: auto;
   overflow-y: auto; 
   width: 23%; /* Initial width */
   transition: width 0.3s ease; /* Smooth transition for width */
@@ -285,7 +287,7 @@ h2 {
   overflow-y: auto; /* Enable vertical scrolling if needed */
   padding: 10px; /* Add padding to right content */
   color: black;
-  height: 3000px;
+  height: auto;
 }
 
 .right-content.hide {
@@ -322,12 +324,15 @@ h2 {
     flex-direction: column;
     height: 100%;
   }
-
+.manage{
+  display: flex;
+  align-items: stretch; 
+}
   .left-filters {
     position: absolute;
     left: 0;
     width: 60%; /* Adjust width as needed */
-    height: 1100px;
+    height: 750px;
     background-color: white;
     box-shadow: 0 0 10px rgba(18, 18, 18, 0.1);
     transform: translateX(-100%);
@@ -375,12 +380,10 @@ h2 {
   }
 
   .right-content.hide {
-    margin-left: 0; /* Ensure content is not shifted */
-    
+    margin-left: 0; /* Ensure content is not shifted */ 
   }
-
   /* Ensure right content remains visible and interactive */
-  .right-content.visible {
+  .right-content.show {
     position: relative;
   }
 

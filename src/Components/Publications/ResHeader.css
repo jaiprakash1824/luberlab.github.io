@@ -1,4 +1,4 @@
-.header {
+.Researchheader {
   display: flex;
   padding-bottom: 1rem;
   width: 100%;
@@ -9,14 +9,28 @@
   color: white;
   box-sizing: border-box;
 }
-.head{
+.Rhead{
   font-weight: bold;
   font-size: 2.5rem; 
   color:black;
 }
 
 @media (max-width: 424px) {
-  .head {
-    font-size: 2.3rem; /* Reduced font size for mobile devices */
+  .Rhead {
+    font-size: 2.3rem;
+    padding-left: 25px;
+    margin-left: 25px;  /* Reduced font size for mobile devices */
+  }
+}
+
+@media (max-width: 426px) {
+  .Rhead {
+    padding-left: 20px;  /* Reduced font size for mobile devices */
+  }
+}
+
+@media (max-width: 1025px) {
+  .Rhead {
+    padding-left: 20px;  /* Reduced font size for mobile devices */
   }
 }
