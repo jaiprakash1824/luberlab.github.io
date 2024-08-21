@@ -1,57 +1,35 @@
 .job-listings {
   flex-grow: 1;
+  overflow-x: hidden;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f8f9fa;
   margin-left: 50px; 
-  overflow-y: auto; 
-  padding: 20px; 
-  box-sizing: border-box; 
-  background-color: #f8f9fa; 
+  transition: margin-left 0.3s ease; 
 }
 
 .job-card {
-  position: relative; 
   background-color: #ffffff;
-  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   margin-bottom: 20px;
   padding: 20px;
-  width: 100%; 
+  width: 100%;
   box-sizing: border-box; 
-}
-
-.job-card .category {
-  font-size: 0.85rem;
-  font-weight: bold;
-  color: #0064b1;
-  margin-bottom: 15px;
 }
 
 .job-card h2 {
   font-size: 1.50rem;
   color: #333;
-  margin-top: 0;
-  margin-bottom: 5px;
 }
-
-.job-card hr {
-  border: none;
-  height: 1px;
-  background-color: #ccc;
-  margin: 10px 0;
-}
-
-.job-card .description {
-  font-size: 0.95rem;
-  color: black;
-  margin-bottom: 20px; 
-}
-
 .job-card .apply-button {
   position: absolute; 
-  top: 20px; 
+  top: 50px; 
   right: 50px; 
   font-size: 1rem;
-  background-color: white;
-  color: #0064b1;
+  background-color: #0064b1;
+  color: white;
   border: none;
   padding: 8px 16px;
   cursor: pointer;
@@ -61,25 +39,26 @@
 .job-card .apply-button:hover {
   background-color: rgb(203, 200, 200);
 }
-.job-card .minimum-qualification {
-  margin-top: 20px; 
+
+@media (max-width: 768px) {
+  .job-card .apply-button {
+    position: static; /* Make it part of the normal document flow */
+    display: block; /* Full width */
+    width: 100%;
+    margin-top: 20px; /* Add some space at the top */
+  }
+}
+.job-card.description, .job-card.minimum-qualification {
+  font-size: 0.95rem;
+  color: black;
 }
 
-.job-card .minimum-qualification h5 {
-  font-family: "SF Pro Black", sans-serif;
-  font-size: 1rem; 
+.job-card.minimum-qualification h5 {
   font-weight: bold;
-  color: black; 
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
 }
 
-.job-card .minimum-qualification ul {
-  list-style-type: disc; 
-  margin: 0; 
-  padding-left: 20px; 
-  color: black; 
-}
-
-.job-card .minimum-qualification ul li {
-  margin-bottom: 5px; 
+.job-card.minimum-qualification ul {
+  list-style-type: disc;
+  padding-left: 20px;
 }
