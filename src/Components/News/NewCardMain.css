@@ -60,7 +60,7 @@
 /* Card hover effect */
 .news-card:hover {
   text-decoration: none;
-  background-color: #007bff;
+  background-color: rgb(189, 214, 230);
   transform: scale(1.03);
 }
 
