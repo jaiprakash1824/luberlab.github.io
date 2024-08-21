@@ -1,0 +1,102 @@
+.alumni-section {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.alumni-header {
+  background-color: #0064b1;
+  color: white;
+  text-align: center;
+  font-size: 3em;
+  font-family: "SF Pro Black", sans-serif;
+  font-weight: 900;
+  letter-spacing: 1.1px;
+  cursor: pointer;
+  padding: 10px;
+  user-select: none;
+}
+
+.alumni-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    4,
+    minmax(200px, 1fr)
+  ); /* 4 columns on large screens */
+  gap: 20px;
+  background-color: #0064b1;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  overflow: hidden;
+  /* max-height: 1000px; */
+  opacity: 1;
+}
+
+.alumni-grid.collapsed {
+  max-height: 0;
+  opacity: 0;
+}
+
+.alumni-card {
+  text-align: center;
+  background-color: #f5f5f5;
+  padding: 15px;
+  margin: 15px;
+  border-radius: 8px;
+}
+
+.alumni-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.alumni-info h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2em;
+  color: #343a40;
+}
+
+.alumni-info p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #6c757d;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+  .alumni-grid {
+    grid-template-columns: repeat(
+      3,
+      minmax(200px, 1fr)
+    ); /* 3 columns on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .alumni-grid {
+    grid-template-columns: repeat(
+      2,
+      minmax(200px, 1fr)
+    ); /* 2 columns on small screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .alumni-grid {
+    grid-template-columns: repeat(
+      2,
+      minmax(150px, 1fr)
+    ); /* 2 columns with reduced width on extra small screens */
+  }
+
+  .alumni-card {
+    padding: 10px; /* Reduce padding on small screens */
+    margin: 10px; /* Reduce margin on small screens */
+  }
+
+  .alumni-photo {
+    width: 100px; /* Reduce photo size on small screens */
+    height: 100px;
+  }
+}

@@ -26,7 +26,16 @@ const Category = ({ title, members }) => {
 
   return (
     <div className="category-team">
-      <h2 className="category-title-team">{title}</h2>
+      <h2
+        className={`${
+          title.toLowerCase() === "phd" ||
+          title.toLowerCase() === "undergraduate"
+            ? "category-title-team"
+            : "category-title-team-blue"
+        }`}
+      >
+        {title}
+      </h2>
       <div
         className={`${
           title.toLowerCase() === "masters" || title.toLowerCase() === "phd"

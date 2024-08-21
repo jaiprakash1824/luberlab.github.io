@@ -78,7 +78,7 @@
   font-weight: 400;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 5; /* Limit to 5 lines */
+  -line-clamp: 5; /* Limit to 5 lines */
   overflow: hidden;
   text-overflow: ellipsis;
   max-height: calc(1.1rem * 5 + 0.35rem * 2);

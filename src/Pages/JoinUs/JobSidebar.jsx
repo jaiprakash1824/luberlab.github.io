@@ -1,20 +1,20 @@
-import React, { useState } from 'react';
-import './JobSidebar.css';
-import data from '../../../public/assets/data/jobs.json';
+import { useState } from "react";
+import "./JobSidebar.css";
+import data from "../../../public/assets/data/jobs.json";
 
 const JobSidebar = ({ setSelectedCategory, selectedCategory }) => {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
   const { categories } = data;
 
   const filteredCategories = searchTerm
-    ? categories.filter(category =>
+    ? categories.filter((category) =>
         category.name.toLowerCase().includes(searchTerm.toLowerCase())
       )
     : categories;
 
-  const handleCategoryClick = category => {
+  const handleCategoryClick = (category) => {
     if (selectedCategory === category) {
-      setSelectedCategory(''); 
+      setSelectedCategory("");
     } else {
       setSelectedCategory(category);
     }
@@ -33,7 +33,7 @@ const JobSidebar = ({ setSelectedCategory, selectedCategory }) => {
           <li
             key={category.name}
             onClick={() => handleCategoryClick(category.name)}
-            className={selectedCategory === category.name ? 'active' : ''}
+            className={selectedCategory === category.name ? "active" : ""}
           >
             {category.name}
           </li>
