@@ -8,7 +8,7 @@ const NewCardMain = ({ member }) => {
       <div className="news-card-inner">
         <div className="new-card-image">
           <img
-            src={baseURL + "assets/logo/uta_engineering.jpg"}
+            src={baseURL + "assets/sample.png"}
             className="card-image-style"
           ></img>
         </div>

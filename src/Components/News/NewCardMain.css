@@ -7,7 +7,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  background-color: #046fc1;
+  background-color: #f3f8f9;
   border-radius: 1.5rem;
   transition: all 0.3s ease-in-out;
   margin: 0 auto;
@@ -21,7 +21,7 @@
     auto-fit,
     minmax(300px, 1fr)
   ); /* Responsive grid with flexible columns */
-  gap: 20px; /* Space between grid items */
+  gap: 15px; /* Space between grid items */
   padding: 20px; /* Padding around the container */
 }
 
@@ -44,7 +44,8 @@
 }
 
 .card-image-style {
-  height: 12rem;
+  height: fit-content;
+  width: 22rem;
 }
 
 /* Image styling */
@@ -67,7 +68,7 @@
 .news-card-inner {
   padding: 0.7rem 1rem 1rem 1rem;
   display: grid;
-  height: 100%; /* Use full height available */
+  height: 34rem; /* Use full height available */
   overflow: auto;
   grid-template-rows: 1fr 2fr; /* Two-column grid layout inside the card */
   gap: 1rem;
@@ -94,6 +95,7 @@
 /* Subtitle styling */
 .news-card-subtitle {
   text-align: justify;
+  color: #313131;
 }
 
 /* Role, advisor, and description styling */
@@ -101,7 +103,7 @@
 .news-card-advisor,
 .news-card-description {
   font-size: 0.875rem;
-  color: rgba(20, 121, 171, 0.6);
+  color: rgba(3, 9, 11, 0.6);
   padding-top: 0.35rem;
   padding-bottom: 0.35rem;
   line-height: 1.1rem;
@@ -114,6 +116,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   max-height: calc(1.1rem * 5 + 0.35rem * 2);
+  color: #313131;
 }
 
 .news-card-description ul {
