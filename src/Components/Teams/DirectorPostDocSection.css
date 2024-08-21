@@ -1,0 +1,13 @@
+.director-postdoc-section {
+  background-color: #0064b1; /* Blue background color */
+  padding: 40px 0; /* Add padding to the top and bottom */
+}
+
+.director-postdoc-section .director-content,
+.director-postdoc-section .postdoc-content {
+  background-color: transparent; /* Background color for the content */
+  border-radius: 8px; /* Rounded corners for the content */
+  padding: 20px;
+  max-width: 1200px; /* Max width to prevent content from spreading too wide */
+  margin: 0 auto; /* Center the content */
+}

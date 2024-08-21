@@ -4,21 +4,25 @@
   align-items: center;
   gap: 16px;
   padding: 20px;
-  background-color: transparent; /* Magnolia color */
+  background-color: transparent;
   width: 100%;
   color: black;
+}
+
+.alumni-section-team {
+  background-color: #0064b1;
 }
 
 .content-section {
   padding: 10px;
   text-align: center;
+}
+.team-wrapper {
   background-color: #f9f7f7;
 }
 
-h1,
-h2 {
-  color: #343a40;
-  margin: 20px 0; /* Adjusted margin */
+.content-section h2 {
+  color: #343a40 !important;
 }
 p {
   color: #343a40;

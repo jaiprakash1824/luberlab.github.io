@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  /* background-color: transparent; */
+  background-color: white;
   border-radius: 1.5rem;
   transition: all 0.3s ease-in-out;
   margin: 0 auto;
@@ -17,13 +17,6 @@
 .team-card:hover .team-card-image {
   background: #007bff;
 }
-/* .team-card-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 200px;
-  overflow: hidden;
-} */
 
 .team-card-image {
   display: flex;
@@ -94,7 +87,7 @@
   font-weight: 400;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 5; /* Limit to 5 lines */
+  -line-clamp: 5; /* Limit to 5 lines */
   overflow: hidden;
   text-overflow: ellipsis;
   max-height: calc(1.1rem * 5 + 0.35rem * 2);

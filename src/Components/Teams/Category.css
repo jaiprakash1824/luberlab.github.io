@@ -4,21 +4,26 @@
   box-sizing: border-box;
 }
 .category-team {
-  /* background-image: url("../../utilities/images/team_background.png"); */
-  background-size: cover; /* This makes sure the image covers the entire div */
-  background-position: center; /* This centers the image */
-  background-repeat: no-repeat; /* This prevents the image from repeating */
-  background-color: #f9f7f7;
-  padding: 20px; /* Example padding */
-}
-.category-title-team {
-  color: black;
+  background-color: transparent;
 }
 
 .category-title-team {
+  color: #0064b1;
   text-align: center;
-  font-size: 2rem;
   margin-bottom: 1rem;
+  font-size: 3em;
+  font-family: "SF Pro Black", sans-serif;
+  font-weight: 900;
+  letter-spacing: 1.1px;
+}
+.category-title-team-blue {
+  color: white !important;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 3em;
+  font-family: "SF Pro Black", sans-serif;
+  font-weight: 900;
+  letter-spacing: 1.1px;
 }
 
 .cover-wrapper-team {
