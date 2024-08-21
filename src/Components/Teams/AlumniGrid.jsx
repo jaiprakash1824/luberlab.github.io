@@ -15,7 +15,7 @@ const AlumniGrid = () => {
   };
 
   useEffect(() => {
-    Papa.parse(`${baseURL}assets/alumni.csv`, {
+    Papa.parse(`${baseURL}/assets/alumni.csv`, {
       download: true,
       header: true,
       skipEmptyLines: true,
