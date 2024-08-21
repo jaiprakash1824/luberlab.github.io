@@ -24,7 +24,7 @@ const CsvReader = () => {
   });
 
   useEffect(() => {
-    fetch(`${baseURL}public/research.csv`)
+    fetch(`${baseURL}/research.csv`)
       .then((response) => response.text())
       .then((csv) => {
         Papa.parse(csv, {
