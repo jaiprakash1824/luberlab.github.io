@@ -2,7 +2,6 @@ body {
   background-color: black;
   margin: 0;
   padding: 0;
-  /* overflow-x: hidden; */
 }
 
 .header {
@@ -98,36 +97,60 @@ body {
   display: none;
 }
 
-.ant-drawer-body {
-  background-color: black !important;
+.drawer .ant-drawer-body {
+  background-color: #001529 !important;
 }
 
-.ant-drawer-body .ant-menu {
-  background-color: black !important;
+.drawer .ant-drawer-body .ant-menu {
+  background-color: #001529 !important;
 }
 
-.ant-drawer-body .ant-menu-item {
+.drawer .ant-drawer-body .ant-menu-item {
   background-color: transparent !important;
+  color: white !important;
+  border-radius: 8px;
+}
+
+.drawer .ant-drawer-body .ant-menu-item a {
   color: white !important;
 }
 
-.ant-drawer-body .ant-menu-item a {
+.drawer .ant-drawer-body .ant-menu-item:hover,
+.drawer .ant-drawer-body .ant-menu-item-active,
+.drawer .ant-drawer-body .ant-menu-item-selected {
+  background-color: #1890ff !important; /* Change to a darker blue */
   color: white !important;
 }
 
-.ant-drawer-body .ant-menu-item:hover,
-.ant-drawer-body .ant-menu-item-active,
-.ant-drawer-body .ant-menu-item-selected {
-  background-color: transparent !important;
-  color: #0064b1 !important;
+.drawer .ant-drawer-body .ant-menu-item-selected a,
+.drawer .ant-drawer-body .ant-menu-item-active a {
+  color: white !important;
 }
 
-.ant-drawer-body .ant-menu-item-selected a,
-.ant-drawer-body .ant-menu-item-active a {
-  color: #0064b1 !important;
+.drawer .ant-drawer-body .ant-menu-item a:hover {
+  color: white !important;
 }
 
-@media (max-width: 768px) {
+/* Modify the contactButton styling within the drawer */
+.drawer .ant-drawer-body .contactButton {
+  background: none;
+  border-radius: 0;
+  padding: 0;
+  color: white !important;
+  font-family: "SF Pro Black", sans-serif;
+  font-size: 1em;
+  font-weight: 900;
+  letter-spacing: 1.1px;
+  text-align: center;
+  display: block;
+}
+
+.drawer .ant-drawer-body .contactButton:hover {
+  color: #1890ff !important;
+  background-color: transparent;
+}
+
+@media (max-width: 900px) {
   .menuButton {
     display: block;
     background: transparent;
@@ -146,7 +169,7 @@ body {
     margin: 20px 0;
   }
 
-  .ant-drawer-body .ant-menu-inline .ant-menu-item {
+  .drawer .ant-drawer-body .ant-menu-inline .ant-menu-item {
     display: flex;
     justify-content: center;
   }

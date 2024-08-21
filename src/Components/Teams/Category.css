@@ -4,11 +4,11 @@
   box-sizing: border-box;
 }
 .category-team {
-  background-image: url("../../utilities/images/team_background.png");
+  /* background-image: url("../../utilities/images/team_background.png"); */
   background-size: cover; /* This makes sure the image covers the entire div */
   background-position: center; /* This centers the image */
   background-repeat: no-repeat; /* This prevents the image from repeating */
-  /* Add other styling as needed */
+  background-color: #f9f7f7;
   padding: 20px; /* Example padding */
 }
 .category-title-team {

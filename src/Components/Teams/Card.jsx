@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import "./card.css";
 import { CardContext } from "./CardContext";
 import Category from "./Category";
-import Carousel from "./TeamCarousel";
+// import Carousel from "./TeamCarousel";
 import AlumniSection from "./AlumniSection";
 
 // Define the CategorySection component
@@ -45,7 +45,7 @@ const Card = () => {
 
   return (
     <div>
-      <Carousel />
+      {/* <Carousel /> */}
       <CategorySection title="Director" members={cards.lead} />
       <CategorySection title="Post Doc" members={cards.postDoc} />
       <CategorySection title="PhD" members={cards.phd} />

@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import { MenuOutlined } from "@ant-design/icons";
 import "./header.css";
 
-const Header = () => {
+const AppHeader = () => {
   const [visible, setVisible] = useState(false);
   const location = useLocation();
 
@@ -60,7 +60,7 @@ const Header = () => {
     {
       key: "/contact",
       label: (
-        <Link to="/contact" className="contactButton" onClick={closeDrawer}>
+        <Link to="/contact" onClick={closeDrawer} className="contactButton">
           Join Us
         </Link>
       ),
@@ -90,6 +90,7 @@ const Header = () => {
         placement="right"
         onClose={closeDrawer}
         open={visible}
+        className="drawer"
       >
         <Menu
           mode="inline"
@@ -101,4 +102,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default AppHeader;
