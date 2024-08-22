@@ -316,18 +316,30 @@ h2 {
 }
 
 
-
 @media (max-width: 426px) { /* Adjust the breakpoint as needed */
   .Publish-main {
     display: flex;
     flex-direction: column;
     height: 100%;
   }
+
+  .paper-label, .field, .year{
+     font-size: 12px;
+  }
+
+  .name{
+    font-size: 20px;
+  }
+  .authors{
+    font-size: 12px;
+  }
 .manage{
   display: flex;
   align-items: stretch; 
 }
+
   .left-filters {
+    font-size: 12px;
     position: absolute;
     left: 0;
     width: 60%; /* Adjust width as needed */
@@ -341,6 +353,7 @@ h2 {
     border: 2px solid #ccc; 
     border-radius: 15px;
   }
+
   .search-bar input[type="text"] {
     width: 92%;
 }
@@ -348,12 +361,12 @@ h2 {
     display: inline-block;
     width: 100px; /* Adjust width as needed */
     text-align: center; /* Center align text */
-    font-size: 18px;
+    font-size: 14px;
   }
+
   .left-filters.show {
     transform: translate(30px, 16px);
     width: 80%;
-
   }
 
   .filter-option h4 {
@@ -368,6 +381,7 @@ h2 {
     cursor: pointer;
     color: black;
     width: 35%;
+
   }
 
   .right-content {

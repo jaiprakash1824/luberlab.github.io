@@ -4,15 +4,12 @@ import JobListings from "./JobListings";
 import "./JoinUs.css";
 
 const JoinUs = () => {
-  const [selectedCategory, setSelectedCategory] = useState("");
+  const [selectedJob, setSelectedJob] = useState(null);
 
   return (
     <div className="join-us-container">
-      <JobSidebar
-        setSelectedCategory={setSelectedCategory}
-        selectedCategory={selectedCategory}
-      />
-      <JobListings selectedCategory={selectedCategory} />
+      <JobSidebar setSelectedJob={setSelectedJob} selectedJob={selectedJob} />
+      <JobListings selectedJob={selectedJob} />
     </div>
   );
 };
