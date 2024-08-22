@@ -1,10 +1,10 @@
 .wrapper-class-teams {
-  background-color: white;
+  background-color: rgb(189, 214, 230);
 }
 
 .cover-wrapper-news {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   padding: 2rem;
   gap: 1rem;
 }

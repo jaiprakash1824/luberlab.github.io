@@ -3,9 +3,9 @@ import "./ResHeader.css";
 
 const ResHeader = () => {
   return (
-    <div className="header">
+    <div className="Researchheader">
       <div>
-        <p className="head">All Research</p>
+        <div className="Rhead">All Research</div>
       </div>
     </div>
   );

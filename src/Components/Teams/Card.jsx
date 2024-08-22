@@ -1,60 +1,29 @@
 import { useContext } from "react";
-import PropTypes from "prop-types";
 import "./card.css";
 import { CardContext } from "./CardContext";
-import Category from "./Category";
-import Carousel from "./TeamCarousel";
-import AlumniSection from "./AlumniSection";
-
-// Define the CategorySection component
-const CategorySection = ({ title, members }) => (
-  <div className="content-section">
-    <Category title={title} members={members} />
-  </div>
-);
-
-CategorySection.propTypes = {
-  title: PropTypes.string.isRequired,
-  members: PropTypes.arrayOf(
-    PropTypes.shape({
-      Achievements: PropTypes.string,
-      Areas_of_Research_Interest: PropTypes.string,
-      Bio: PropTypes.string,
-      Degree: PropTypes.string,
-      Designation: PropTypes.string,
-      Dissertation_Committee_Members: PropTypes.string,
-      Dissertation_topic: PropTypes.string,
-      GitHub_URL: PropTypes.string,
-      Google_Scholar_URL: PropTypes.string,
-      Graduation_Date: PropTypes.string,
-      LinkedIn_URL: PropTypes.string,
-      Mentors: PropTypes.string,
-      Name: PropTypes.string.isRequired,
-      Education: PropTypes.string,
-      Research_Category: PropTypes.string,
-      Resume_CV: PropTypes.string,
-      Twitter_URL: PropTypes.string,
-      email: PropTypes.string,
-      photo: PropTypes.string.isRequired,
-    })
-  ).isRequired,
-};
+import DirectorPostDocSection from "./DirectorPostDocSection";
+import PhdSection from "./PhdSection";
+import MasterSection from "./MasterSection";
+import UndergraduateSection from "./UndergraduateSection";
+import AlumniGrid from "./AlumniGrid";
 
 const Card = () => {
   const { cards } = useContext(CardContext);
 
   return (
-    <div>
-      <Carousel />
-      <CategorySection title="Director" members={cards.lead} />
-      <CategorySection title="Post Doc" members={cards.postDoc} />
-      <CategorySection title="PhD" members={cards.phd} />
-      <CategorySection title="Masters" members={cards.masters} />
-      <CategorySection title="Undergraduate" members={cards.undergrad} />
+    <div className="team-wrapper">
+      <DirectorPostDocSection
+        directorMembers={cards.lead}
+        postDocMembers={cards.postDoc}
+      />
+      <PhdSection phdMembers={cards.phd} />
+      <MasterSection masterMembers={cards.masters} />
+      <UndergraduateSection undergradMembers={cards.undergrad} />
 
-      <div className="content-section">
-        <AlumniSection />
+      <div className="alumni-section-team">
+        <AlumniGrid />
       </div>
+
       <div className="content-section">
         <h2>Join Us</h2>
         <p>

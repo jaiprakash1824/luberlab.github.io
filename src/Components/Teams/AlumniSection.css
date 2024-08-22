@@ -1,17 +1,16 @@
 /* AlumniSection.css */
 .alumni-section {
   margin: 10px 0;
-  border: 1px solid #ddd;
+  border: 1px solid #f9f7f7;
   border-radius: 8px;
-  background: #d3e9f3;
+  background: #f9f7f7;
 }
-
 .alumni-header {
-  background-color: #f8f9fa;
+  background-color: #f9f7f7;
   padding: 10px 10px;
   cursor: pointer;
   font-size: 1.5rem;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #f9f7f7;
   color: black;
 }
 

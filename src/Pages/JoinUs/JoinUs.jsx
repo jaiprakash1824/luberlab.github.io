@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import JobSidebar from './JobSidebar';
-import JobListings from './JobListings';
-import './JoinUs.css';
+import { useState } from "react";
+import JobSidebar from "./JobSidebar";
+import JobListings from "./JobListings";
+import "./JoinUs.css";
 
 const JoinUs = () => {
   const [selectedJob, setSelectedJob] = useState(null);

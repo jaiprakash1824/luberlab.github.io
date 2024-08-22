@@ -96,80 +96,82 @@ const CsvReader = () => {
           <span className="plus">+ Filters</span>
         )}
       </div>
-      <div className={`left-filters ${filtersVisible ? "show" : "hide"}`}>
-        <div className="filters">
-          <div className="search-bar">
-            <input
-              type="text"
-              placeholder="Search papers by title"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+      <div className="manage">
+        <div className={`left-filters ${filtersVisible ? "show" : "hide"}`}>
+          <div className="filters">
+            <div className="search-bar">
+              <input
+                type="text"
+                placeholder="Search papers by title"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+            </div>
+            <SortFilter
+              sortOrder={sortOrder}
+              setSortOrder={setSortOrder}
+              filterVisibility={filterVisibility}
+              toggleFilterSectionVisibility={toggleFilterSectionVisibility}
+            />
+            <TypeFilter
+              data={data}
+              selectedType={selectedType}
+              setSelectedType={setSelectedType}
+              filterVisibility={filterVisibility}
+              toggleFilterSectionVisibility={toggleFilterSectionVisibility}
+            />
+            <YearFilter
+              data={data}
+              selectedYears={selectedYears}
+              setSelectedYears={setSelectedYears}
+              filterVisibility={filterVisibility}
+              toggleFilterSectionVisibility={toggleFilterSectionVisibility}
+            />
+            <FieldFilter
+              data={data}
+              selectedField={selectedField}
+              setSelectedField={setSelectedField}
+              filterVisibility={filterVisibility}
+              toggleFilterSectionVisibility={toggleFilterSectionVisibility}
             />
           </div>
-          <SortFilter
-            sortOrder={sortOrder}
-            setSortOrder={setSortOrder}
-            filterVisibility={filterVisibility}
-            toggleFilterSectionVisibility={toggleFilterSectionVisibility}
-          />
-          <TypeFilter
-            data={data}
-            selectedType={selectedType}
-            setSelectedType={setSelectedType}
-            filterVisibility={filterVisibility}
-            toggleFilterSectionVisibility={toggleFilterSectionVisibility}
-          />
-          <YearFilter
-            data={data}
-            selectedYears={selectedYears}
-            setSelectedYears={setSelectedYears}
-            filterVisibility={filterVisibility}
-            toggleFilterSectionVisibility={toggleFilterSectionVisibility}
-          />
-          <FieldFilter
-            data={data}
-            selectedField={selectedField}
-            setSelectedField={setSelectedField}
-            filterVisibility={filterVisibility}
-            toggleFilterSectionVisibility={toggleFilterSectionVisibility}
-          />
         </div>
-      </div>
-      <div className={`right-content ${filtersVisible ? "show" : "hide"}`}>
-        <div className="paper-container">
-          {sortedPapers.length > 0 ? (
-            sortedPapers.map((row, index) => (
-              <div className="paper" key={index}>
-                <div className="meta">
-                  <span className="paper-label">{row.Paper}</span>
-                  <span className="field">{row.Field}</span>
-                  <span className="year">{row.Year}</span>
+        <div className={`right-content ${filtersVisible ? "show" : "hide"}`}>
+          <div className="paper-container">
+            {sortedPapers.length > 0 ? (
+              sortedPapers.map((row, index) => (
+                <div className="paper" key={index}>
+                  <div className="meta">
+                    <span className="paper-label">{row.Paper}</span>
+                    <span className="field">{row.Field}</span>
+                    <span className="year">{row.Year}</span>
+                  </div>
+                  <h2 className="name">
+                    <a
+                      href={row.Link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        color: "black",
+                        fontWeight: "bold",
+                        textDecoration: "none",
+                      }}
+                    >
+                      {row.Title}
+                    </a>
+                  </h2>
+                  <p className="authors">
+                    {Object.keys(row)
+                      .slice(5) // Assuming authors start from index 5 in your data
+                      .map((authorKey) => row[authorKey])
+                      .join(", ")}
+                  </p>
                 </div>
-                <h2 className="name">
-                  <a
-                    href={row.Link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{
-                      color: "black",
-                      fontWeight: "bold",
-                      textDecoration: "none",
-                    }}
-                  >
-                    {row.Title}
-                  </a>
-                </h2>
-                <p className="authors">
-                  {Object.keys(row)
-                    .slice(5) // Assuming authors start from index 5 in your data
-                    .map((authorKey) => row[authorKey])
-                    .join(", ")}
-                </p>
-              </div>
-            ))
-          ) : (
-            <p>No papers found</p>
-          )}
+              ))
+            ) : (
+              <p>No papers found</p>
+            )}
+          </div>
         </div>
       </div>
     </div>

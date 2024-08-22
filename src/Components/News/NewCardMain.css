@@ -1,17 +1,28 @@
 /* Main card styling */
+/* Main card styling */
 .news-card {
-  height: 275px;
-  width: 90%;
+  width: 100%; /* Full width within grid cell */
   text-align: center;
+  display: flex; /* Flexbox for internal layout */
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  background-color: #0064b1;
+  background-color: #f3f8f9;
   border-radius: 1.5rem;
   transition: all 0.3s ease-in-out;
   margin: 0 auto;
   animation: fadeIn 1s ease-in-out;
   border: 2px solid rgba(0, 0, 0, 0.03);
+}
+
+.news-card-container {
+  display: grid; /* Use grid layout for the container */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Responsive grid with flexible columns */
+  gap: 15px; /* Space between grid items */
+  padding: 20px; /* Padding around the container */
 }
 
 /* Image hover effect */
@@ -20,10 +31,11 @@
 }
 
 /* Image container styling */
+
 .news-card-image {
   display: flex;
-  width: 155px;
-  height: 155px;
+  width: 60px; /* Adjust width */
+  height: 60px; /* Adjust height */
   justify-content: center;
   margin: 10px auto;
   border-radius: 50%;
@@ -32,13 +44,14 @@
 }
 
 .card-image-style {
-  height: 15rem;
+  height: fit-content;
+  width: 22rem;
 }
 
 /* Image styling */
 .news-card-image-img {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
   border-radius: 50%;
   border: 2px solid #fff;
@@ -47,20 +60,29 @@
 /* Card hover effect */
 .news-card:hover {
   text-decoration: none;
-  background-color: #007bff;
+  background-color: rgb(189, 214, 230);
   transform: scale(1.03);
+}
+
+.read-more-link {
+  color: #007bff;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.read-more-link:hover {
+  text-decoration: underline;
 }
 
 /* Inner card styling */
 .news-card-inner {
   padding: 0.7rem 1rem 1rem 1rem;
   display: grid;
-  height: 275px;
-  overflow: auto;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-grow: 1;
-  grid-template-columns: 1fr 2fr;
+  height: 34rem; /* Use full height available */
+  overflow: hidden;
+  grid-template-rows: 1fr 2fr; /* Two-column grid layout inside the card */
+  gap: 1rem;
 }
 
 /* Title styling */
@@ -84,6 +106,7 @@
 /* Subtitle styling */
 .news-card-subtitle {
   text-align: justify;
+  color: #313131;
 }
 
 /* Role, advisor, and description styling */
@@ -91,21 +114,20 @@
 .news-card-advisor,
 .news-card-description {
   font-size: 0.875rem;
-  color: rgba(20, 121, 171, 0.6);
+  color: rgba(3, 9, 11, 0.6);
   padding-top: 0.35rem;
-  padding-bottom: 0.35rem;
+  padding-bottom: 0.45rem;
   line-height: 1.1rem;
   font-weight: 400;
 }
 
 /* Description text styling with line clamp */
 .news-card-description {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 5;
+  display: grid;
   overflow: hidden;
   text-overflow: ellipsis;
   max-height: calc(1.1rem * 5 + 0.35rem * 2);
+  color: #313131;
 }
 
 .news-card-description ul {
@@ -125,7 +147,7 @@
 
 /* Miscellaneous links styling */
 .news-card-links > .news-card-misc {
-  display: flex;
+  display: grid;
   flex-wrap: wrap;
   gap: 0.5rem;
   align-items: flex-start;

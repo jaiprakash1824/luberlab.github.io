@@ -4,11 +4,13 @@ import NewCardMain from "./NewCardmain.jsx";
 
 const NewsList = ({ members }) => {
   return (
-    <div className="category-news">
-      <div className="cover-wrapper-news">
-        {members.map((member, index) => (
-          <NewCardMain key={index} member={member} />
-        ))}
+    <>
+      <div className="category-news">
+        <div className="cover-wrapper-news">
+          {members.map((member, index) => (
+            <NewCardMain key={index} member={member} />
+          ))}
+        </div>
       </div>
       <div className="content-section">
         <h2>Join Us</h2>
@@ -17,7 +19,7 @@ const NewsList = ({ members }) => {
           out to us for more information.
         </p>
       </div>
-    </div>
+    </>
   );
 };
 

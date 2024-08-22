@@ -1,16 +1,27 @@
 import PropTypes from "prop-types";
+import React, { useState } from "react";
 import "./NewCardMain.css";
 const baseURL = import.meta.env.BASE_URL;
 
 const NewCardMain = ({ member }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const toggleReadMore = () => {
+    setIsExpanded(!isExpanded);
+  };
+  const maxLength = 275; // Maximum characters to display before truncating
+  const shouldTruncate = member.content.length > maxLength;
+  const displayedText = isExpanded
+    ? member.content
+    : member.content.slice(0, maxLength);
   return (
     <div className="news-card">
       <div className="news-card-inner">
         <div className="new-card-image">
           <img
-            src={baseURL + "assets/logo/uta_engineering.jpg"}
+            src={baseURL + "assets/sample.png"}
             className="card-image-style"
-          ></img>
+            alt="Sample"
+          />
         </div>
         <div>
           <div className="news-card-top">
@@ -23,7 +34,15 @@ const NewCardMain = ({ member }) => {
                 <span>{member.date}</span>
               )}
             </div>
-            <div className="news-card-subtitle">{member.content}</div>
+            <div className="news-card-subtitle">
+              {displayedText}
+              {shouldTruncate && !isExpanded && "..."}
+              {shouldTruncate && (
+                <span onClick={toggleReadMore} className="read-more-link">
+                  {isExpanded ? " Show Less" : " Read More"}
+                </span>
+              )}
+            </div>
           </div>
           {member.link && (
             <div className="news-card-learn-more">
