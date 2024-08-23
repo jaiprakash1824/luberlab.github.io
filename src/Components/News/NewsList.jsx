@@ -27,6 +27,7 @@ NewsList.propTypes = {
   members: PropTypes.arrayOf(
     PropTypes.shape({
       date: PropTypes.string,
+      title: PropTypes.string,
       content: PropTypes.string.isRequired,
       link: PropTypes.string,
     })

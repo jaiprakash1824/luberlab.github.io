@@ -16,6 +16,7 @@ export const NewsCardContext = ({ children }) => {
       complete: (results) => {
         const parsedData = results.data.map((item) => ({
           date: item.date, // Keep date as a string
+          title: item.title,
           content: item.content,
           link: item.link,
         }));
