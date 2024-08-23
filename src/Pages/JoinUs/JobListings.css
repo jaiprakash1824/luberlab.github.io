@@ -6,10 +6,16 @@
   padding: 20px;
   box-sizing: border-box;
   background-color: #f8f9fa;
-  margin-left: 50px;
+  margin-left: 260px;  
   transition: margin-left 0.3s ease;
+  font-family: 'SF Pro Black', sans-serif;
 }
-
+@media (max-width: 768px) {
+  .job-listings {
+    margin-left: 0;    
+    padding: 10px;      
+  }
+}
 .job-card {
   background-color: #ffffff;
   border-radius: 8px;
@@ -44,18 +50,19 @@
 
 @media (max-width: 768px) {
   .job-card .apply-button {
-    position: static; /* Make it part of the normal document flow */
-    display: block; /* Full width */
+    position: static;
+    display: block; 
     width: 100%;
-    margin-top: 20px; /* Add some space at the top */
+    margin-top: 20px; 
   }
 }
 .job-card.description, .job-card.minimum-qualification {
   font-size: 0.95rem;
   color: black;
-  white-space: normal; /* Ensure that text wraps */
-  overflow-wrap: break-word; /* Break long words that can't fit on one line */
+  white-space: normal; 
+  overflow-wrap: break-word; 
   text-align: justify;
+  
 }
 
 .job-card.minimum-qualification h5 {

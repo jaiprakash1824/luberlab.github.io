@@ -4,6 +4,7 @@ import {MenuOutlined, CloseOutlined} from '@ant-design/icons';
 import './JobSidebar.css';
 import data from '../../../public/assets/data/jobs2.json';
 
+
 const JobSidebar = ({ setSelectedJob, selectedJob }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);

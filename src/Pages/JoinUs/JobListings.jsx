@@ -1,6 +1,6 @@
 import React from 'react';
 import './JobListings.css';
-// import MyComponent from './MyComponent';
+import MyComp from './Mycomp';  
 
 const JobListings = ({ selectedJob }) => {
   return (
@@ -12,25 +12,25 @@ const JobListings = ({ selectedJob }) => {
             <button style={{ fontWeight: 'bold' }} className="apply-button">APPLY</button>
           </div>
           <hr />
-          <p className="description">
-            {Array.isArray(selectedJob.description) 
-              ? selectedJob.description.map((desc, index) => (
-                  <React.Fragment key={index}>
-                    {desc}
-                    <br />
-                  </React.Fragment>
-                ))
-              : selectedJob.description
-            }
-          </p>
-          <div className="minimum-qualification">
-            <h5>Additional Information</h5>
-            <ul>
-              {selectedJob.additionalinformation.map((qual, index) => (
-                <li key={index}>{qual}</li>
+          {Array.isArray(selectedJob.description) ? (
+            <div className="description">
+              {selectedJob.description.map((desc, index) => (
+                <MyComp key={index} description={desc} />
               ))}
-            </ul>
-          </div>
+            </div>
+          ) : (
+            <MyComp description={selectedJob.description} />
+          )}
+          {selectedJob.additionalinformation && selectedJob.additionalinformation.length > 0 && (
+            <div className="minimum-qualification">
+              <h5>Additional Information</h5>
+              <ul>
+                {selectedJob.additionalinformation.map((info, index) => (
+                  <li key={index}>{info}</li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
       ) : (
         <p>Select a job to see more details.</p>
