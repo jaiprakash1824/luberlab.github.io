@@ -18,7 +18,7 @@ const NewCardMain = ({ member }) => {
       <div className="news-card-inner">
         <div className="new-card-image">
           <img
-            src={baseURL + "assets/sample.png"}
+            src={baseURL + "assets/sample.jpg"}
             className="card-image-style"
             alt="Sample"
           />
