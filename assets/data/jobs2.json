@@ -1,120 +1,31 @@
 {
     "jobs": [
+      
       {
         "id": 1,
-        "title": "Front End Developer",
-        "description": "Develop and maintain the user interface of our web applications.",
-        "minimumQualification": [
-          "Bachelor's degree in Computer Science or related field.",
-          "Experience with HTML, CSS, and JavaScript.",
-          "Familiarity with front-end frameworks like React or Angular."
+        "title": "Non-student Positions",
+        "description": ["1. Postdoctoral Fellowship in Deep Learning Applied to Cancer (dry lab).",
+                        "2. Associate Computational Biologists (only B.S. required, dry lab).",
+                        "3. Staff Scientist",
+                        "4. Software Engineer"
+                      ],
+        "additionalinformation": [
+          "1. Postdoctoral Fellowship in Deep Learning Applied to Cancer (dry lab).",
+          "2. Associate Computational Biologists (only B.S. required, dry lab).",
+          "3. Staff Scientist",
+          "4. Software Engineer"
         ]
       },
       {
         "id": 2,
-        "title": "Back End Developer",
-        "description": "Design and implement the server-side logic of our web applications.",
-        "minimumQualification": [
-          "Bachelor's degree in Computer Science or related field.",
-          "Experience with server-side languages such as Node.js, Python, or Java.",
-          "Knowledge of database management and API design."
-        ]
-      },
-      {
-        "id": 3,
-        "title": "Full Stack Developer",
-        "description": "Develop both the front-end and back-end components of our web applications.",
-        "minimumQualification": [
-          "Bachelor's degree in Computer Science or related field.",
-          "Experience with both front-end and back-end technologies.",
-          "Strong problem-solving skills and ability to work across the stack."
-        ]
-      },
-      {
-        "id": 4,
-        "title": "Software Engineer",
-        "description": "Design, develop, and maintain complex software systems.",
-        "minimumQualification": [
-          "Bachelor's degree in Computer Science or related field.",
-          "Experience with software development methodologies.",
-          "Proficiency in programming languages such as Java, C++, or Python."
-        ]
-      },
-      {
-        "id": 5,
-        "title": "Senior Software Engineer",
-        "description": "Lead the development of critical software components and mentor junior engineers.",
-        "minimumQualification": [
-          "Bachelor's degree in Computer Science or related field.",
-          "Extensive experience in software development and team leadership.",
-          "Strong understanding of software architecture and design patterns."
-        ]
-      },
-      {
-        "id": 6,
-        "title": "DevOps Engineer",
-        "description": "Automate and streamline the software delivery process.",
-        "minimumQualification": [
-          "Bachelor's degree in Computer Science or related field.",
-          "Experience with DevOps tools and practices.",
-          "Knowledge of cloud services and automation tools."
-        ]
-      },
-      {
-        "id": 7,
-        "title": "Data Analyst",
-        "description": "Collect, analyze, and interpret data to support business decisions.",
-        "minimumQualification": [
-          "Bachelor's degree in Data Science, Statistics, or related field.",
-          "Experience with data analysis tools and techniques.",
-          "Strong analytical and problem-solving skills."
-        ]
-      },
-      {
-        "id": 8,
-        "title": "Data Scientist",
-        "description": "Apply machine learning and statistical methods to extract insights from data.",
-        "minimumQualification": [
-          "Master's degree in Data Science, Machine Learning, or related field.",
-          "Experience with machine learning algorithms and frameworks.",
-          "Strong programming skills in Python or R."
-        ]
-      },
-      {
-        "id": 9,
-        "title": "Data Engineer",
-        "description": "Design and build data pipelines to enable seamless data processing and storage.",
-        "minimumQualification": [
-          "Bachelor's degree in Computer Science, Engineering, or related field.",
-          "Experience with data engineering tools and technologies.",
-          "Strong skills in SQL and ETL processes."
-        ]
-      },
-      {
-        "id": 10,
-        "title": "GPU Architect",
-        "description": "Design and optimize the graphics processing unit (GPU) architecture.",
-        "minimumQualification": [
-          "Master's degree in Computer Engineering or related field.",
-          "Experience with GPU architecture and design.",
-          "Strong knowledge of computer graphics and parallel computing."
-        ]
-      },
-      {
-        "id": 11,
-        "title": "Graphics Engineer",
-        "description": "Develop high-performance graphics and visualization software.",
-        "minimumQualification": [
-          "Bachelor's degree in Computer Science, Graphics, or related field.",
-          "Experience with graphics programming and rendering techniques.",
-          "Proficiency in graphics APIs such as OpenGL or DirectX."
-        ]
-      },
-      {
-        "id": 12,
         "title": "Postdoctoral Fellowship in Deep Learning Applied to Cancer (dry lab)",
-        "description": "The overarching focus of Dr. Jacob Luber’s lab is building computational tools and frameworks that at massive scale allow for cancer imaging data to be 1) contextualized in the oncology clinic to improve patient outcomes and 2) leveraged at the bench to augment drug discovery efforts. ",
-        "minimumQualification": [
+        "description": [
+    "The Luber Lab, located in the Department of Computer Science and Engineering in the College of Engineering at The University of Texas at Arlington, is recruiting two postdoctoral fellows with experience in vision transformers, generative AI, pathology informatics, deep learning architecture design, or distributed model training.",
+    "The current focus areas of the lab include: 1) Generative AI for medical imaging, 2) Deep learning based petabyte scale pathology compression, search, and integration with EHR.",
+    "Other areas include computational design of microbial immunotherapy augmentations, integrating polygenic risk scores with imaging using ViT in the operating room, and developing imaging processing techniques for complex microscopy that integrates single cell sequencing.",
+    "A potential candidate could join \n these existing projects or move in a new but related area."
+  ],
+        "additionalinformation": [
           "Applicants should have a doctorate in computer science, biomedical informatics, or a related quantitative field with substantial experience in either PyTorch, Keras, and/or Tensorflow.",
           "Experience with computer vision algorithms and libraries.",
           "Strong programming skills in Python or C++."
