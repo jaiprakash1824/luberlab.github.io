@@ -60,8 +60,8 @@ const JobSidebar = ({ setSelectedJob, selectedJob }) => {
   return (
     <>
       {isMobile && (
-        <Button className="menuButton" type="primary" 
-        icon={mobileDrawerVisible ? <CloseOutlined style={{ color: 'white' }} /> : <MenuOutlined style={{ color: 'black' }} />}
+        <Button className="sidebarMenuButton" type="primary" 
+        icon={mobileDrawerVisible ? <CloseOutlined style={{ color: 'white', background: "transparent"}} /> : <MenuOutlined style={{ color: 'black' }} />}
         onClick={() => setMobileDrawerVisible(!mobileDrawerVisible)} />
       )}
       {isMobile ? (

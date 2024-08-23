@@ -7,14 +7,16 @@
   z-index: 1000;
 }
 
-.menuButton {
+.sidebarMenuButton {
   display: none;
   position: fixed;
   top: 90px;
   left: 20px;
   z-index: 1001;
   color: black;
+  background-color: transparent;
 }
+
 
 .sidebarSearch {
   width: calc(100% - 30px);
@@ -25,7 +27,7 @@
 }
 
 @media (max-width: 768px) {
-  .menuButton {
+  .sidebarMenuButton {
     display: block;
   }
 

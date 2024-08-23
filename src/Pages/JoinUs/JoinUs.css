@@ -3,8 +3,8 @@
   display: flex;
   flex-direction: row; 
   align-items: stretch;
-  height: 100vh; 
-  overflow: hidden; 
+  height: 100vh; /* Changed from height to min-height */
+  overflow-y: auto; 
   background-color: #f7f7f7; 
   position: relative;
 }

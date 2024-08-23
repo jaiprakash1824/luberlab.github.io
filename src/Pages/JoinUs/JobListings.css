@@ -1,11 +1,13 @@
 .job-listings {
   flex-grow: 1;
-  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
   padding: 20px;
   box-sizing: border-box;
   background-color: #f8f9fa;
-  margin-left: 50px; 
-  transition: margin-left 0.3s ease; 
+  margin-left: 50px;
+  transition: margin-left 0.3s ease;
 }
 
 .job-card {
@@ -15,7 +17,8 @@
   margin-bottom: 20px;
   padding: 20px;
   width: 100%;
-  box-sizing: border-box; 
+  box-sizing: border-box;
+  overflow-y: auto;
 }
 
 .job-card h2 {
@@ -50,6 +53,9 @@
 .job-card.description, .job-card.minimum-qualification {
   font-size: 0.95rem;
   color: black;
+  white-space: normal; /* Ensure that text wraps */
+  overflow-wrap: break-word; /* Break long words that can't fit on one line */
+  text-align: justify;
 }
 
 .job-card.minimum-qualification h5 {
