@@ -8,6 +8,7 @@ import Footer from "./Components/Footer/footer.jsx";
 import ScrollToTop from "./Components/ScrollToTop/ScrollToTop.jsx";
 import Publications from "./Pages/Publications/Publications.jsx";
 import JobListings from "./Pages/JoinUs/JoinUs.jsx";
+import ResearchPage from "./Pages/Research/Research.jsx";
 
 import { MemberProvider } from "./Components/Teams/MemberContext"; // Adjust the path as needed
 import "./App.css";
@@ -25,6 +26,7 @@ function App() {
           <Route path="/news" element={<News />} />
           <Route path="/publications" element={<Publications />} />
           <Route path="/contact" element={<JobListings />} />
+          <Route path="/research" element={<ResearchPage />} />
         </Routes>
       </MemberProvider>
       <Footer />

@@ -37,13 +37,13 @@ const JobSidebar = ({ setSelectedJob, selectedJob }) => {
 
   const SidebarContent = (
     <>
-      <input
+      {/* <input                                                  //uncomment if searchbar is needed
         type="text"
         placeholder="Search jobs"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
         className="sidebarSearch"
-      />
+      /> */}
       <Menu
         mode="inline"
         selectedKeys={[selectedJob?.id?.toString()]}
