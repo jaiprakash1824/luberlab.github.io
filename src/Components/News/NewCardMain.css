@@ -1,7 +1,7 @@
 /* Main card styling */
 .news-card {
   width: 100%; /* Full width within grid cell */
-  height: 90%;
+  height: 20rem;
   text-align: center;
   display: flex; /* Flexbox for internal layout */
   flex-direction: column;
@@ -12,17 +12,19 @@
   transition: all 0.3s ease-in-out;
   margin: 0 auto;
   animation: fadeIn 1s ease-in-out;
-  border: 2px solid rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .news-card-container {
-  display: grid; /* Use grid layout for the container */
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(300px, 1fr)
-  ); /* Responsive grid with flexible columns */
-  gap: 15px; /* Space between grid items */
-  padding: 20px; /* Padding around the container */
+  display: flex; /* Use grid layout for the container */
+  grid-template-rows: repeat(
+    3,
+    1fr
+  ) !important; /* Responsive grid with flexible columns */
+  gap: 20px; /* Space between grid items */
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto; /* Padding around the container */
 }
 
 /* Image hover effect */
@@ -32,22 +34,33 @@
 
 /* Image container styling */
 
+/* Headline styling */
+.news-card-headline {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #052d57; /* Change this color based on your design */
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
 .news-card-image {
   display: flex;
-  width: 60px; /* Adjust width */
+  width: 100%; /* Adjust width */
   height: 60px; /* Adjust height */
   justify-content: center;
-  margin: 10px auto;
+  margin: 10px;
   border-radius: 50%;
   padding: 10px;
   background: #d3e9f3; /* Outer circle color */
 }
 
 .card-image-style {
-  height: 12rem;
-  width: 28rem;
-  border-radius: 1rem; /* Adjust the value as needed */
+  height: auto;
+  width: auto;
+  border-radius: 10px; /* Adjust the value as needed */
   object-fit: fill;
+  max-width: 10px;
+  max-height: 50px;
 }
 
 /* Image styling */
@@ -72,7 +85,7 @@
   text-decoration: none;
   background-color: rgb(243, 246, 248);
   transform: translateY(-10px);
-  border-color: #1765cc; /* Change the border color on hover */
+  border-color: #1765cc;
   box-shadow: 0 0 15px rgba(23, 101, 204, 0.7);
 }
 
@@ -84,34 +97,48 @@
   color: #052d57;
   cursor: pointer;
   font-weight: bold;
+  text-decoration: underline;
   margin-left: 5px;
 }
 
 .read-more-link:hover {
   text-decoration: underline;
+  color: #007bff;
 }
 
 /* Inner card styling */
 .news-card-inner {
-  padding: 0.7rem 1rem 1rem 1rem;
-  display: grid;
-  height: 28rem; /* Use full height available */
+  padding: 1.5rem 2rem 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  text-align: center;
+  max-height: 24rem; /* Use full height available */
   overflow: hidden;
   grid-template-rows: 1fr 2fr; /* Two-column grid layout inside the card */
-  gap: 1rem;
+  gap: 0.1rem;
+}
+
+.news-card-image-text {
+  display: flex;
+  align-items: center; /* Vertically align the image and text */
+  justify-content: center; /* Horizontally center the content */
+  gap: 10px; /* Space between the image and the text */
+  margin-bottom: 10px; /* Space below the image-text block */
 }
 
 /* Title styling */
 .news-card-title {
-  font-size: 1.4rem;
+  font-size: 0.8rem;
   text-transform: capitalize;
   font-weight: 600;
-  color: #313131;
+  color: rgba(0, 0, 0, 0.6);
   line-height: 1.3;
   text-align: left; /* Aligns text to the left */
   width: 100%; /* Ensures the title spans the full width of the container */
   margin-left: 0;
   margin-bottom: 1rem;
+  margin-top: 10px;
 }
 
 .news-card-title a {
@@ -126,9 +153,33 @@
 /* Subtitle styling */
 .news-card-subtitle {
   text-align: justify;
-  color: #0a0a0a;
+  color: rgba(0, 0, 0, 0.6);
   margin-top: 0.5rem; /* Existing margin for spacing */
   font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  /* Adjust height based on your needs */
+  overflow: hidden;
+  overflow-y: auto;
+  max-height: 100px;
+  position: relative;
+  transition: max-height 0.3s ease-in-out;
+  white-space: normal;
+  text-overflow: ellipsis;
+  font-size: 1rem;
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
+  scrollbar-width: none;
+}
+
+.news-card-subtitle.expanded {
+  max-height: none;
+}
+
+.news-card-subtitle::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+
+.news-card-subtitle:hover {
+  max-height: none; /* Allows full content to be visible */
+  overflow: auto;
 }
 
 /* Role, advisor, and description styling */
@@ -145,11 +196,25 @@
 
 /* Description text styling with line clamp */
 .news-card-description {
-  display: grid;
+  display: -webkit-box;
+  /* Number of lines to display */
+  -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-height: calc(1.1rem * 5 + 0.35rem * 2);
-  color: #313131;
+}
+.news-card-description-wrapper {
+  position: relative;
+  max-height: 3rem; /* Example of truncation at 3 lines */
+  overflow: auto; /* Hide the overflow */
+  cursor: pointer; /* Change cursor to indicate hover action */
+  transition: max-height 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.news-card-description-wrapper:hover {
+  max-height: 10rem; /* Expand the height sufficiently to show full content */
+  overflow: visible; /* Reveal the content */
+  background-color: #f3f8f9; /* Optional: background change on hover */
+  z-index: 1; /* Make sure it stays above other content */
 }
 
 .news-card-description ul {
@@ -191,7 +256,7 @@
 
 /* Learn more link styling */
 .news-card-learn-more {
-  text-align: center;
+  text-align: left;
   margin-top: 15px;
 }
 
@@ -252,6 +317,7 @@
 .timeline-event {
   position: relative;
   margin-bottom: 50px;
+  will-change: opacity, transform;
 }
 
 .timeline-event:before {
