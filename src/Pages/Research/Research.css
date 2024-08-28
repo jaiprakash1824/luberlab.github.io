@@ -121,8 +121,8 @@
 }
 
 .publication-name, .publication-authors {
-  transition: transform 0.2s ease-in-out; /* Apply transition to text */
-  display: block; /* Ensure text elements behave correctly during transformation */
+  transition: transform 0.2s ease-in-out; 
+  display: block; 
 }
 
 .publication-content:hover .publication-name, .publication-content:hover .publication-authors {
@@ -165,31 +165,31 @@
   }
 
   .research-card, .publications-card {
-      flex: 0 1 90%; /* Cards take more width on smaller screens */
+      flex: 0 1 90%; 
       margin-bottom: 20px;
   }
 
   .main-title, .publications-title {
-      font-size: 20px; /* Smaller font size for smaller screens */
+      font-size: 20px; 
   }
 
   .publication-number {
-      width: 40px; /* Slightly larger for touch friendliness */
+      width: 40px; 
       height: 40px;
   }
 }
 
 @media (max-width: 480px) {
   .main-title, .publications-title {
-      font-size: 18px; /* Even smaller font size for very small screens */
+      font-size: 18px; 
   }
 
   .publication-title, .publication-authors {
-      font-size: 0.8em; /* Smaller font size for publication details */
+      font-size: 0.8em; 
   }
 
   .publication-number {
-      width: 50px; /* Larger to maintain usability */
+      width: 50px; 
       height: 50px;
   }
 }
