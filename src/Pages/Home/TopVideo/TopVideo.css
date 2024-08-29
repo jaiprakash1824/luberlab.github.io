@@ -6,89 +6,61 @@
 }
 
 .top-video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  filter: blur(5px);
+  filter: blur(8px); /* Apply blur to the video */
+  transform: scale(
+    1.05
+  ); /* Slightly scale the video to avoid visible edges from the blur */
 }
 
 .top-video-text {
   position: absolute;
-  top: 20%;
-  margin-left: 10%;
-  color: white;
-  z-index: 1;
-  text-align: left;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff; /* Force white text color */
+  text-align: center;
+  font-size: 2rem; /* Adjusted font size */
+  font-weight: bold;
+  max-width: 80%; /* Limit width to allow wrapping */
+  line-height: 1.2; /* Adjust line height */
+  word-wrap: break-word; /* Break long words */
+  z-index: 2; /* Ensure the text is above the video */
 }
-
 .top-video-text h1 {
-  font-size: 8em;
-  margin: 0;
-  font-family: "SF Pro Black", sans-serif;
-  font-weight: 900;
-  letter-spacing: 1.1px;
-  text-align: start;
-  color: white;
+  color: #ffffff;
 }
 
-.top-video-text p {
-  font-size: 2em;
-  font-family: "SF Pro Black", sans-serif;
+/* Adding an overlay to further ensure text contrast */
+.top-video-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  z-index: 1; /* Ensure the overlay is behind the text but above the video */
 }
 
-/* Responsive Design */
-@media (max-width: 1200px) {
-  .top-video-text h1 {
-    font-size: 6em;
-  }
-
-  .top-video-text p {
-    font-size: 1.5em;
-  }
+.typewriter-cursor {
+  display: inline-block;
+  background-color: white;
+  margin-left: 5px;
+  animation: blink 1s infinite;
+  z-index: 2;
 }
 
-@media (max-width: 992px) {
-  .top-video-text h1 {
-    font-size: 4em;
+@keyframes blink {
+  0% {
+    opacity: 1;
   }
-
-  .top-video-text p {
-    font-size: 1.2em;
+  50% {
+    opacity: 0;
   }
-}
-
-@media (max-width: 768px) {
-  .top-video-text {
-    top: 25%;
-    margin-left: 5%;
-  }
-
-  .top-video-text h1 {
-    font-size: 3em;
-  }
-
-  .top-video-text p {
-    font-size: 1em;
-  }
-}
-
-@media (max-width: 576px) {
-  .top-video-text {
-    top: 40%;
-    margin-left: 20%;
-  }
-
-  .top-video-text h1 {
-    font-size: 2em;
-    text-align: center;
-  }
-
-  .top-video-text p {
-    font-size: 0.8em;
+  100% {
+    opacity: 1;
   }
 }
