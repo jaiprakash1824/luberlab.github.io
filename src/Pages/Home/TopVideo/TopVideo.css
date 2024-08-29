@@ -22,13 +22,14 @@
   transform: translate(-50%, -50%);
   color: #ffffff; /* Force white text color */
   text-align: center;
-  font-size: 2rem; /* Adjusted font size */
+  font-size: 2rem; /* Smaller font size */
   font-weight: bold;
   max-width: 80%; /* Limit width to allow wrapping */
   line-height: 1.2; /* Adjust line height */
   word-wrap: break-word; /* Break long words */
   z-index: 2; /* Ensure the text is above the video */
 }
+
 .top-video-text h1 {
   color: #ffffff;
 }
@@ -62,5 +63,18 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+/* Responsive text adjustments */
+@media (max-width: 768px) {
+  .top-video-text {
+    font-size: 1.2rem; /* Smaller font size for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .top-video-text {
+    font-size: 1rem; /* Even smaller font size for mobile phones */
   }
 }
