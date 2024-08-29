@@ -22,12 +22,13 @@
   transform: translate(-50%, -50%);
   color: #ffffff; /* Force white text color */
   text-align: center;
-  font-size: 2rem; /* Smaller font size */
+  font-size: 2rem; /* Font size */
   font-weight: bold;
   max-width: 80%; /* Limit width to allow wrapping */
   line-height: 1.2; /* Adjust line height */
   word-wrap: break-word; /* Break long words */
   z-index: 2; /* Ensure the text is above the video */
+  min-height: 3rem; /* Set a fixed height to prevent fluctuations */
 }
 
 .top-video-text h1 {
@@ -76,5 +77,6 @@
 @media (max-width: 480px) {
   .top-video-text {
     font-size: 1rem; /* Even smaller font size for mobile phones */
+    min-height: 2rem; /* Adjusted fixed height for mobile */
   }
 }
