@@ -151,6 +151,9 @@ body {
 }
 
 @media (max-width: 900px) {
+  .header {
+    height: 10px;
+  }
   .menuButton {
     display: block;
     background: transparent;

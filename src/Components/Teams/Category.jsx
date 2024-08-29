@@ -5,7 +5,6 @@ import NewCard from "./new_card"; // Use the correct import for new_card
 
 const baseURL = import.meta.env.BASE_URL;
 const getImageUrl = (imageName) => {
-  console.log(baseURL);
   return `${baseURL}assets/data/images/${imageName}`;
 };
 

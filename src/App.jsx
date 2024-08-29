@@ -2,22 +2,23 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Teams from "./Pages/Teams/Teams.jsx";
 import IndividualPage from "./Pages/IndividualPage/IndividualPage.jsx";
 import Home from "./Pages/Home/Home.jsx";
-import Header from "./Components/Header/header.jsx";
+// import Header from "./Components/Header/header.jsx";
 import News from "./Pages/news/News.jsx";
 import Footer from "./Components/Footer/footer.jsx";
 import ScrollToTop from "./Components/ScrollToTop/ScrollToTop.jsx";
 import Publications from "./Pages/Publications/Publications.jsx";
 import JobListings from "./Pages/JoinUs/JoinUs.jsx";
 import ResearchPage from "./Pages/Research/Research.jsx";
-
-import { MemberProvider } from "./Components/Teams/MemberContext"; // Adjust the path as needed
+import NavBar from "./Components/Header/NewHeader.jsx";
+import { MemberProvider } from "./Components/Teams/MemberContext";
 import "./App.css";
 
 function App() {
   return (
     <Router basename={import.meta.env.BASE_URL}>
       <ScrollToTop />
-      <Header />
+      {/* <Header /> */}
+      <NavBar />
       <MemberProvider>
         <Routes>
           <Route path="/" element={<Home />} />
