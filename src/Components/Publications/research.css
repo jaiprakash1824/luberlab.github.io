@@ -1,7 +1,7 @@
 .paper {
   background-color: white; /* Set background to white */
   padding: 20px;
-  margin: 20px 0 20px 20px; /* Add margin around each paper */
+  margin: 20px 0 20px 0px; /* Add margin around each paper */
   overflow-wrap: break-word;
   flex-grow: 1;
   flex-wrap: wrap; 
