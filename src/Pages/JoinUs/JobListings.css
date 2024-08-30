@@ -58,7 +58,7 @@
 }
 .job-card.description, .job-card.minimum-qualification {
   font-size: 0.95rem;
-  color: black;
+  color: black !important;
   white-space: normal; 
   overflow-wrap: break-word; 
   text-align: justify;
@@ -68,9 +68,11 @@
 .job-card.minimum-qualification h5 {
   font-weight: bold;
   margin-bottom: 10px;
+  color: black !important;
 }
 
 .job-card.minimum-qualification ul {
   list-style-type: disc;
   padding-left: 20px;
+  color: black !important;
 }
