@@ -35,6 +35,7 @@ const TopVideo = () => {
 
     const timer = setTimeout(handleTyping, speed);
     return () => clearTimeout(timer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [text, isDeleting, currentSentenceIndex, speed]);
 
   useEffect(() => {
