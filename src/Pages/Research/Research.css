@@ -35,7 +35,7 @@
   z-index: 2;
   -webkit-text-stroke: 2px orange;
 }
-.main-title, .publications-title, .publication-title, .publication-authors, p {
+.main-title, .publications-title, .publication-title, .publication-authors {
   color: white !important; 
 }
 .publications-card .ant-card-head-title h4.publications-title {
