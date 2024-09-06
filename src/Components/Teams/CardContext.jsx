@@ -60,7 +60,7 @@ export const CardProvider = ({ children }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await fetchYAML(`${baseURL}assets/members.yml`);
+        const data = await fetchYAML(`${baseURL}assets/members-1.yml`);
 
         const categorizedData = {
           lead: data.filter((card) => card.Degree === "Director"),
