@@ -9,7 +9,7 @@ import ScrollToTop from "./Components/ScrollToTop/ScrollToTop.jsx";
 import Publications from "./Pages/Publications/Publications.jsx";
 import JobListings from "./Pages/JoinUs/JoinUs.jsx";
 import ResearchPage from "./Pages/Research/Research.jsx";
-import NavBar from "./Components/Header/NewHeader.jsx";
+import Navbar from "./Components/Header/Navbar.jsx";
 import { MemberProvider } from "./Components/Teams/MemberContext";
 import "./App.css";
 
@@ -18,7 +18,7 @@ function App() {
     <Router basename={import.meta.env.BASE_URL}>
       <ScrollToTop />
       {/* <Header /> */}
-      <NavBar />
+      <Navbar />
       <MemberProvider>
         <Routes>
           <Route path="/" element={<Home />} />
