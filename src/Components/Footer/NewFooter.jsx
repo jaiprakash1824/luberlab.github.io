@@ -2,7 +2,7 @@
 import React from 'react';
 import './NewFooter.css';
 import { Link } from 'react-router-dom';
-import '@fortawesome/fontawesome-free/css/all.min.css';
+//import '@fortawesome/fontawesome-free/css/all.min.css';
 
 // Base URL for assets
 const baseURL = import.meta.env.BASE_URL;
