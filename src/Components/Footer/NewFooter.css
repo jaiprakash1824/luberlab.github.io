@@ -1,0 +1,206 @@
+.footer {
+    background-color: #0064b1;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    border-top: 1px solid #e7e7e7;
+    font-family: Arial, sans-serif;
+    color: white;
+  }
+  
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .footer-logo {
+    flex: 1;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; /* Center the logo */
+  }
+  
+  .footer-logo img {
+    max-width: 150px;
+    height: auto;
+  }
+  
+  .footer-about-us,
+  .footer-sponsors,
+  .footer-customer-service,
+  .footer-social-media {
+    width: 200px; /* Default width for most sections */
+    margin-right: 20px;
+  }
+  
+  .footer-about-us {
+    width: 150px; /* Specific width for About Us */
+  }
+  
+  .footer-about-us h4,
+  .footer-customer-service h4,
+  .footer-social-media h4,
+  .footer-sponsors h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    border-bottom: 2px solid #ddd; /* Line under the heading */
+    padding-bottom: 5px; /* Space between heading text and line */
+    width: 100%; /* Make sure the heading spans the full width of the section */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+  }
+  
+  .footer-about-us ul,
+  .footer-customer-service ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-about-us ul li,
+  .footer-customer-service ul li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-about-us ul li a,
+  .footer-customer-service ul li a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .footer-about-us ul li a:hover,
+  .footer-customer-service ul li a:hover {
+    text-decoration: underline;
+  }
+  .footer-logo img {
+    max-width: 100px;
+}
+  .footer-sponsors {
+    width: 150px; /* Default width for Sponsors section */
+    display: flex;
+    flex-direction: column; /* Stack logos vertically */
+    align-items: flex-start; /* Center logos horizontally */
+  }
+  
+  .sponsor-logos {
+    display: flex;
+    flex-direction: column; /* Stack logos vertically */
+    align-items: center; /* Center logos horizontally */
+  }
+  
+  .sponsor-logo {
+    max-width: 60px; /* Adjust the size as needed */
+    height: auto;
+    margin-bottom: 8px; /* Reduced space between logos */
+  }
+  
+  .footer-social-media {
+    width: 200px; /* Same width for Social Media section */
+  }
+  
+  .social-icons a {
+    color: white; /* Set icon color to white */
+    margin-right: 10px;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .social-icons a:hover, .footer-bottom a:hover {
+    color: #ddd; /* Optional: Change color on hover */
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .footer-bottom p,
+  .footer-bottom a {
+    color: white;
+  }
+
+  
+  /* Media Queries */
+  @media (max-width: 767px) {
+    .footer-top {
+      flex-direction: column;
+      align-items: center;
+    }
+    .footer-sponsors{
+            width: 100px; /* Default width for Sponsors section */
+            display: flex;
+            flex-direction: column; /* Stack logos vertically */
+            align-items: center; /* Center logos horizontally */
+    }
+    .footer-about-us,
+    .footer-sponsors,
+    .footer-customer-service,
+    .footer-social-media {
+      margin-bottom: 20px;
+      text-align: center;
+      width: 100%; /* Make sections full-width on smaller screens */
+      max-width: 250px; /* Optional: constrain maximum width */
+    }
+  
+    .footer-about-us h4,
+    .footer-customer-service h4,
+    .footer-social-media h4,
+    .footer-sponsors h4 {
+      font-size: 16px; /* Reduced font size for smaller screens */
+      margin-bottom: 8px; /* Reduced margin */
+      border-bottom: 1px solid #ddd;
+    }
+  
+    .footer-about-us ul li,
+    .footer-customer-service ul li {
+      margin-bottom: 6px; /* Reduced space between list items */
+      font-size: 12px;
+    }
+  
+    .social-icons a {
+      font-size: 16px; /* Adjust icon size for smaller screens */
+    }
+  
+    .footer-bottom {
+      font-size: 10px; /* Reduced font size for the bottom section */
+    }
+  }
+  /* Media Queries for Tablet Screens */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .footer {
+      padding-top: 30px; /* Reduce top padding */
+      padding-bottom: 10px; /* Increase bottom padding */
+    }
+  
+    .footer-logo img {
+      max-width: 80px; /* Reduce logo size */
+    }
+  
+    .footer-about-us,
+    .footer-sponsors,
+    .footer-customer-service,
+    .footer-social-media {
+      width: 120px; /* Reduce width of sections */
+      margin-right: 15px; /* Reduce margin */
+    }
+  
+    .footer-about-us h4,
+    .footer-customer-service h4,
+    .footer-social-media h4,
+    .footer-sponsors h4 {
+      font-size: 14px; /* Reduce font size of headings */
+    }
+  
+    .footer-about-us ul li,
+    .footer-customer-service ul li {
+      margin-bottom: 6px; /* Reduce margin between list items */
+    }
+  
+    .social-icons a {
+      font-size: 16px; /* Reduce size of social icons */
+    }
+  
+    .footer-bottom {
+      font-size: 10px; /* Reduce font size in the footer bottom */
+    }
+  }
