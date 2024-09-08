@@ -1,6 +1,7 @@
 .home-news-carousel-container {
   padding: 20px;
 }
+
 .home-news-title h1 {
   text-align: center;
   font-size: 3.5em;
@@ -10,9 +11,9 @@
 }
 
 .home-news-card-wrapper {
-  padding: 0 100px;
   display: flex;
   justify-content: center;
+  height: 500px;
 }
 
 .slick-slide {
@@ -25,10 +26,20 @@
   margin-top: 100px;
 }
 
+/* Ensure fixed card height */
+.home-news-card {
+  height: 80%; /* Make sure the card occupies the full height of the wrapper */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden; /* Ensure overflow content is hidden */
+}
+
 /* Responsive settings */
 @media (max-width: 1200px) {
   .home-news-card-wrapper {
     width: 22%;
+    height: 400px; /* Adjust height for medium-sized screens */
   }
   .home-news-carousel-row {
     margin-bottom: 50px;
@@ -42,6 +53,7 @@
   }
   .home-news-card-wrapper {
     width: 30%;
+    height: 400px; /* Ensure fixed height */
   }
   .home-news-carousel-row {
     margin-bottom: 30px;
@@ -52,6 +64,7 @@
 @media (max-width: 768px) {
   .home-news-card-wrapper {
     width: 45%;
+    height: 400px; /* Adjust height for smaller viewports */
   }
   .home-news-title h1 {
     font-size: 2em;
@@ -62,9 +75,19 @@
   .home-news-card-wrapper {
     width: 100%;
     margin-bottom: 20px;
+    height: 300px; /* Ensure a consistent height for mobile */
   }
   .home-news-carousel-row {
     margin-bottom: 20px;
     margin-top: 20px;
   }
+}
+
+/* Truncate content inside the card to fit within the fixed height */
+.home-news-card .home-news-description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -line-clamp: 3; /* Limit description to 3 lines */
+  -webkit-box-orient: vertical;
 }
