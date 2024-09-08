@@ -7,8 +7,24 @@
   z-index: 1;
   width: 100%;
   background-color: #000;
+  /* animation: slideDown 1s ease-in-out; */
 }
 
+/* Add the slideDown animation only when the 'animate-slide' class is added */
+.animate-slide {
+  animation: slideDown 1s ease-in-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .nav-inner-container {
   display: flex;
   justify-content: space-between;

@@ -12,6 +12,8 @@ import ResearchPage from "./Pages/Research/Research.jsx";
 import Navbar from "./Components/Header/Navbar.jsx";
 import { MemberProvider } from "./Components/Teams/MemberContext";
 import "./App.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function App() {
   return (

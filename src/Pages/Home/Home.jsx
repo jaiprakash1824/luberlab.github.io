@@ -1,9 +1,10 @@
-import LabNews from "./News/LabNews";
 import WhatWeDo from "./WhatWeDo/WhatWeDo";
 import HomeTopHeading from "./TopVideo/TopHeading";
 import HomeTeam from "./Team/HomeTeam";
 import "./Home.css";
 import HomeResearchSection from "./Research/HomeResearchSection";
+import { HomeNewsCardContext } from "./News/HomeNewsContext";
+import HomeNewsCarousel from "./News/HomeNewsCarousel";
 
 const Home = () => {
   return (
@@ -11,7 +12,9 @@ const Home = () => {
       <HomeTopHeading />
       <HomeResearchSection />
       <WhatWeDo />
-      <LabNews />
+      <HomeNewsCardContext>
+        <HomeNewsCarousel />
+      </HomeNewsCardContext>
       <HomeTeam />
     </div>
   );

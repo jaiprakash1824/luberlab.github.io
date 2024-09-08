@@ -1,27 +1,43 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import ContactButton from "./ContactButton"; // Assuming you've implemented the ContactButton component
 import "./Navbar.css";
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [animateNavbar, setAnimateNavbar] = useState(true); // Set true initially to trigger animation on load
   const navigate = useNavigate();
+
+  // Play the slide animation when the component mounts (first load)
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setAnimateNavbar(false); // Disable the animation after it runs once
+    }, 1000); // Duration should match the CSS animation time
+
+    return () => clearTimeout(timer); // Clean up the timeout on unmount
+  }, []);
 
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen);
   };
 
   const handleMenuClick = (path) => {
-    navigate(path); // Redirect to the respective page
-    setMenuOpen(false); // Close the drawer
+    setMenuOpen(false);
+
+    // Trigger navbar animation
+    setAnimateNavbar(true);
+    navigate(path);
+    setTimeout(() => {
+      setAnimateNavbar(false); // Reset animation state
+    }, 1000); // Adjust time to match animation duration (1s here)
   };
 
   const handleContactClick = () => {
-    navigate("/contact"); // Navigate to the contact page when the button is clicked
+    navigate("/contact");
   };
 
   return (
-    <div className="navbar-container">
+    <div className={`navbar-container ${animateNavbar ? "animate-slide" : ""}`}>
       <div className="nav-inner-container">
         <div></div>
         <div className="dots-container" onClick={handleMenuToggle}>
@@ -53,6 +69,9 @@ const NavBar = () => {
               onClick={() => handleMenuClick("/publications")}
             >
               PUBLICATIONS
+            </li>
+            <li data-text="NEWS" onClick={() => handleMenuClick("/news")}>
+              NEWS
             </li>
             <li data-text="TEAMS" onClick={() => handleMenuClick("/team")}>
               TEAMS
