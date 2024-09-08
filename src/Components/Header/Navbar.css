@@ -5,18 +5,34 @@
   height: 5vh;
   position: relative;
   z-index: 1;
+  width: 100%;
+  background-color: #000;
+}
+
+.nav-inner-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+  height: 5vh;
+  position: relative;
 }
 
 .dots-container {
+  position: absolute; /* Change to absolute */
+  left: 50%; /* Align dots at the center */
+  transform: translateX(-50%); /* Ensure true centering */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
   cursor: pointer;
   transition: transform 0.3s ease;
+  margin-top: 15px;
 }
 
 .dots-container:hover {
-  transform: rotate(45deg);
+  transform: translateX(-50%) rotate(45deg); /* Ensure hover rotation works */
 }
 
 .dot {
@@ -96,7 +112,7 @@
   position: relative;
   overflow: hidden;
   font-size: 3rem;
-  color: white; /* Default text color */
+  color: white;
 }
 
 .menu-options li::before {
@@ -105,7 +121,7 @@
   top: 100%;
   left: 0;
   width: 100%;
-  color: white; /* Set the sliding text color to white */
+  color: white;
   transition: top 0.5s ease;
 }
 
@@ -119,13 +135,13 @@
   top: 0;
   left: 0;
   width: 100%;
-  color: white; /* Ensure the original text is white as well */
-  transition: top 0.5s ease, opacity 0.5s ease; /* Add opacity transition */
+  color: white;
+  transition: top 0.5s ease, opacity 0.5s ease;
 }
 
 .menu-options li:hover::after {
   top: -100%;
-  opacity: 0; /* Fade out the original text as it slides out */
+  opacity: 0;
 }
 
 /* Responsive adjustments */
@@ -133,10 +149,16 @@
   .menu-options li {
     font-size: 2.5rem;
   }
+  .nav-inner-container {
+    padding: 0 15px;
+  }
 }
 
 @media (max-width: 480px) {
   .menu-options li {
     font-size: 2rem;
+  }
+  .nav-inner-container {
+    padding: 0 10px;
   }
 }
