@@ -1,0 +1,145 @@
+.full-screen-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  z-index: 9998;
+  opacity: 1;
+}
+
+/* When the menu opens, slide up from the bottom */
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* When the menu closes, slide down from the current position */
+@keyframes slideDown {
+  from {
+    transform: translateY(0); /* Starts at its current position */
+  }
+  to {
+    transform: translateY(100%); /* Slides down out of view */
+  }
+}
+
+/* Apply the slide-up animation for opening */
+.full-screen-menu.open {
+  animation: slideUp 0.5s ease forwards;
+}
+
+/* Apply the slide-down animation for closing */
+.full-screen-menu.close {
+  animation: slideDown 0.5s ease alternate-reverse;
+}
+
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: grey;
+  background-color: #333;
+  border: none;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  z-index: 9999;
+}
+
+.close-button:hover {
+  background-color: white;
+  color: grey;
+}
+
+/* Menu options and hover animation */
+.menu-options {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  z-index: 9997;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 5rem;
+  width: 100%;
+}
+
+.menu-options li {
+  cursor: pointer;
+  display: inline;
+  position: relative;
+  overflow: hidden;
+  font-size: 3rem;
+  font-weight: 900;
+  color: white;
+}
+
+.menu-options li::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  color: white;
+  transition: top 0.5s ease;
+}
+
+.menu-options li:hover::before {
+  top: 0;
+}
+
+.menu-options li::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  transition: top 0.5s ease, opacity 0.5s ease;
+}
+
+.menu-options li:hover::after {
+  top: -100%;
+  opacity: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .menu-options li {
+    font-size: 2.7rem;
+  }
+
+  .close-button {
+    top: 20px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-options li {
+    font-size: 2.5rem;
+  }
+
+  .close-button {
+    top: 15px;
+    right: 15px;
+  }
+}

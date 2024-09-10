@@ -1,9 +1,10 @@
+import ContactButton from "../../../Components/Header/ContactButton";
 import "./HomeTeam.css";
 import { useNavigate } from "react-router-dom";
 const baseURL = import.meta.env.BASE_URL;
 const teamMembers = [
   {
-    name: "Dr Jacod Luber",
+    name: "Dr Jacob Luber",
     role: "Director, HDSL",
     imgSrc: baseURL + "assets/data/images/jacob.jpg",
   },
@@ -11,11 +12,6 @@ const teamMembers = [
     name: "Helen Shang",
     role: "Visiting Assistant Professor",
     imgSrc: baseURL + "assets/data/images/shang.jpeg",
-  },
-  {
-    name: "Mohammad Nasr",
-    role: "Post Doctoral Fellow",
-    imgSrc: baseURL + "assets/data/images/nasr.jpg",
   },
 ];
 
@@ -42,9 +38,7 @@ const Team = () => {
           </div>
         ))}
       </div>
-      <button className="home-team-btn" onClick={handleSeeMoreClick}>
-        SEE MORE
-      </button>
+      <ContactButton title={"SEE MORE"} onClick={handleSeeMoreClick} />
     </div>
   );
 };

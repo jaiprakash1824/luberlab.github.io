@@ -1,8 +1,12 @@
 import "./TopHeading.css";
+import WavesBackground from "./WavesBackground";
 
 const HomeTopHeading = () => {
   return (
     <div className="home-top-heading-container">
+      <div className="waves-background-home">
+        <WavesBackground />
+      </div>
       <div className="home-top-heading-text">
         <h1>HEALTH</h1>
         <div className="home-sub-heading">

@@ -1,0 +1,9 @@
+.waves-background {
+  /* position: relative;
+  top: 0;
+  left: 0; */
+  /* width: 100vh;
+  height: 100vh; */
+  z-index: -1; /* Set behind other content */
+  pointer-events: none; /* So that it doesn't interfere with any other elements */
+}

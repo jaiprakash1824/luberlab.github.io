@@ -1,13 +1,13 @@
 .home-team-container {
   text-align: center;
-  background-color: #fff;
+  background-color: black;
   padding: 50px 0;
 }
 
 .home-team-container h1 {
   font-size: 3.5em;
   font-family: "SF Pro Black", sans-serif;
-  color: #0064b1;
+  color: white;
   font-weight: 900;
   margin-bottom: 1em;
   letter-spacing: 1.1px;
@@ -30,58 +30,26 @@
 .home-team-img {
   border-radius: 25%;
   width: 100%;
-  height: auto;
-  margin-bottom: 20px;
-  /* Apply black and white filter */
-  /* filter: grayscale(100%); */
-}
-
-.home-team-member:hover .home-team-img {
-  filter: none; /* Remove filter on hover */
+  height: 200px;
+  margin-bottom: 10px;
 }
 
 .home-team-member h2 {
   font-size: 1.2em;
   font-family: "SF Pro Black", sans-serif;
-  color: #0064b1;
-  margin-bottom: 0.5em;
+  color: white;
 }
 
 .home-team-member p {
   font-size: 1em;
   font-family: "SF Pro Black", sans-serif;
-  color: #0064b1;
+  color: white;
   text-align: center;
 }
 
-.home-team-btn {
-  background: none;
-  border: 2px solid #0064b1;
-  border-radius: 25px;
-  padding: 15px 40px;
-  color: #0064b1;
-  font-family: "SF Pro Black", sans-serif;
-  font-size: 1em;
-  cursor: pointer;
-  margin-top: 5em;
-  font-weight: bold;
-  letter-spacing: 1.1px;
-}
-
-.home-team-btn:hover {
-  background-color: #0064b1;
-  color: #fff;
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
   .home-team-container h1 {
     font-size: 2.5em;
-  }
-
-  .home-team-btn {
-    font-size: 0.8em;
-    padding: 8px 16px;
   }
 
   .home-team-member h2 {
@@ -90,5 +58,8 @@
 
   .home-team-member p {
     font-size: 0.8em;
+  }
+  .home-team-img {
+    height: 150px;
   }
 }

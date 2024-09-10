@@ -1,5 +1,5 @@
 .home-contact-button {
-  height: auto;
+  height: 50px;
   width: fit-content;
   position: relative;
   display: inline-block;
@@ -14,7 +14,7 @@
   cursor: pointer;
   overflow: hidden;
   transition: color 0.4s ease;
-  margin-top: 15px;
+  /* margin-top: 15px; */
 }
 
 .home-contact-button::before {
