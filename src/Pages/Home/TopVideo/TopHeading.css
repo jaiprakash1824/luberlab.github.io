@@ -60,18 +60,24 @@
 
 /* Adjustments for smaller screens */
 @media (max-width: 768px) {
+  .home-top-heading-container {
+    padding-top: 60%;
+  }
   .home-top-heading-text > h1,
   .home-sub-heading > h1 {
-    font-size: clamp(2rem, 8vw, 5rem); /* Adjusting the smaller screen size */
+    font-size: clamp(3rem, 8vw, 5rem); /* Adjusting the smaller screen size */
   }
 }
 
 @media (max-width: 480px) {
+  .home-top-heading-container {
+    padding-top: 60%;
+  }
   .home-sub-heading {
     flex-direction: column; /* Stack the words vertically on smaller screens */
   }
 
   .home-sub-heading > h1 {
-    font-size: clamp(1.8rem, 6vw, 4rem); /* Keep the text relatively large */
+    font-size: clamp(3rem, 6vw, 4rem); /* Keep the text relatively large */
   }
 }
