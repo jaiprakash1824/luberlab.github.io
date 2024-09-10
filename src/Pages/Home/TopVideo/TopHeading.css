@@ -8,11 +8,7 @@
   justify-content: start;
   align-items: center;
   padding-top: 10%;
-}
-.waves-background-home {
-  position: absolute;
-  top: 0;
-  left: 0;
+  z-index: 1;
 }
 
 .home-top-heading-text {

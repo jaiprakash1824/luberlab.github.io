@@ -1,10 +1,12 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import "./WavesBackground.css";
 
 const WavesBackground = () => {
+  const containerRef = useRef(null); // Use a ref for the container
+
   useEffect(() => {
-    let container;
+    let container = containerRef.current;
     let camera, scene, renderer;
     let particles,
       count = 0;
@@ -16,9 +18,7 @@ const WavesBackground = () => {
     let windowHalfY = window.innerHeight / 2;
 
     const init = () => {
-      container = document.createElement("div");
-      document.body.appendChild(container);
-
+      // Ensure we append to the specific container rather than the body
       camera = new THREE.PerspectiveCamera(
         120,
         window.innerWidth / window.innerHeight,
@@ -35,9 +35,9 @@ const WavesBackground = () => {
       particles = new Array(numParticles);
 
       const material = new THREE.PointsMaterial({
-        color: 0xffffff,
-        size: 2, // Adjust the size of the particles here
-        opacity: 0.7, // Adjust opacity if needed
+        color: 0x0064b1,
+        size: 2,
+        opacity: 0.7,
       });
 
       const geometry = new THREE.BufferGeometry();
@@ -49,7 +49,7 @@ const WavesBackground = () => {
           const x = ix * SEPARATION - (AMOUNTX * SEPARATION) / 2;
           const z = iy * SEPARATION - (AMOUNTY * SEPARATION - 10);
           positions[i] = x;
-          positions[i + 1] = 0; // Initial y position is 0
+          positions[i + 1] = 0;
           positions[i + 2] = z;
           i += 3;
         }
@@ -64,7 +64,7 @@ const WavesBackground = () => {
 
       renderer = new THREE.WebGLRenderer({ alpha: true });
       renderer.setSize(window.innerWidth, window.innerHeight);
-      renderer.setClearColor(0x000000, 1); // Background color
+      renderer.setClearColor(0x000000, 1);
       container.appendChild(renderer.domElement);
 
       window.addEventListener("resize", onWindowResize);
@@ -100,12 +100,11 @@ const WavesBackground = () => {
       }
       geometry.attributes.position.needsUpdate = true;
       renderer.render(scene, camera);
-      count += 0.1; // Speed of wave animation
+      count += 0.1;
     };
 
     init();
 
-    // Cleanup when the component unmounts
     return () => {
       while (container.firstChild) {
         container.removeChild(container.firstChild);
@@ -114,7 +113,12 @@ const WavesBackground = () => {
     };
   }, []);
 
-  return null; // This component does not render any JSX, it handles the Three.js canvas creation
+  return (
+    <div
+      ref={containerRef}
+      className="waves-background-container" // Reference the CSS class
+    />
+  );
 };
 
 export default WavesBackground;
