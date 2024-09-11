@@ -1,9 +1,11 @@
 import PropTypes from "prop-types";
 import "./ResearchCardHome.css";
+import ParticleEffect from "./ParticleEffect";
 
 const ResearchCardHome = ({ title, description }) => {
   return (
     <div className="research-card">
+      <ParticleEffect />
       <div className="research-card-title">
         <h3>{title}</h3>
       </div>
