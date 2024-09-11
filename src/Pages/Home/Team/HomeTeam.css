@@ -2,22 +2,16 @@
   text-align: center;
   background-color: black;
   padding: 50px 0;
-}
-
-.home-team-container h1 {
-  font-size: 3.5em;
-  font-family: "SF Pro Black", sans-serif;
-  color: white;
-  font-weight: 900;
-  margin-bottom: 1em;
-  letter-spacing: 1.1px;
+  height: 100%;
 }
 
 .home-team-members {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 50px;
+  gap: 20px;
+  padding-top: 3%;
+  padding-bottom: 3%;
 }
 
 .home-team-member {
@@ -38,6 +32,8 @@
   font-size: 1.2em;
   font-family: "SF Pro Black", sans-serif;
   color: white;
+  margin: 0; /* Remove any margin */
+  padding: 0; /* Remove any padding */
 }
 
 .home-team-member p {
@@ -45,13 +41,15 @@
   font-family: "SF Pro Black", sans-serif;
   color: white;
   text-align: center;
+  margin: 0; /* Remove any margin */
+  padding: 0; /* Remove any padding */
+  margin-bottom: 10px; /* Adjust spacing as needed */
 }
 
 @media (max-width: 768px) {
-  .home-team-container h1 {
-    font-size: 2.5em;
+  .home-team-members {
+    padding-bottom: 8%;
   }
-
   .home-team-member h2 {
     font-size: 1em;
   }

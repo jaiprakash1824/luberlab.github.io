@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import "./WhatWeDo.css";
+import TitleSection from "../../../Components/Home/TitleSection";
 
 const WhatWeDo = () => {
   const [isVisibleTitle, setIsVisibleTitle] = useState(false);
@@ -46,8 +47,11 @@ const WhatWeDo = () => {
       }`}
       ref={sectionRef}
     >
+      <div className="what-we-do-title">
+        <TitleSection titleText="WHAT WE DO" isVisible={isVisibleTitle} />
+      </div>
+
       <div className="what-we-do">
-        <h2 className={isVisibleTitle ? "animate-slide-up" : ""}>What We Do</h2>
         <p
           className={
             isVisibleParagraph1 ? "paragraph-1 animate-slide-up" : "paragraph-1"

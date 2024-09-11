@@ -1,28 +1,20 @@
 .what-we-do-container {
-  height: 100vh;
+  height: 100%;
   text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centering items */
-  padding: 10px;
+  align-items: center;
+  justify-items: center;
+  /* justify-content: center; */
+  margin: 0 auto;
+  padding: 10% 0;
   background-color: black;
   color: white;
+  /* padding-top: 10%; */
 }
 
 .what-we-do {
   flex: 1;
-  padding: 10%;
-}
-
-.what-we-do h2 {
-  opacity: 0;
-  /* transform: translateY(100px); */
-  transition: opacity 1s ease-out, transform 1s ease-out;
-  font-size: 5em; /* Moved font size inside the h2 rule */
-  font-family: "SF Pro Black", sans-serif;
-  font-weight: 900;
-  margin-bottom: 20px;
-  color: white;
 }
 
 .animate-slide-up {
@@ -35,6 +27,12 @@
   opacity: 0;
   transform: translateY(100px);
   transition: opacity 1s ease-out, transform 1s ease-out;
+  font-size: 1.4em;
+  line-height: 1.2;
+  color: white;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
 }
 
 .paragraph-1.animate-slide-up,
@@ -43,53 +41,40 @@
   transform: translateY(0);
 }
 
-.paragraph-1,
-.paragraph-2 {
-  font-size: 18px;
-  line-height: 1.6;
-  color: white;
-  text-align: center;
-  width: 50%;
-  margin: 0 auto;
-}
-
 /* Media queries for responsiveness */
 @media (max-width: 1200px) {
-  .what-we-do h2 {
-    font-size: 4em;
-  }
   .paragraph-1,
   .paragraph-2 {
-    font-size: 16px;
+    font-size: 1.2em;
+    width: 80%;
   }
 }
 
 @media (max-width: 768px) {
   .what-we-do-container {
     flex-direction: column;
-    padding: 10px;
+    padding: 0px;
   }
   .what-we-do {
     padding: 5%;
   }
-  .what-we-do h2 {
-    font-size: 3em;
-  }
   .paragraph-1,
   .paragraph-2 {
-    font-size: 14px;
+    font-size: 1.2em;
+    width: 80%;
   }
 }
 
 @media (max-width: 480px) {
-  .what-we-do h2 {
-    font-size: 2em;
-  }
   .paragraph-1,
   .paragraph-2 {
-    font-size: 12px;
+    font-size: 1.2em;
+    width: 80%;
   }
   .what-we-do {
     padding: 3%;
+  }
+  .what-we-do-container {
+    padding-bottom: 30px;
   }
 }

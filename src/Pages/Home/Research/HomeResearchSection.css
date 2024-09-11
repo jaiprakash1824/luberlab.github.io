@@ -5,29 +5,17 @@
   padding: 20px 0;
 }
 
-.home-research-header h1 {
-  font-size: 5em;
-  font-family: "SF Pro Black", sans-serif;
-  color: white;
-  font-weight: 900;
-  opacity: 0;
-  transform: translateY(100px); /* Slide from below */
-  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
-}
-
 .home-research-row {
   display: flex;
   flex-wrap: wrap; /* Allows wrapping when items don’t fit in a row */
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin: 50px auto;
   opacity: 0;
   transform: translateY(100px); /* Slide from below */
   transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
 }
 
-.home-research-container.animate .home-research-header h1,
 .home-research-container.animate .home-research-row {
   opacity: 1;
   transform: translateY(0); /* Slide up to original position */
@@ -37,9 +25,10 @@
   opacity: 0;
   transform: translateY(100px);
   transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
-  margin: 20px;
   flex: 1 1 calc(33.333% - 40px); /* Each card takes 1/3 of the row */
-  max-width: 350px; /* Optional, keeps cards at a reasonable size */
+  max-width: 350px;
+  min-width: 280px; /* Ensure a minimum width */
+  box-sizing: border-box;
 }
 
 .home-research-container.animate .home-research-card {
@@ -47,29 +36,35 @@
   transform: translateY(0);
 }
 
-/* Responsive media queries */
+/* Media queries for better responsive behavior */
 @media (max-width: 1024px) {
-  .home-research-header h1 {
-    font-size: 4em;
-  }
-
   .home-research-card {
     flex: 1 1 calc(50% - 40px); /* 2 cards per row for medium screens */
+    max-width: 350px;
+    min-width: 280px;
   }
 }
 
 @media (max-width: 768px) {
-  .home-research-header h1 {
-    font-size: 3em;
+  .home-research-row {
+    justify-content: center; /* Ensure cards are centered */
   }
 
   .home-research-card {
     flex: 1 1 calc(100% - 40px); /* 1 card per row for small screens */
+    max-width: 350px;
+    /* margin: 20px auto; */
   }
 }
 
 @media (max-width: 480px) {
-  .home-research-header h1 {
-    font-size: 2em;
+  .home-research-row {
+    justify-content: center; /* Ensure cards are centered */
+  }
+
+  .home-research-card {
+    flex: 1 1 90%; /* Ensure the card takes up 90% of the available width */
+    max-width: 100%; /* Ensure the card is centered and takes full width */
+    margin: 20px auto; /* Auto margin to center the card */
   }
 }

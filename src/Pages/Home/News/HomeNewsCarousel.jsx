@@ -1,12 +1,16 @@
 import Slider from "react-slick";
 import { useHomeNews } from "./useHomeNews";
 import HomeNewsCard from "./HomeNewsCard";
-import useWindowSize from "./useWindowSize"; // Import the hook
+import useWindowSize from "./useWindowSize";
+import TitleSection from "../../../Components/Home/TitleSection";
 import "./HomeNewsCarousel.css";
+import { useEffect, useRef, useState } from "react";
 
 const HomeNewsCarousel = () => {
   const newsCards = useHomeNews();
-  const { width } = useWindowSize(); // Get window width
+  const { width } = useWindowSize();
+  const [isTitleVisible, setIsTitleVisible] = useState(false);
+  const sectionRef = useRef(null);
 
   // Sort news by date, descending
   const sortedNewsCards = newsCards.sort(
@@ -25,7 +29,7 @@ const HomeNewsCarousel = () => {
     dots: false,
     infinite: true,
     speed: 10000,
-    slidesToShow: slidesToShow, // Adjust dynamically
+    slidesToShow: slidesToShow,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 100,
@@ -40,11 +44,36 @@ const HomeNewsCarousel = () => {
     rtl: true,
   };
 
+  // IntersectionObserver to trigger the animation
+  useEffect(() => {
+    const sectionElement = sectionRef.current;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsTitleVisible(true); // Make the title visible when the section is in view
+          console.log("I am here");
+          observer.disconnect(); // Stop observing after the animation is triggered
+        }
+      },
+      { threshold: 0.2 } // Trigger when 20% of the title is in view
+    );
+
+    if (sectionElement) {
+      observer.observe(sectionElement);
+    }
+
+    return () => {
+      if (sectionElement) {
+        observer.disconnect();
+      }
+    };
+  }, []);
+
   return (
-    <div className="home-news-container">
-      <div className="home-news-title">
-        <h1>LAB NEWS</h1>
-      </div>
+    <div className="home-news-container" ref={sectionRef}>
+      <TitleSection titleText="LAB NEWS" isVisible={isTitleVisible} />
+
       <div className="home-news-carousel-row">
         <Slider {...settingsFirstRow}>
           {firstRowCards.map((news, index) => (

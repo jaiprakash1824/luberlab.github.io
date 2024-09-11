@@ -1,11 +1,27 @@
 import { useEffect, useRef, useState } from "react";
 import "./HomeResearchSection.css";
 import ResearchCardHome from "./ResearchCardHome";
+import TitleSection from "../../../Components/Home/TitleSection";
 
 const researchItems = [
-  { imagePath: "assets/sample.jpg", title: "HEALTH SYSTEMS AT SCALE" },
-  { imagePath: "assets/sample.jpg", title: "AI FOR MEDICAL IMAGING" },
-  { imagePath: "assets/sample.jpg", title: "COMPUTATIONAL MICROBIOLOGY" },
+  {
+    imagePath: "assets/sample.jpg",
+    title: "HEALTH SYSTEMS AT SCALE",
+    description:
+      "This is some sample description for the research card on the home page to display the text",
+  },
+  {
+    imagePath: "assets/sample.jpg",
+    title: "AI FOR MEDICAL IMAGING",
+    description:
+      "This is some sample description for the research card on the home page to display the text",
+  },
+  {
+    imagePath: "assets/sample.jpg",
+    title: "COMPUTATIONAL MICROBIOLOGY",
+    description:
+      "This is some sample description for the research card on the home page to display the text",
+  },
 ];
 
 const HomeResearchSection = () => {
@@ -43,12 +59,17 @@ const HomeResearchSection = () => {
       className={`home-research-container ${isVisible ? "animate" : ""}`}
     >
       <div className="home-research-header">
-        <h1>OUR RESEARCH</h1>
+        <TitleSection titleText="OUR RESEARCH" isVisible={isVisible} />
+        {/* <h1>OUR RESEARCH</h1> */}
       </div>
       <div className="home-research-row">
         {researchItems.map((item, index) => (
           <div className="home-research-card" key={index}>
-            <ResearchCardHome imageSrc={item.imagePath} title={item.title} />
+            <ResearchCardHome
+              imageSrc={item.imagePath}
+              title={item.title}
+              description={item.description}
+            />
           </div>
         ))}
       </div>
