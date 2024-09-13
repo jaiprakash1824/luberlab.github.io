@@ -38,26 +38,6 @@
   email: "helen.shang@uta.edu"
   photo: shang.jpeg
 
-- Name: Mohammad Nasr
-  Achievements: ""
-  Areas_of_Research_Interest: ""
-  Bio: ""
-  Degree: PostDoc
-  Designation: "Post Doctoral Fellow"
-  Dissertation_Committee_Members: ""
-  Dissertation_topic: "Style transfer, compression, and search of medical imaging"
-  GitHub_URL: ""
-  Google_Scholar_URL: "https://scholar.google.com/citations?user=CrwJIcUAAAAJ&hl=en"
-  Graduation_Date: ""
-  LinkedIn_URL: "https://www.linkedin.com/in/msnasr/"
-  Mentors: "Manfred Huber"
-  Education: "PHD at The University of Texas at Arlington; MS and BS at Shariff University"
-  Research_Category: ""
-  Resume_CV: ""
-  Twitter_URL: ""
-  email: ""
-  photo: nasr.jpg
-
 - Name: Amir Hajighasemi
   Achievements: ""
   Areas_of_Research_Interest: "self supervised learning, computer vision, large language models"
