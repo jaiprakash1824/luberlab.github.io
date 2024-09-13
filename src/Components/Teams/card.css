@@ -10,7 +10,7 @@
 }
 
 .alumni-section-team {
-  background-color: #0064b1;
+  background-color: black;
 }
 
 .content-section {
@@ -18,12 +18,15 @@
   text-align: center;
 }
 .team-wrapper {
-  background-color: #f9f7f7;
+  background-color: black;
 }
 
-.content-section h2 {
-  color: #343a40 !important;
+.content-section > h2 {
+  color: white;
+  font-weight: 900;
+  font-size: 2rem;
 }
-p {
-  color: #343a40;
+.content-section > p {
+  color: white;
+  font-size: 1rem;
 }

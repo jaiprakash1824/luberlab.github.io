@@ -1,10 +1,9 @@
 .alumni-section {
-  margin-bottom: 20px;
   margin-top: 20px;
 }
 
 .alumni-header {
-  background-color: #0064b1;
+  background-color: black;
   color: white;
   text-align: center;
   font-size: 3em;
@@ -23,7 +22,7 @@
     minmax(200px, 1fr)
   ); /* 4 columns on large screens */
   gap: 20px;
-  background-color: #0064b1;
+  background-color: black;
   transition: max-height 0.3s ease, opacity 0.3s ease;
   overflow: hidden;
   /* max-height: 1000px; */

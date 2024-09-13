@@ -2,15 +2,13 @@
   width: 100%;
   padding: 20px;
   box-sizing: border-box;
-}
-.category-team {
-  background-color: transparent;
+  background-color: black;
 }
 
 .category-title-team {
-  color: #0064b1;
+  color: white;
   text-align: center;
-  margin-bottom: 1rem;
+  padding-bottom: 1rem;
   font-size: 3em;
   font-family: "SF Pro Black", sans-serif;
   font-weight: 900;
@@ -28,7 +26,7 @@
 
 .cover-wrapper-team {
   display: grid;
-  gap: 2rem;
+  gap: 1rem;
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
 }
