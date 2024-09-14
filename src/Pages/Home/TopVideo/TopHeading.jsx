@@ -1,5 +1,5 @@
-import "./TopHeading.css";
 import WavesBackground from "./WavesBackground";
+import "./TopHeading.css";
 
 const HomeTopHeading = () => {
   return (
@@ -8,7 +8,7 @@ const HomeTopHeading = () => {
         <WavesBackground />
       </div>
       <div className="home-top-heading-text">
-        <h1>HEALTH</h1>
+        <h1 className="main-heading">HEALTH</h1>
         <div className="home-sub-heading">
           <h1>DATA</h1>
           <h1>SCIENCE</h1>

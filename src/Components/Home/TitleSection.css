@@ -1,13 +1,7 @@
 .title-section {
+  position: relative;
   text-align: center;
-  opacity: 0;
-  transform: translateY(100px); /* Slide from below */
-  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
-}
-
-.title-section.animate {
-  opacity: 1;
-  transform: translateY(0); /* Slide up to original position */
+  overflow: hidden; /* This will hide the h1 while it's sliding in */
 }
 
 .title-section h1 {
@@ -15,6 +9,26 @@
   font-weight: 900;
   color: white;
   font-size: clamp(3rem, 10vw, 5em);
+  position: relative;
+  transform: translateY(100%); /* Start below the container */
+  transition: transform 0.8s ease-in-out;
+  z-index: 1;
+}
+
+.title-section.animate h1 {
+  transform: translateY(0); /* Slide into view */
+}
+
+/* Create the solid block behind the title */
+.title-section::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%; /* The solid block should cover the whole section */
+  background-color: black; /* Change this to the background color of the solid block */
+  z-index: 0;
 }
 
 /* Responsive font size adjustments */
