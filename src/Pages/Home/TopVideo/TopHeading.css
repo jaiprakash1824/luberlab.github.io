@@ -1,21 +1,26 @@
 .home-top-heading-container {
   position: relative;
   width: 100%;
-  height: 100vh;
-  background-color: black;
+  height: 80vh;
+  background: radial-gradient(
+    circle,
+    rgba(33, 50, 92, 0.142) 5%,
+    rgba(0, 0, 0, 1) 100%
+  ) !important;
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
   padding-top: 10%;
-  z-index: 1;
+  z-index: -1;
 }
 
-.home-top-heading-text {
+.home-top-heading-text > h1,
+.home-sub-heading > h1 {
   text-align: center;
   opacity: 0; /* Hidden at first */
-  transform: translateY(50px); /* Slide up from 50px down */
-  animation: slide-up 0.8s ease-out forwards; /* Slide up animation */
+  transform: translateY(50px);
+  animation: slide-up 0.8s ease-out forwards;
 }
 
 @keyframes slide-up {

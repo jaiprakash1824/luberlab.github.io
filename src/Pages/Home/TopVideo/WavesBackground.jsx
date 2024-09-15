@@ -8,13 +8,16 @@ const WavesBackground = () => {
   useEffect(() => {
     let container = containerRef.current;
     let camera, scene, renderer;
+    // eslint-disable-next-line no-unused-vars
     let particles,
       count = 0;
     const SEPARATION = 40,
       AMOUNTX = 130,
       AMOUNTY = 35;
 
+    // eslint-disable-next-line no-unused-vars
     let windowHalfX = window.innerWidth / 2;
+    // eslint-disable-next-line no-unused-vars
     let windowHalfY = window.innerHeight / 2;
 
     const init = () => {
@@ -64,7 +67,7 @@ const WavesBackground = () => {
 
       renderer = new THREE.WebGLRenderer({ alpha: true });
       renderer.setSize(window.innerWidth, window.innerHeight);
-      renderer.setClearColor(0x000000, 1);
+      // renderer.setClearColor(0x000000, 1);
       container.appendChild(renderer.domElement);
 
       window.addEventListener("resize", onWindowResize);

@@ -27,7 +27,7 @@
   left: 0;
   right: 0;
   height: 100%; /* The solid block should cover the whole section */
-  background-color: black; /* Change this to the background color of the solid block */
+  background-color: transparent; /* Change this to the background color of the solid block */
   z-index: 0;
 }
 

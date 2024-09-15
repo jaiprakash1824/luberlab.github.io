@@ -1,0 +1,30 @@
+.responsive-animated-path-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+}
+
+.svg-path {
+  width: 100%;
+  height: 100%;
+}
+
+.svg-path path {
+  stroke-dasharray: 0;
+  stroke-dashoffset: 0;
+  animation: drawPath 3s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+@keyframes drawPath {
+  0% {
+    stroke-dashoffset: 100%;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
