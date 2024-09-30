@@ -14,58 +14,32 @@
   font-weight: 900;
   letter-spacing: 1.1px;
 }
-.category-title-team-blue {
-  color: white !important;
-  text-align: center;
-  margin-bottom: 1rem;
-  font-size: 3em;
-  font-family: "SF Pro Black", sans-serif;
-  font-weight: 900;
-  letter-spacing: 1.1px;
-}
 
-.cover-wrapper-team {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(3, 1fr);
-  width: 100%;
-}
+.cover-wrapper-team,
 .cover-wrapper-team-top {
   display: grid;
-  gap: 2rem;
+  gap: 6rem 6rem; /* Explicitly set both row and column gaps */
   width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
 }
 
-.cover-wrapper-1-col-team {
-  grid-template-columns: 1fr;
-}
-
-.cover-wrapper-2-col-team {
-  grid-template-columns: 1fr 1fr;
-}
-
-.cover-wrapper-3-col-team {
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-@media screen and (max-width: 1100px) {
-  .cover-wrapper-team {
-    grid-template-columns: 1fr 1fr;
-  }
+.cover-wrapper-team > *,
+.cover-wrapper-team-top > * {
+  margin: 0; /* Remove margins from grid items */
+  padding: 0; /* Remove padding from grid items */
 }
 
 @media (max-width: 768px) {
-  .cover-wrapper-team {
+  .cover-wrapper-team,
+  .cover-wrapper-team-top {
     grid-template-columns: 1fr;
   }
 
-  .cover-team {
-    width: 100%;
-    height: auto;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    margin-left: 0rem !important;
-    margin-right: 0rem !important;
+  .cover-wrapper-team > *,
+  .cover-wrapper-team-top > * {
+    margin: 0; /* Ensure no margins are added in media queries */
   }
 }

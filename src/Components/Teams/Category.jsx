@@ -1,7 +1,8 @@
 import PropTypes from "prop-types";
 import "./Category.css";
-import { useEffect, useState } from "react";
-import NewCard from "./new_card"; // Use the correct import for new_card
+import { useEffect, useState, useRef } from "react";
+import NewCard from "./new_card";
+import TitleSection from "../../Components/Home/TitleSection";
 
 const baseURL = import.meta.env.BASE_URL;
 const getImageUrl = (imageName) => {
@@ -10,6 +11,8 @@ const getImageUrl = (imageName) => {
 
 const Category = ({ title, members }) => {
   const [imageUrls, setImageUrls] = useState({});
+  const [isTitleVisible, setIsTitleVisible] = useState(false); // State for title visibility
+  const sectionRef = useRef(null); // Reference to the section for IntersectionObserver
 
   useEffect(() => {
     const loadImages = () => {
@@ -23,25 +26,35 @@ const Category = ({ title, members }) => {
     loadImages();
   }, [members]);
 
+  // IntersectionObserver to trigger the animation for the title
+  useEffect(() => {
+    const sectionElement = sectionRef.current;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsTitleVisible(true); // Trigger title animation
+          observer.disconnect(); // Disconnect observer after triggering
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionElement) {
+      observer.observe(sectionElement);
+    }
+
+    return () => {
+      if (sectionElement) {
+        observer.disconnect(); // Clean up the observer
+      }
+    };
+  }, []);
+
   return (
-    <div className="category-team">
-      <h2
-        className={`${
-          title.toLowerCase() === "phd" ||
-          title.toLowerCase() === "undergraduate"
-            ? "category-title-team"
-            : "category-title-team-blue"
-        }`}
-      >
-        {title}
-      </h2>
-      <div
-        className={`${
-          title.toLowerCase() === "masters" || title.toLowerCase() === "phd"
-            ? "cover-wrapper-team"
-            : "cover-wrapper-team-top"
-        }`}
-      >
+    <div className="category-team" ref={sectionRef}>
+      <TitleSection titleText={title} isVisible={isTitleVisible} />
+      <div className="cover-wrapper-team">
         {members.map((member, index) => (
           <NewCard
             key={index}
