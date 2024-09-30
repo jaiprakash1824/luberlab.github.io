@@ -1,195 +1,127 @@
-@font-face {
-  font-family: 'Horizon';
-  src: url('/font/horizon_outlined.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
+.animated-section.active {
+  opacity: 1;
+  box-sizing: border-box;
+  margin: 0; /* Explicitly remove any margins added by reset */
+  padding: 0;
+  transform: translateY(0);
+  transition: transform 1.2s ease-in-out, opacity 1.2s ease-out 0.2s; /* Delay opacity slightly */
 }
 
-
-.main-title {
-  font-family: 'Horizon', sans-serif !important;
-  font-size: 28px !important;
-  line-height: 1.2 !important;
-  margin-bottom: 50px !important;
-  text-align: center;
-  position: relative;
-  margin-top: 2px;
+.animated-section h1,
+.animated-section p {
+  opacity: 0;
+  transform: translateY(0);
+  transition: transform 1.2s ease-in-out, opacity 1.2s ease-out 0.1s;
+  transition-delay: 0.1s;
 }
 
-.main-title::before,
-.main-title::after {
-  content: 'GENERATIVE ARTIFICIAL INTELLIGENCE';
+.animated-section.active h1,
+.animated-section.active p {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Particle background styling */
+#tsparticles {
   position: absolute;
-  left: 0;
-  right: 0;
   top: 0;
+  right: 0;
+  width: 50%;
+  height: 100vh;
+  z-index: 1; /* Ensure particles are in the background */
+  transition: transform 0.1s ease-in-out, opacity 0.1s ease-in-out 0.1s; /* Match this duration to carousel transition */
 }
 
-.main-title::before {
-  color: #ff6600 !important;
-  z-index: 1;
+.main-container {
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  box-sizing: border-box;
+  width: 100vw;
+  margin: 0; /* Explicitly remove any margins added by reset */
+  padding: 0;
+  overflow: hidden; /* Hide overflow to ensure no scrollbars appear */
+  position: relative; /* Needed for absolute positioning of children if necessary */
 }
 
-.main-title::after {
+/* Carousel section general styles */
+.section {
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  background-color: black;
   color: white;
-  z-index: 2;
-  -webkit-text-stroke: 2px orange;
-}
-.main-title, .publications-title, .publication-title, .publication-authors {
-  color: white !important; 
-}
-.publications-card .ant-card-head-title h4.publications-title {
-  background-color: white;
-  border-radius: 0;
-  padding: 5px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  color: #4c2fec !important;
-  flex: 1;
-}
-
-.publication-content {
-  background-color:#0064b1 !important; 
-  padding: 15px;
-  flex-grow: 1;
-  color: white !important;
-  position: relative;
-  
-}
-
-.publication-title {
-  margin: 0;
-  font-weight: bold;
-}
-
-.publication-authors {
-  margin: 5px 0 0;
-  font-size: 0.9em;
-}
-
-.publication-content::after {
-  content: '';
-  position: absolute;
-  left: -90px; 
-  right: -50px; 
-  bottom: 5px; 
-  height: 2px;
-  background: linear-gradient(to right, #8c52ff, #f674aa);
-  z-index: 1;
-}
-
-
-.page-container {
-  padding: 20px;
-  background-color: #f0f2f5;
-}
-
-.research-publication-container {
-  display: flex;
+  flex-direction: column;
   justify-content: center;
-  gap: 30px;
+  align-items: flex-start;
+  padding-left: 5vw;
+  margin: 0; /* Explicitly remove any margins added by reset */
+  text-align: left;
+  box-sizing: border-box;
+  transition: transform 0.8s ease-in-out;
 }
 
-.research-card, .publications-card {
-  flex: 0 1 35%; 
-  border-radius: 50px; 
-  padding: 25px;
+.section h1, .section p {
+  max-width: 40vw;
+  margin-left: 20px;
 }
-.publications-card{
-  border-radius: 0px; 
-  border-style: groove;
-}
-
-.research-card {
-  background-color: #0064b1; 
-  color: #ffffff !important; 
-  padding: 10px; 
-  margin-right: 10px;
-}
-
-
-.publications-title {
-  color: #0064b1 !important; 
-  text-decoration-line: underline;
-}
-
-
-.publication-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 0px;
-  position: relative; 
-}
-
-.publication-name, .publication-authors {
-  transition: transform 0.2s ease-in-out; 
-  display: block; 
-}
-
-.publication-content:hover .publication-name, .publication-content:hover .publication-authors {
-  transform: translateX(-10px); /* Only move text to the left */
-  color: #4db1ef !important;
-}
-
-.publication-name {
-  margin: 0;
-  font-weight: bold;
-}
-
-.publication-authors {
-  margin-top: 5px;
-  font-size: 0.9em;
-}
-
-/* .publication-number {
-  background-color: #0064b1;
+.section h1{
   color: #ffffff;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 15px; 
-  font-weight: bold;
-  position: relative; 
-  top: 15px;
-  left: -10px;
-  overflow: auto; 
-  flex-shrink: 0;
-} */
+}
+.section p {
+  text-align: justify;
+  line-height: 2; 
+  color: white;
+}
 
-@media (max-width: 768px) {
-  .research-publication-container {
-      flex-direction: column; /* Stack the cards vertically on smaller screens */
-      align-items: center;
+/* Adjusting the visibility and functionality of the default dots */
+.ant-carousel .slick-dots {
+  position: fixed; /* Ensures dots do not move with the carousel */
+  bottom: 20px;
+  left: 3%; /* Move dots to the right corner */
+  z-index: 100; /* Ensures dots are above other elements */
+}
+
+.ant-carousel .slick-track {
+  transition: opacity 1.2s ease-in-out !important /* Adjust this duration */
+}
+
+/* Custom styles for the vertical slider */
+.vertical-slider {
+  -webkit-appearance: none;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 200px;
+  width: 10px;
+  background: #ccc;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+
+  /* Styling for the slider thumb */
+  -webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #4CAF50;
+    cursor: pointer;
   }
 
-  .research-card, .publications-card {
-      flex: 0 1 90%; 
-      margin-bottom: 20px;
-  }
-
-  .main-title, .publications-title {
-      font-size: 20px; 
-  }
-
-  .publication-number {
-      width: 40px; 
-      height: 40px;
+  /* Firefox compatibility for the thumb */
+  ::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #4CAF50;
+    cursor: pointer;
   }
 }
 
-@media (max-width: 480px) {
-  .main-title, .publications-title {
-      font-size: 18px; 
+/* Styling for mobile responsiveness */
+@media (max-width: 768px) {
+  .section {
+    padding: 10px;
   }
 
-  .publication-title, .publication-authors {
-      font-size: 0.8em; 
-  }
-
-  .publication-number {
-      width: 50px; 
-      height: 50px;
+  .vertical-slider {
+    height: 150px; /* Shorter slider for smaller screens */
   }
 }
