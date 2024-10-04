@@ -1,24 +1,34 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 import "./research.css";
 
-const SortFilter = ({ sortOrder, setSortOrder, filterVisibility, toggleFilterSectionVisibility }) => (
+const SortFilter = ({
+  sortOrder,
+  setSortOrder,
+  filterVisibility,
+  toggleFilterSectionVisibility,
+}) => (
   <div className="filter-option">
-    <h4 className="filter-header-u" onClick={() => toggleFilterSectionVisibility('sort')}>
+    <h4
+      className="filter-header-u"
+      onClick={() => toggleFilterSectionVisibility("sort")}
+    >
       <span className="filter-title">Sort By</span>
-      <span className="filter-toggle1">{filterVisibility.sort ? '-' : '+'}</span>
+      <span className="filter-toggle1">
+        {filterVisibility.sort ? "-" : "+"}
+      </span>
     </h4>
     {filterVisibility.sort && (
       <div className="sort-options">
         <div
-          className={`sort-option ${sortOrder === 'desc' ? 'active' : ''}`}
-          onClick={() => setSortOrder('desc')}
+          className={`sort-option ${sortOrder === "desc" ? "active" : ""}`}
+          onClick={() => setSortOrder("desc")}
         >
           Newest
         </div>
         <div
-          className={`sort-option ${sortOrder === 'asc' ? 'active' : ''}`}
-          onClick={() => setSortOrder('asc')}
+          className={`sort-option ${sortOrder === "asc" ? "active" : ""}`}
+          onClick={() => setSortOrder("asc")}
         >
           Oldest
         </div>

@@ -23,7 +23,6 @@ function App() {
       <Navbar />
       <MemberProvider>
         <Routes>
-          
           <Route path="/" element={<Home />} />
           <Route path="/team" element={<Teams />} />
           <Route path="/individual-page" element={<IndividualPage />} />
