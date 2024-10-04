@@ -35,7 +35,7 @@ const HomeResearchSection = () => {
           observer.disconnect();
         }
       },
-      { threshold: [0.1] }
+      { threshold: [0.2] }
     );
 
     if (sectionElement) {
@@ -50,9 +50,12 @@ const HomeResearchSection = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="w-full min-h-screen text-center bg-black ">
+    <div
+      ref={sectionRef}
+      className="w-full min-h-screen flex flex-col justify-center items-center text-center bg-black "
+    >
       <div>
-        <TitleSection titleText="OUR RESEARCH" isVisible={isVisible} />
+        <TitleSection titleText="OUR RESEARCH" />
       </div>
       <div
         className={`flex flex-wrap justify-center items-center transition-transform duration-800 ease-in-out ${

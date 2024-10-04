@@ -2,18 +2,20 @@ import WhatWeDo from "./WhatWeDo/WhatWeDo";
 import HomeTopHeading from "./TopVideo/TopHeading";
 import HomeTeam from "./team/HomeTeam";
 import HomeResearchSection from "./research/HomeResearchSection";
-// import { HomeNewsCardContext } from "./News/HomeNewsContext";
-// import HomeNewsCarousel from "./News/HomeNewsCarousel";
+import { HomeNewsCardContext } from "./news/HomeNewsContext";
+import HomeNewsCarousel from "./news/HomeNewsCarousel";
+import ScrollProgress from "../../components/ScrollProgress/ScrollProgress";
 
 const Home = () => {
   return (
     <div className="flex flex-col m-0 ">
+      <ScrollProgress />
       <HomeTopHeading />
       <HomeResearchSection />
       <WhatWeDo />
-      {/*<HomeNewsCardContext>
+      <HomeNewsCardContext>
         <HomeNewsCarousel />
-      </HomeNewsCardContext>*/}
+      </HomeNewsCardContext>
       <HomeTeam />
     </div>
   );

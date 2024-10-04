@@ -5,7 +5,8 @@ import Home from "./pages/home/Home.jsx";
 // import News from "./Pages/news/News.jsx";
 // import Footer from "./Components/Footer/NewFooter.jsx";
 // import ScrollToTop from "./Components/ScrollToTop/ScrollToTop.jsx";
-// import Publications from "./Pages/Publications/Publications.jsx";
+import Publications from "./pages/publications/Publications.jsx";
+
 // import JobListings from "./Pages/JoinUs/JoinUs.jsx";
 // import ResearchPage from "./Pages/Research/Research.jsx";
 import Navbar from "./components/header/NavBar";
@@ -22,9 +23,9 @@ function App() {
           <Route path="/" element={<Home />} />
           {/* <Route path="/team" element={<Teams />} />
           <Route path="/individual-page" element={<IndividualPage />} />
-          <Route path="/news" element={<News />} />
+          <Route path="/news" element={<News />} />*/}
           <Route path="/publications" element={<Publications />} />
-          <Route path="/contact" element={<JobListings />} />
+          {/* <Route path="/contact" element={<JobListings />} />
           <Route path="/research" element={<ResearchPage />} /> */}
         </Routes>
       </MemberProvider>

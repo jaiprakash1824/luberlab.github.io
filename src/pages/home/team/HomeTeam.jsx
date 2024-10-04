@@ -1,4 +1,3 @@
-import { useEffect, useState, useRef } from "react";
 import ContactButton from "../../../components/header/ContactButton";
 import TitleSection from "../../../components/titleSection/TitleSection"; // Import TitleSection
 import { useNavigate } from "react-router-dom";
@@ -19,41 +18,14 @@ const teamMembers = [
 
 const Team = () => {
   const navigate = useNavigate();
-  const [isTitleVisible, setIsTitleVisible] = useState(false);
-  const sectionRef = useRef(null);
-
-  // IntersectionObserver to trigger the animation for the title
-  useEffect(() => {
-    const sectionElement = sectionRef.current;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsTitleVisible(true); // Trigger title animation
-          observer.disconnect(); // Disconnect observer after triggering
-        }
-      },
-      { threshold: 0.2 }
-    );
-
-    if (sectionElement) {
-      observer.observe(sectionElement);
-    }
-
-    return () => {
-      if (sectionElement) {
-        observer.disconnect(); // Clean up the observer
-      }
-    };
-  }, []);
 
   const handleSeeMoreClick = () => {
     navigate("/team");
   };
 
   return (
-    <div className="text-center bg-black py-12 min-h-screen" ref={sectionRef}>
-      <TitleSection titleText="TEAM" isVisible={isTitleVisible} />{" "}
+    <div className="text-center bg-black min-h-screen flex flex-col justify-center items-center">
+      <TitleSection titleText="TEAM" />
       {/* Use TitleSection here */}
       <div className="flex flex-wrap justify-center gap-8 py-8">
         {teamMembers.map((member, index) => (

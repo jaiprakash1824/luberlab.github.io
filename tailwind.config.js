@@ -37,7 +37,7 @@ export default {
         navbarSlideDown: "navbarSlideDown 0.5s ease-in-out forwards",
         navbarSlideUp: "navbarSlideUp 0.5s ease-in-out forwards",
         fadeIn: "fadeIn 1s ease-in-out forwards",
-        slideUp: "slideUp 0.8s ease-in-out forwards", // Common slideUp animation
+        slideUp: "slideUp 0.5s ease-in-out forwards", // Common slideUp animation
         slideDown: "slideDown 0.5s ease-in-out forwards",
         buttonSlide: "buttonSlide 0.5s ease-in-out forwards",
         buttonHide: "buttonHide 0.5s ease-in-out forwards",

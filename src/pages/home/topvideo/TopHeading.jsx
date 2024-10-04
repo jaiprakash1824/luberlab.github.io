@@ -1,3 +1,4 @@
+import TitleSection from "../../../components/titleSection/TitleSection";
 import WavesBackground from "./WavesBackground";
 
 const HomeTopHeading = () => {
@@ -11,13 +12,15 @@ const HomeTopHeading = () => {
       {/* Centered Text */}
       <div className="z-10 flex flex-col justify-center items-center text-center">
         {/* Main Heading */}
-        <h1 className="text-white font-black text-[clamp(3rem,10vw,6rem)] opacity-0 animate-slideUp">
+        {/* <h1 className="text-white font-black text-[clamp(3rem,10vw,6rem)] opacity-0 animate-slideUp">
           HEALTH
-        </h1>
+        </h1> */}
+        <TitleSection titleText={"HEALTH"} />
+        <TitleSection titleText={"DATA SCIENCE LAB"} />
 
-        <h1 className="text-white font-black mx-4 text-[clamp(3rem,10vw,6rem)] opacity-0 animate-slideUp delay-[0.3s]">
+        {/* <h1 className="text-white font-black mx-4 text-[clamp(3rem,10vw,6rem)] opacity-0 animate-slideUp delay-[0.3s]">
           DATA SCIENCE LAB
-        </h1>
+        </h1> */}
       </div>
     </div>
   );
