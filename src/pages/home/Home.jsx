@@ -1,5 +1,5 @@
 import WhatWeDo from "./whatwedo/WhatWeDo";
-import HomeTopHeading from "./TopVideo/TopHeading";
+import HomeTopHeading from "./topvideo/TopHeading";
 import HomeTeam from "./team/HomeTeam";
 import HomeResearchSection from "./research/HomeResearchSection";
 import { HomeNewsCardContext } from "../../context/HomeNewsContext";
