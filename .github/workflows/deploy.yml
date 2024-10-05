@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - website  # The branch to watch for pushes
+      - website-tailwind  # The branch to watch for pushes
 
 jobs:
   build:
