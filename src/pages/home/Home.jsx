@@ -1,4 +1,4 @@
-import WhatWeDo from "./WhatWeDo/WhatWeDo";
+import WhatWeDo from "./whatwedo/WhatWeDo";
 import HomeTopHeading from "./TopVideo/TopHeading";
 import HomeTeam from "./team/HomeTeam";
 import HomeResearchSection from "./research/HomeResearchSection";
