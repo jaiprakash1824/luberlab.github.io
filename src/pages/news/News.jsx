@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import ScrollProgress from "../../components/ScrollProgress/ScrollProgress";
 
 const NewsPage = () => {
-  const cards = useHomeNews(); // Accessing cards from context
+  const cards = useHomeNews();
 
   return (
     <div className="bg-black text-white min-h-screen py-16">
