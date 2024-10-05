@@ -9,7 +9,7 @@ export const HomeNewsCardContext = ({ children }) => {
   const [cards, setCards] = useState([]);
 
   useEffect(() => {
-    Papa.parse(`${baseURL}news.csv`, {
+    Papa.parse(`${baseURL}assets/news.csv`, {
       download: true,
       header: true,
       skipEmptyLines: true,

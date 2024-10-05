@@ -29,21 +29,21 @@ const HomeNewsCarousel = () => {
   // Dynamically determine slides based on screen width
   const slidesToShow = width < 768 ? 1 : width < 1200 ? 2 : 3;
 
-  // Slider settings for the first row
+  // Slider settings for the first row (forward scrolling)
   const settingsFirstRow = {
     dots: false,
     infinite: true,
-    speed: 10000, // Adjust speed for better readability
+    speed: 8000, // Higher speed for continuous flow
     slidesToShow: slidesToShow,
-    slidesToScroll: 1,
+    slidesToScroll: 0.5, // Small incremental scrolling for smoother flow
     autoplay: true,
-    autoplaySpeed: 0, // Slower autoplay speed
-    cssEase: "linear",
+    autoplaySpeed: 0, // Continuous autoplay with no pause
+    cssEase: "linear", // Smooth, continuous easing
     pauseOnHover: false,
     arrows: false,
   };
 
-  // Slider settings for the second row (reverse direction)
+  // Slider settings for the second row (reverse scrolling)
   const settingsSecondRow = {
     ...settingsFirstRow,
     rtl: true, // Reverse direction for the second row
@@ -67,6 +67,7 @@ const HomeNewsCarousel = () => {
           ))}
         </Slider>
       </div>
+
       {/* Second row of news cards (reverse direction) */}
       <div className="my-5">
         <Slider {...settingsSecondRow}>
@@ -82,6 +83,7 @@ const HomeNewsCarousel = () => {
           ))}
         </Slider>
       </div>
+
       {/* Centered Contact Button */}
       <div className="flex justify-center mt-8">
         <ContactButton title={"SEE MORE"} onClick={handleSeeMoreClick} />
