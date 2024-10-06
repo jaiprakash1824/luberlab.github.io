@@ -25,7 +25,7 @@ const WavesBackground = () => {
         120,
         window.innerWidth / window.innerHeight,
         1,
-        10000
+        1000
       );
       camera.position.y = 150;
       camera.position.z = 300;
