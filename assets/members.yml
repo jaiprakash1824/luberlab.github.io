@@ -1,0 +1,304 @@
+- Name: Dr. Jacob Luber
+  Achievements: ""
+  Areas_of_Research_Interest: "Currently focused on developing multi-model models to accelerate biomarker and target discovery in oncology"
+  Bio: "Dr. Luber directs the Health Data Science Lab (HDSL) at the University of Texas at Arlington where he is an Assistant Professor in the Department of Computer Science and Engineering and a CPRIT Scholar in Cancer Research."
+  Degree: Director
+  Designation: "Director, Health Data Science Lab"
+  Dissertation_Committee_Members: ""
+  Dissertation_topic: ""
+  GitHub_URL: ""
+  Google_Scholar_URL: "https://scholar.google.com/citations?user=qkLcROYAAAAJ&hl=en"
+  Graduation_Date: ""
+  LinkedIn_URL: "https://www.linkedin.com/in/jacobluber/"
+  Mentors: ""
+  Education: "PhD, Harvard University, 2020. Major - Biomedical Informatics; BS, Trinity University, 2016. Major - Computer Science"
+  Research_Category: ""
+  Resume_CV: ""
+  Twitter_URL: "https://x.com/jacobluber"
+  email: "jacob.luber@uta.edu"
+  photo: jacob.jpg
+
+- Name: Helen Shang
+  Achievements: "In undergrad, I served as president of OATH, a free health clinic in downtown San Diego In medical school, I co-founded Memoir Health, a digital health company for chronic pain In residency, I've been working with the Luber Lab as a Visiting Assistant Professor"
+  Areas_of_Research_Interest: "Currently focused on developing multi-model models to accelerate biomarker and target discovery in oncology"
+  Bio: "Visiting Assistant Professor in the Luber Lab at UTA. Incoming Hematology-Oncology fellow at UCLA. Alum at Harvard Med and UCSD. Co-founder of Memoir Health."
+  Degree: PostDoc
+  Designation: "Visiting Assistant Professor"
+  Dissertation_Committee_Members: ""
+  Dissertation_topic: ""
+  GitHub_URL: "https://github.com/hshang1"
+  Google_Scholar_URL: "https://scholar.google.com/citations?user=fNHSM9oAAAAJ&hl=en"
+  Graduation_Date: ""
+  LinkedIn_URL: "https://www.linkedin.com/me?trk=p_mwlite_me_notifications-secondary_nav"
+  Mentors: ""
+  Education: "UCSD - BS/MS in Molecular Biology; Harvard Medical School - MD; UCLA - Internal Medicine Residency; UCLA - Hematology/Oncology fellowship"
+  Research_Category: "Oncology, Machine Learning, Multi-modal, Target discovery"
+  Resume_CV: "https://drive.google.com/u/0/open?usp=forms_web&id=1_eppxbgGzfe9-VBaUtB-t-MgDnhEknl8"
+  Twitter_URL: ""
+  email: "helen.shang@uta.edu"
+  photo: shang.jpeg
+
+- Name: Mohammad Nasr
+  Achievements: ""
+  Areas_of_Research_Interest: ""
+  Bio: ""
+  Degree: PostDoc
+  Designation: "Post Doctoral Fellow"
+  Dissertation_Committee_Members: ""
+  Dissertation_topic: "Style transfer, compression, and search of medical imaging"
+  GitHub_URL: ""
+  Google_Scholar_URL: "https://scholar.google.com/citations?user=CrwJIcUAAAAJ&hl=en"
+  Graduation_Date: ""
+  LinkedIn_URL: "https://www.linkedin.com/in/msnasr/"
+  Mentors: "Manfred Huber"
+  Education: "PHD at The University of Texas at Arlington; MS and BS at Shariff University"
+  Research_Category: ""
+  Resume_CV: ""
+  Twitter_URL: ""
+  email: ""
+  photo: nasr.jpg
+
+- Name: Thuong (Lucy) Pham
+  Achievements: "The Welch Research Foundation Undergraduate Fellowship (Summer 2021 - current)
+  American Physical Society (APS) Undergraduate Outstanding Oral Presentation Award (March 2022)
+  Trinity Engineering Departments Swalm Endowed Engineering Scholarship (Fall 2022 - Spring 2023)
+  Trinity University Murchison Undergraduate Research Grant (Summer 2020) Trinity University International Merit Scholarship
+  Deans List: Completed 15 or more credit hours and attained a GPA of 3.65 or above Spring 2019 and Fall 2020"
+  Areas_of_Research_Interest: "Main project: Protein Large Language Model application on Next-Gen Sequencing Platforms.
+  Others: Creating Analysis pipeline for big data in genomics/proteomics."
+  Bio: "PhD Student - UT Arlingtons Computer Science and Engineering "
+  Degree: PHD
+  Designation: GRA
+  Dissertation_Committee_Members: ""
+  Dissertation_topic: ""
+  GitHub_URL: "https://github.com/lucypham951"
+  Google_Scholar_URL: "https://scholar.google.com/citations?user=opREmBkAAAAJ&hl=en&oi=ao"
+  Graduation_Date: "15-05-2028"
+  LinkedIn_URL: "https://www.linkedin.com/in/thuong-lucy-pham/"
+  Mentors: "Jacob Luber (phD - advisor), Mohammad Nars (phD - postdoc)"
+  Education: "Undergraduate - Trinity University, TX: B.S. in Computer Science, B.S. in Electrical Engineering, B.A. in Physics, minor in Mathematics. Graduate - UTA CSEs BS-to-phD program (on-going)"
+  Research_Category: "Multi-disciplinary Researches; Machine Learning, Proteomics, Automation."
+  Resume_CV: "https://drive.google.com/u/0/open?usp=forms_web&id=1rzQlveCgvPc_uf9cFc-NOdxYJjU9mQpU"
+  Twitter_URL: ""
+  email: "thuong.pham@uta.edu"
+  photo: "thuong_pham.jpg"
+
+- Name: Cody Tyler Reynolds
+  Achievements: "UTAs Computer Science and Engineering Departments Undergraduate Academic Achievement Award"
+  Areas_of_Research_Interest: "Metagenomics and Bioinformatics"
+  Bio: "Hello, Im Cody Tyler Reynolds Im a CS PhD Student studying AI + Bioinformatics at UTA. My research focuses on understanding how environmental impacts such as chemical exposures can affect the human microbiome by utilizing LLMs and custom bioinformatics pipelines on metagenomic sequencing data. Additionally, I also work with other microbiome data such as soil samples to look for disruptions to various Environmental Signaling Pathways."
+  Degree: PHD
+  Designation: GRA
+  Dissertation_Committee_Members: ""
+  Dissertation_topic: ""
+  GitHub_URL: "https://github.com/codytreynolds"
+  Google_Scholar_URL: "https://scholar.google.com/citations?user=U-ieOfUAAAAJ&hl=en&oi=ao"
+  Graduation_Date: "08-05-2027"
+  LinkedIn_URL: "https://www.linkedin.com/in/cody-reynolds-049b85163/"
+  Mentors: "Dr. Jacob Luber"
+  Education: "B.S. in Computer Science at University of Texas at Arlington"
+  Research_Category: "Genomics, Bioinformatics, Computational Biology, Large Language Models"
+  Resume_CV: "https://drive.google.com/u/0/open?usp=forms_web&id=1mJCwLe4-X544NbcPiJIgLIQ-z31JIP4K"
+  Twitter_URL: ""
+  email: "cody.reynolds@uta.edu"
+  photo: "cody_reynolds.jpg"
+
+- Name: Yash Vishwanath Tobre
+  Achievements: "Worked with Bank of America for a capstone project involving LLMs Awarded maverick distinction advantage"
+  Areas_of_Research_Interest: "Machine Learning, Bioinformatics, Protein sequencing, Data Science"
+  Bio: "I am a masters student of Data Science from UT Arlington. My research focuses on Bioinformatics and protein sequencing. I work on developing, fine-tuning, and testing Machine Learning and deep learning models for protein sequencing."
+  Degree: Masters
+  Designation: GRA
+  Dissertation_Committee_Members: ""
+  Dissertation_topic: ""
+  GitHub_URL: "https://github.com/Yash-Tobre"
+  Google_Scholar_URL: "https://scholar.google.com/citations?view_op=list_works&hl=en&user=4DyHLzgAAAAJ&gmla=ABOlHizRqirBRV5XBsJQomezLAOFGwbya3WG6F1Uv-qOuB8sUAU4XORUCLN_ecrCl7me7D0Av8akuoS3PSa-uns9bFM95hbMshjNaSDwkGg"
+  Graduation_Date: "10-05-2024"
+  LinkedIn_URL: "https://www.linkedin.com/in/yashtobre?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+  Mentors: "Lucy, Pham Thoung"
+  Education: "Masters in Data Science, Bachelors in Electronic Engineering (India)"
+  Research_Category: "Machine Learning, Bioinformatics, Deep Learning"
+  Resume_CV: "https://drive.google.com/u/0/open?usp=forms_web&id=1okhu05cTaFrQd9BFd4K2-DkiyMf3cKBw"
+  Twitter_URL: ""
+  email: "yxt4030@mavs.uta.edu"
+  photo: "missing.png"
+
+- Name: Mohamed Mohamed
+  Achievements: ""
+  Areas_of_Research_Interest: "Machine Learning, Computer Vision"
+  Bio: "I am a masters graduate from UTA starting under Dr. Jacob Luber in the MICHI Health Data Science Lab this fall as a PhD student"
+  Degree: PHD
+  Designation: GRA
+  Dissertation_Committee_Members: ""
+  Dissertation_topic: ""
+  GitHub_URL: "https://github.com/uta-mo"
+  Google_Scholar_URL: ""
+  Graduation_Date: "11-05-2027"
+  LinkedIn_URL: ""
+  Mentors: "Prof Jacob Luber"
+  Education: "Masters in Computer Science at UTA"
+  Research_Category: "Machine Learning, Computer Vision"
+  Resume_CV: "https://drive.google.com/u/0/open?usp=forms_web&id=1o8iVD32jDgFDiGA-EQUebCa6VGrSgKJh"
+  Twitter_URL: ""
+  email: "mohamed.mohamed4@mavs.uta.edu"
+  photo: "Mohamed_Mohamed.jpg"
+
+- Name: Biraaj Rout
+  Achievements: "Defended master thesis successfully at UTA."
+  Areas_of_Research_Interest: "Currently my work focuses on adding generalizability to predicting future states with Spatial point processes in single molecule resolution spatial transcriptomics. This project uses statistical machine learning models to predict the future states distribution for gene regulations in various cell or nucleus trajectory."
+  Bio: "I am an upcoming PhD student of Dr Jacob Luber in MICHI - Health Data Science Lab at UTA. Being a passionate machine learning researcher, my focus is on prediction and analysis of genomics and spatial transcriptomics. I also work on optimizing complex large language and diffusion models for health care and cancer research."
+  Degree: PHD
+  Designation: GRA
+  Dissertation_Committee_Members: "Dr Jacob Luber, Dr Ming Li, Dr Rémi A. Chou"
+  Dissertation_topic: "Predicting future states with spatial point processes in single molecule resolution spatial transcriptomics"
+  GitHub_URL: "https://github.com/biraaj"
+  Google_Scholar_URL: "https://scholar.google.com/citations?user=unGpG4IAAAAJ&hl=en&oi=ao"
+  Graduation_Date: "10-05-2027"
+  LinkedIn_URL: "https://www.linkedin.com/in/biraaj/"
+  Mentors: "Dr Jacob Luber"
+  Education: "MSCS at UTA"
+  Research_Category: "Machine Learning, Computer vision, Genomics, statistical machine learning, Large Language Models"
+  Resume_CV: "https://drive.google.com/u/0/open?usp=forms_web&id=1edSuXFa6mhqcvTVwEY73BmAAK0bJ1Q2x"
+  Twitter_URL: ""
+  email: "bxr1886@mavs.uta.edu"
+  photo: "biraaj_luber_lab.jpg"
+
+- Name: Jillur Rahman Saurav
+  Achievements: "Google Research CSRMP recipients :Class A (January 2023 - April 2023)"
+  Areas_of_Research_Interest: "Gen AI, Computer Vision, Natural Language Processing"
+  Bio: "As a Ph.D. candidate, I am deeply immersed in exploring the potential of deep learning to transform cancer diagnosis and treatment. My research focuses on employing advanced algorithms such as diffusion models, generative adversarial networks (GANs), and autoencoders (VAEs/AEs) to develop artificial biomarker stains for cancer tissue samples and to create a sophisticated multiplexed cancer image search engine. These innovative tools are designed to not only enhance the precision of cancer diagnostics, particularly for rare diseases but also to increase accessibility in underserved regions globally. My ultimate goal is to democratize access to these cutting-edge technologies, fostering greater equity in healthcare across developing countries."
+  Degree: PHD
+  Designation: GRA
+  Dissertation_Committee_Members: "Dr. William Beksi, Dr. Junzhou Huang, Dr. Manfred Huber, Dr. Jacob Luber"
+  Dissertation_topic: "Medical Image Generation"
+  GitHub_URL: "https://github.com/facevoid"
+  Google_Scholar_URL: "https://scholar.google.com/citations?user=uhDHcmoAAAAJ&hl=en"
+  Graduation_Date: "09-12-2025"
+  LinkedIn_URL: "https://www.linkedin.com/in/jillur-rahman-saurav/"
+  Mentors: "Dr. Jacob Luber"
+  Education: "BS in Computer Science"
+  Research_Category: "Gen AI, Computer Vision, Natural Language Processing"
+  Resume_CV: "https://drive.google.com/u/0/open?usp=forms_web&id=1u1x053Mq4Bv8QBSBdG2ncrkYgdf_iiC4"
+  Twitter_URL: ""
+  email: "mxs2361@mavs.uta.edu"
+  photo: "rahman.jpg"
+
+- Name: Hayden Lotspeich
+  Achievements: ""
+  Areas_of_Research_Interest: ""
+  Bio: ""
+  Degree: PHD
+  Designation: GTA
+  Dissertation_Committee_Members: ""
+  Dissertation_topic: ""
+  GitHub_URL: ""
+  Google_Scholar_URL: ""
+  Graduation_Date: "05-03-2029"
+  LinkedIn_URL: ""
+  Mentors: "Dr. Luber"
+  Education: "Bachelors/Masters Degree in Computer Science"
+  Research_Category: ""
+  Resume_CV: "https://drive.google.com/u/0/open?usp=forms_web&id=1t27gqsKZ2TfpspuFbSier6XQCKZLC9sK"
+  Twitter_URL: ""
+  email: "hayden.lotspeich@mavs.uta.edu"
+  photo: "hayden.jpg"
+
+- Name: Parisa Boodaghi Malidarreh
+  Achievements: "Helen H Shang, Mohammad Sadegh Nasr, Jai Prakash Veerla, Parisa Boodaghi Malidarreh, MD Saurav, Amir Hajighasemi, Manfred Huber, Chace Moleta,Jitin Makker, Jacob M Luber,Histopathology Slide Indexing and Search: Are We There Yet?, NEJM AI, 2023"
+  Areas_of_Research_Interest: "My work extends from cancer diagnosis to treatment and prognosis, underpinned by a robust foundation in mathematics, statistical analysis, statistical genetics, and analysis on embryo genesis."
+  Bio: "As a Ph.D. student in Computer Science at The University of Texas at Arlington, I specialize in Health Data Science, focusing on leveraging AI and Deep Learning for groundbreaking healthcare applications.  My experience includes developing, deploying, and training sophisticated Deep Learning algorithms, evidenced by my projects in, generative AI on histopathology images, and genetic data analysis. My dedication to this field is reflected in my contributions to publications in esteemed journals and conferences. I am driven by the potential of AI to revolutionize healthcare, making a tangible difference in the lives of patients worldwide."
+  Degree: PHD
+  Designation: GRA
+  Dissertation_Committee_Members: "Dr. Manfred Huber, Dr. Junzhou Huang , Dr. William Beksi"
+  Dissertation_topic: "Integrating omics with vision techniques at scale"
+  GitHub_URL: "https://github.com/Parisa-Boodaghi"
+  Google_Scholar_URL: "https://scholar.google.com/citations?user=VtHS_yEAAAAJ&hl=en&oi=sra"
+  Graduation_Date: "11-08-2027"
+  LinkedIn_URL: "https://www.linkedin.com/in/parisa-boodaghi-malidarreh-07646b171/"
+  Mentors: "Dr. Jacob Luber"
+  Education: "Master in Power Electronics"
+  Research_Category: "Machine Learning, Computer Vision, Genetics"
+  Resume_CV: "https://drive.google.com/u/0/open?usp=forms_web&id=1LOMiD6vLZc9DJgx8dihqLTPdAcMhCL77"
+  Twitter_URL: ""
+  email: "pxb7330@mavs.uta.edu"
+  photo: "ParisaBoodaghiMalidarreh.jpg"
+
+- Name: Aarushi Jain
+  Achievements: "Summer 2023 intern at Lawrence Berkeley National Laboratory Fall 2023 (Full-time) and Spring 2024 (part-time) intern at AMD in the HPC Software Solution team Secured a full-time position as ML Inference acceleration SDE 2 at AMD"
+  Areas_of_Research_Interest: "HPC, ML, GPU Computing"
+  Bio: "Masters student and intern at AMD"
+  Degree: Masters
+  Designation: GRA in 2nd sem
+  Dissertation_Committee_Members: ""
+  Dissertation_topic: ""
+  GitHub_URL: "https://www.linkedin.com/in/aarushi29jain/"
+  Google_Scholar_URL: "https://www.linkedin.com/in/aarushi29jain/"
+  Graduation_Date: ""
+  LinkedIn_URL: "https://www.linkedin.com/in/aarushi29jain/"
+  Mentors: "Dr. Jacob Luber"
+  Education: "Masters student"
+  Research_Category: "ML, GPU Computing"
+  Resume_CV: "https://drive.google.com/u/0/open?usp=forms_web&id=1ifvsf8vVYux9R4Fi9Cz_5o_X68Sdd8oJ"
+  Twitter_URL: ""
+  email: "axj8943@mavs.uta.edu"
+  photo: "aarushi_jain.jpg"
+
+- Name: Aarti Darji
+  Achievements: "Awarded 1st place for TExBioMed 2023 and received fully-funded trip to present poster at THIA 2023 Accepted into NIH HuBMAP Internship Program for Summer 2024 at Harvard Medical School."
+  Areas_of_Research_Interest: ""
+  Bio: ""
+  Degree: Undergraduate
+  Designation: Undergraduate Research Assistant
+  Dissertation_Committee_Members: ""
+  Dissertation_topic: ""
+  GitHub_URL: "https://github.com/Aarti-Darji"
+  Google_Scholar_URL: "https://scholar.google.com/citations?user=mAe4XaAAAAAJ&hl=en"
+  Graduation_Date: "15-05-2025"
+  LinkedIn_URL: "https://www.linkedin.com/in/aarti-darji/"
+  Mentors: "Amir Hajighasemi, Md Jillur Rahman Saurav"
+  Education: "Currently an undergraduate at UTA - B.S in Data Science with a concentration in Psychology"
+  Research_Category: ""
+  Resume_CV: "https://drive.google.com/u/0/open?usp=forms_web&id=1jmVO4pFEH5UTj9N3JRw5-m3a8JIVI9Y1"
+  Twitter_URL: ""
+  email: "acd9300@mavs.uta.edu"
+  photo: "darji_aarti.jpg"
+
+- Name: Pardhu
+  Achievements: "Developed the first adversarial attack against multimodal vision language models for medical applications (accepted IEEE ISBI 2024). Executed deep learning training on an 11 TB dataset using a parallelized SLURM workload manager on a NVIDIA DGX A100. Built pipelines for Cell Segmentation of large-sized medical images (CODEX). Designed interpretability framework for ViT models to visualize attention on medical imaging datasets. Crafted and implemented an AR medical image visualizer on a VR platform using Unity VR. Implemented an iOS application which performs inferences on-chip using ML core models in Swift. Integrated the SLURM workload manager with ELK-stack (Elasticsearch, Logstash, Kibana) for tracking logs/usage. Developed an advanced image search system using CLIP model and Elasticsearch for image-to-image search. Executed the integration of Keycloak authentication services within a Spring Boot microservices ecosystem. Engineered and prototyped End-to-End payment workflows facilitating communication between multiple microservices. Managed the development of a communication microservice for SMS and email notifications utilizing Apache Camel for inter-service messaging. Developed a Progressive Web App (PWA) using Vue.JS 2 and Vuetify. Improved load time from 5 seconds to 1.3 seconds by caching assets in local storage."
+  Areas_of_Research_Interest: "Machine Learning, Computer Vision, Full Stack Development"
+  Bio: "Skilled Full Stack Developer and AI focused on medical imaging, creating innovative solutions with machine learning."
+  Degree: Masters
+  Designation: GRA
+  Dissertation_Committee_Members: ""
+  Dissertation_topic: ""
+  GitHub_URL: "https://github.com/propardhu"
+  Google_Scholar_URL: "https://scholar.google.com/citations?user=vQkfuh3bIRQC"
+  Graduation_Date: "02-05-2024"
+  LinkedIn_URL: "www.linkedin.com/in/guttikonda-pardhu"
+  Mentors: "Jai Prakash"
+  Education: "Master in Computer Science at UTA"
+  Research_Category: "Human Computer Interaction, Machine Learning"
+  Resume_CV: "https://drive.google.com/u/0/open?usp=forms_web&id=1NOccUoiYiFDqLOWAqfnaM8gEEIlMVfcl"
+  Twitter_URL: ""
+  email: "parthasai.guttikonda@uta.edu"
+  photo: "partha_sai.jpg"
+
+- Name: Neel Vora
+  Achievements: "Completed my Masters Thesis this fall. Joined LBNL as Research Engineer (Machine Learning)"
+  Areas_of_Research_Interest: "Machine Learning on Embedded System"
+  Bio: "I'm Neel Vora, a passionate Machine Learning Engineer with a background in deploying cutting-edge ML solutions across various domains, including quantum computing, embedded devices, cloud architecture, and control systems. Currently, I am working at Lawrence Berkeley National Lab, where I've developed robust ML pipelines and implemented online learning algorithms for real-time model updates. With experience in fine-tuning large language models, developing AI-powered applications, and optimizing machine learning infrastructure, I thrive in end-to-end ML development pipelines. I enjoy experimenting with different ML models, optimizing them, and deploying them on servers. My technical expertise spans Python, Django, React, CUDA programming, and distributed computing. I am dedicated to continuous learning and actively engage with the AI and software development community to share knowledge and collaborate on innovative projects. Let's connect and explore opportunities to push the boundaries of what's possible in machine learning and software engineering!"
+  Degree: Masters
+  Designation: GRA
+  Dissertation_Committee_Members: "Dr VP Nguyen, Dr Jacob Luber, Dr Yilun Xu"
+  Dissertation_topic: "Exploring Machine Learning Techniques for embedded hardware"
+  GitHub_URL: "https://github.com/freaksie/"
+  Google_Scholar_URL: "https://scholar.google.com/citations?user=EV0TOzcAAAAJ&hl=en"
+  Graduation_Date: "01-05-2024"
+  LinkedIn_URL: "https://www.linkedin.com/in/neelvora27"
+  Mentors: "Dr VP Nguyen"
+  Education: "Bachelors degree"
+  Research_Category: "Machine Learning"
+  Resume_CV: "https://drive.google.com/u/0/open?usp=forms_web&id=1b4V9Ses49ODqQi9nfdXs5LHWfVqpWg5W"
+  Twitter_URL: ""
+  email: "nxv8988@mavs.uta.edu"
+  photo: "missing.png"
