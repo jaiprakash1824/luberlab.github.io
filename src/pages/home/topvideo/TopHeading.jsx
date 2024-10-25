@@ -3,7 +3,7 @@ import WavesBackground from "./WavesBackground";
 
 const HomeTopHeading = () => {
   return (
-    <div className="relative w-full min-h-screen bg-black  flex flex-col justify-center items-center z-[-1] overflow-hidden">
+    <div className="relative w-full h-screen-minus-70 bg-black  flex flex-col justify-center items-center z-[-1] overflow-hidden">
       {/* Background Component */}
       <div className="absolute inset-0">
         <WavesBackground />

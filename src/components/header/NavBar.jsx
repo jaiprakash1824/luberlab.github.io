@@ -42,7 +42,7 @@ const NavBar = () => {
     { label: "RESEARCH", path: "/research" },
     { label: "PUBLICATIONS", path: "/publications" },
     { label: "NEWS", path: "/news" },
-    { label: "TEAMS", path: "/team" },
+    { label: "TEAMS", path: "/teams" },
     { label: "JOIN US", path: "/contact" },
   ];
 

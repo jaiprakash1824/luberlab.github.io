@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
     extend: {
+      height: {
+        "screen-minus-70": "calc(100vh - 70px)",
+      },
       keyframes: {
         navbarSlideDown: {
           "0%": { transform: "translateY(-100%)", opacity: "0" },
