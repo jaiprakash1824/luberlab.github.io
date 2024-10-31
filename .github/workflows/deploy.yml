@@ -21,13 +21,11 @@ jobs:
       - name: Clear npm cache
         run: npm cache clean --force
 
+      - name: Clean and install dependencies
+        run: rm -rf node_modules package-lock.json
+
       - name: Install dependencies
         run: npm install
-
-      - name: Clean and install dependencies
-        run: |
-        rm -rf node_modules package-lock.json
-        npm install --legacy-peer-deps  # Clean install dependencies
 
       - name: Build project
         run: npm run build
