@@ -17,7 +17,7 @@ import Teams from "./pages/teams/Teams.jsx";
 function App() {
   return (
     <Router basename={import.meta.env.BASE_URL}>
-    <Router>
+      {/* <Router> */}
       <Navbar />
       <MemberProvider>
         <Routes>
