@@ -21,9 +21,6 @@ jobs:
       - name: Clear npm cache
         run: npm cache clean --force
 
-      - name: Check working directory
-        run: echo "Current directory: ${{ github.workspace }}
-
       - name: Install dependencies
         run: npm install
 
