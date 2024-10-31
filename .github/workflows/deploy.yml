@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - website-tailwind # Or specify your branch here (e.g., website-tailwind)
+      - website-tailwind
 
 jobs:
   build:
