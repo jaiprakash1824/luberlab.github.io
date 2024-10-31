@@ -18,6 +18,9 @@ jobs:
         with:
           node-version: "16" # Make sure this matches your local environment
 
+      - name: Clear npm cache
+        run: npm cache clean --force
+
       - name: Install dependencies
         run: npm install
 
