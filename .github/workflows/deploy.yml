@@ -30,3 +30,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages # Ensure this is the branch where your site is hosted
           publish_dir: ./dist # Vite outputs to `dist` by default
+          cname: "https://jaiprakashveerla.com/"
