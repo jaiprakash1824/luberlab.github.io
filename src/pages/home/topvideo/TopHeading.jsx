@@ -1,4 +1,5 @@
-import TitleSection from "../../../components/titleSection/TitleSection";
+// import TitleSection from "../../../components/titleSection/TitleSection";
+import GlowingText from "./GlowingText";
 import WavesBackground from "./WavesBackground";
 
 const HomeTopHeading = () => {
@@ -15,8 +16,14 @@ const HomeTopHeading = () => {
         {/* <h1 className="text-white font-black text-[clamp(3rem,10vw,6rem)] opacity-0 animate-slideUp">
           HEALTH
         </h1> */}
-        <TitleSection titleText={"HEALTH"} />
-        <TitleSection titleText={"DATA SCIENCE LAB"} />
+        {/* <TitleSection titleText={"HEALTH DATA SCIENCE LAB"} /> */}
+
+        <GlowingText
+          text="Health Data Science Lab"
+          glowColor="#0070f3"
+          glowSpread="8px"
+        />
+        {/* <TitleSection titleText={"DATA SCIENCE LAB"} /> */}
 
         {/* <h1 className="text-white font-black mx-4 text-[clamp(3rem,10vw,6rem)] opacity-0 animate-slideUp delay-[0.3s]">
           DATA SCIENCE LAB

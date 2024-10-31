@@ -52,7 +52,7 @@ const HomeResearchSection = () => {
   return (
     <div
       ref={sectionRef}
-      className="w-full min-h-screen flex flex-col justify-center items-center text-center bg-black "
+      className="w-full min-h-screen flex flex-col justify-center items-center text-center bg-[#1d1b1b] "
     >
       <div>
         <TitleSection titleText="OUR RESEARCH" />

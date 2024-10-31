@@ -26,9 +26,9 @@ const TitleSection = ({ titleText }) => {
   return (
     <div className="relative text-center overflow-hidden" ref={titleRef}>
       <h1
-        className={`relative font-black text-white text-[clamp(3rem,10vw,5em)] transform ${
+        className={`relative font-black text-white text-[clamp(4rem,8vw,7.5em)] transform ${
           isVisible ? "animate-slideUp" : "animate-slideDown"
-        } transition-transform duration-800 ease-in-out`}
+        } transition-transform duration-800 ease-in-out `}
       >
         {titleText}
       </h1>

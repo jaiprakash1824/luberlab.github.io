@@ -9,10 +9,10 @@ import ContactButton from "../../../components/header/ContactButton";
 import { useNavigate } from "react-router-dom";
 
 const HomeNewsCarousel = () => {
-  const newsCards = useHomeNews(); // Fetching news cards
-  const { width } = useWindowSize(); // Hook for window size
-
+  const newsCards = useHomeNews();
+  const { width } = useWindowSize();
   const navigate = useNavigate();
+
   const handleSeeMoreClick = () => {
     navigate("/news");
   };
@@ -33,12 +33,12 @@ const HomeNewsCarousel = () => {
   const settingsFirstRow = {
     dots: false,
     infinite: true,
-    speed: 8000, // Higher speed for continuous flow
+    speed: 8000,
     slidesToShow: slidesToShow,
-    slidesToScroll: 0.5, // Small incremental scrolling for smoother flow
+    slidesToScroll: 0.3,
     autoplay: true,
-    autoplaySpeed: 0, // Continuous autoplay with no pause
-    cssEase: "linear", // Smooth, continuous easing
+    autoplaySpeed: 0,
+    cssEase: "linear",
     pauseOnHover: false,
     arrows: false,
   };
@@ -46,14 +46,19 @@ const HomeNewsCarousel = () => {
   // Slider settings for the second row (reverse scrolling)
   const settingsSecondRow = {
     ...settingsFirstRow,
-    rtl: true, // Reverse direction for the second row
+    rtl: true,
   };
 
   return (
-    <div className=" bg-black py-10 px-4 min-h-screen max-w-full">
+    <div className="bg-[#1d1b1b] py-10 px-4 min-h-screen max-w-full relative">
       <TitleSection titleText="LAB NEWS" />
 
-      <div className="my-5">
+      {/* First Row of News Cards */}
+      <div className="my-5 relative">
+        {/* Left and right fade overlays */}
+        <div className="absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-[#1d1b1b] to-transparent pointer-events-none z-10"></div>
+        <div className="absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-[#1d1b1b] to-transparent pointer-events-none z-10"></div>
+
         <Slider {...settingsFirstRow}>
           {firstRowCards.map((news, index) => (
             <div className="flex justify-center" key={index}>
@@ -68,8 +73,12 @@ const HomeNewsCarousel = () => {
         </Slider>
       </div>
 
-      {/* Second row of news cards (reverse direction) */}
-      <div className="my-5">
+      {/* Second Row of News Cards (Reverse Direction) */}
+      <div className="my-5 relative">
+        {/* Left and right fade overlays */}
+        <div className="absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-[#1d1b1b] to-transparent pointer-events-none z-10"></div>
+        <div className="absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-[#1d1b1b] to-transparent pointer-events-none z-10"></div>
+
         <Slider {...settingsSecondRow}>
           {secondRowCards.map((news, index) => (
             <div className="flex justify-center" key={index}>

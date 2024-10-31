@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 const HomeNewsCard = ({ title, date, content, link }) => {
   return (
-    <div className="bg-[#1d1b1b] text-white rounded-lg p-5 flex flex-col justify-between h-[300px] mx-5 my-5">
+    <div className="bg-black text-white rounded-lg p-5 flex flex-col justify-between h-[300px] mx-5 my-5">
       <div className="mb-2">
         <h3 className="text-xl font-bold uppercase text-white mb-1">
           {title.toUpperCase()}

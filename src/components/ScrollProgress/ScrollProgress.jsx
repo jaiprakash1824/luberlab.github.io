@@ -1,29 +1,35 @@
 import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 
-// eslint-disable-next-line react/prop-types
 const ScrollProgress = ({ color = "bg-blue-500", height = "h-1" }) => {
-  const [scrollProgress, setScrollProgress] = useState(0);
+  const [scrollProgressValue, setScrollProgressValue] = useState(0);
 
   // Calculate scroll position as a percentage
-  const calculateScrollProgress = () => {
+  const calculateScrollProgressValue = () => {
     const scrollTop = window.scrollY;
     const winHeight = window.innerHeight;
     const docHeight = document.body.scrollHeight - winHeight;
     const scrolled = (scrollTop / docHeight) * 100;
-    setScrollProgress(scrolled);
+    setScrollProgressValue(scrolled);
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", calculateScrollProgress);
-    return () => window.removeEventListener("scroll", calculateScrollProgress);
+    window.addEventListener("scroll", calculateScrollProgressValue);
+    return () =>
+      window.removeEventListener("scroll", calculateScrollProgressValue);
   }, []);
 
   return (
     <div
       className={`fixed top-0 left-0 ${height} ${color} z-50`}
-      style={{ width: `${scrollProgress}%` }}
+      style={{ width: `${scrollProgressValue}%` }}
     ></div>
   );
+};
+
+ScrollProgress.propTypes = {
+  color: PropTypes.string,
+  height: PropTypes.string,
 };
 
 export default ScrollProgress;

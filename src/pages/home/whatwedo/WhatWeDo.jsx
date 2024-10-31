@@ -32,7 +32,7 @@ const WhatWeDo = () => {
   return (
     <div
       ref={sectionRef}
-      className="w-full min-h-screen flex flex-col items-center justify-center py-16 text-white bg-black bg-opacity-90 bg-radial-gradient-to-b from-[#21325C23] to-black text-justify"
+      className="w-full min-h-screen flex flex-col items-center justify-center py-16 text-white bg-black text-justify"
     >
       <TitleSection titleText="WHAT WE DO" />
 

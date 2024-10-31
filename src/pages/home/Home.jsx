@@ -8,7 +8,7 @@ import ScrollProgress from "../../components/ScrollProgress/ScrollProgress";
 
 const Home = () => {
   return (
-    <div className="flex flex-col m-0 overflow-x-hidden ">
+    <div className="flex flex-col m-0 overflow-x-hidden font-bricky">
       <ScrollProgress />
       <HomeTopHeading />
       <HomeResearchSection />

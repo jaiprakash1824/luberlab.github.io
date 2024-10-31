@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        bricky: ["Bricolage Grotesque", "sans-serif"], // or any other font family
+      },
       height: {
         "screen-minus-70": "calc(100vh - 70px)",
       },

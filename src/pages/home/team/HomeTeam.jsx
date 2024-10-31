@@ -20,7 +20,7 @@ const Team = () => {
   const navigate = useNavigate();
 
   const handleSeeMoreClick = () => {
-    navigate("/team");
+    navigate("/teams");
   };
 
   return (
