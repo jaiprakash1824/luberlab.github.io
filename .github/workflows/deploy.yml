@@ -3,20 +3,20 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - website-tailwind # The branch to watch for pushes
+      - website-tailwind # Or specify your branch here (e.g., website-tailwind)
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v2
         with:
-          node-version: "16" # or the version you need
+          node-version: "16" # Make sure this matches your local environment
 
       - name: Install dependencies
         run: npm install
@@ -25,9 +25,8 @@ jobs:
         run: npm run build
 
       - name: Deploy to GitHub Pages
+        if: success()
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages # Ensure this is the branch where your site is hosted
-          publish_dir: ./dist # Vite outputs to `dist` by default
-          cname: "https://jaiprakashveerla.com/"
+          publish_dir: ./dist # Use ./build for Create React App, ./dist for Vite
