@@ -8,12 +8,12 @@ const teamMembers = [
     name: "Dr Jacob Luber",
     role: "Director, HDSL",
 
-    imgSrc: baseURL + "/assets/images/jacob.jpg",
+    imgSrc: baseURL + "assets/images/jacob.jpg",
   },
   {
     name: "Helen Shang",
     role: "Visiting Assistant Professor",
-    imgSrc: baseURL + "/assets/images/shang.jpeg",
+    imgSrc: baseURL + "assets/images/shang.jpeg",
   },
 ];
 

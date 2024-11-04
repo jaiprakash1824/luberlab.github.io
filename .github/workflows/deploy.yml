@@ -16,11 +16,21 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
+<<<<<<< HEAD
           node-version: "16" # Make sure this matches your local environment
+=======
+          node-version: "18" # Make sure this matches your local environment
+>>>>>>> 9d112aefea993563d76cd2762919f5e2a18321d1
 
       - name: Clear npm cache
         run: npm cache clean --force
 
+<<<<<<< HEAD
+=======
+      - name: Clean and install dependencies
+        run: rm -rf node_modules package-lock.json
+
+>>>>>>> 9d112aefea993563d76cd2762919f5e2a18321d1
       - name: Install dependencies
         run: npm install
 
@@ -32,4 +42,8 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+<<<<<<< HEAD
           publish_dir: ./dist # Use ./build for Create React App, ./dist for Vite
+=======
+          publish_dir: ./dist
+>>>>>>> 9d112aefea993563d76cd2762919f5e2a18321d1
