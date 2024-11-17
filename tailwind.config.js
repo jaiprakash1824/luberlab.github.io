@@ -48,7 +48,34 @@ export default {
         buttonSlide: "buttonSlide 0.5s ease-in-out forwards",
         buttonHide: "buttonHide 0.5s ease-in-out forwards",
       },
+      animationDelay: {
+        '100': '100ms',
+        '200': '200ms',
+        '300': '300ms',
+        '400': '400ms',
+        '500': '500ms',
+        '600': '600ms',
+        '700': '700ms',
+        '800': '800ms',
+        '900': '900ms',
+        '1000': '1000ms',
+      },
     },
   },
-  plugins: [],
+  variants: {
+    extend: {
+      animationDelay: ['responsive'],
+    },
+  },
+  plugins: [
+    function ({ addUtilities }) {
+      const newUtilities = {};
+      for (let i = 100; i <= 1000; i += 100) {
+        newUtilities[`.delay-${i}`] = {
+          'animation-delay': `${i}ms`,
+        };
+      }
+      addUtilities(newUtilities, ['responsive', 'hover']);
+    },
+  ],
 };
