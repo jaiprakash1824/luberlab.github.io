@@ -49,7 +49,7 @@ const FullScreenMenu = ({ isOpen, onClose, menuItems, onMenuItemClick }) => {
       <div className="w-full lg:w-1/3 flex flex-col items-start text-left">
         <div className="w-full max-w-[850px] sm:max-w-[800px] md:max-w-[850px] mb-10">
           <img
-            src={`${baseURL}src/assets/bg-logo-white.png`} // Replace with actual path
+            src={`${baseURL}assets/bg-logo-white.png`} // Replace with actual path
             alt="Menu Logo"
             className="w-full h-auto"
           />
