@@ -42,7 +42,7 @@ const WhatWeDo = () => {
             isVisible.paragraph1
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-10"
-          } text-xl md:text-2xl lg:text-3xl leading-snug`}
+          } text-[1.25rem] leading-snug`}
         >
           We study the neurobiology of energy balance. Using cutting-edge
           approaches, we aim to understand the molecular, cellular, and circuit
@@ -55,7 +55,7 @@ const WhatWeDo = () => {
             isVisible.paragraph2
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-10"
-          } text-xl md:text-2xl lg:text-3xl leading-snug`}
+          } text-xl leading-snug`}
         >
           We are also developing novel technologies to better understand how the
           brain affects behavior and physiology.

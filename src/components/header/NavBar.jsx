@@ -38,12 +38,28 @@ const NavBar = () => {
 
   // Define the menu items
   const menuItems = [
-    { label: "HOME", path: "/" },
-    { label: "RESEARCH", path: "/research" },
-    { label: "PUBLICATIONS", path: "/publications" },
-    { label: "NEWS", path: "/news" },
-    { label: "TEAMS", path: "/teams" },
-    { label: "JOIN US", path: "/contact" },
+    { label: "Home", path: "/", subItems: ["Intro", "Innovation Spectrum"] },
+    {
+      label: "Research",
+      path: "/research",
+      subItems: [
+        "Generative AI",
+        "Computational Microbiology",
+        "Computational Oncology",
+        "Health Systems at Scale",
+        "Population Genetics",
+        "Digital Pathology",
+        "Virtual Reality and Human-Computer Interaction",
+      ],
+    },
+    {
+      label: "Publications",
+      path: "/publications",
+      subItems: ["All Publicatios"],
+    },
+    { label: "News", path: "/news", subItems: ["All News"] },
+    { label: "People", path: "/teams", subItems: ["All People"] },
+    { label: "Join us", path: "/contact", subItems: ["Connect"] },
   ];
 
   return (

@@ -40,7 +40,7 @@ const NewsCard = ({ news }) => {
     <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
       <div className="h-40 bg-gray-700 flex items-center justify-center">
         <img
-          src="src/assets/sample.jpg" // Placeholder for your image
+          src="/assets/rock.jpg" // Placeholder for your image
           alt={news.title}
           className="h-full w-full object-cover"
         />

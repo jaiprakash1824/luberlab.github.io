@@ -9,6 +9,10 @@ export default {
       height: {
         "screen-minus-70": "calc(100vh - 70px)",
       },
+      backgroundImage: {
+        "custom-gradient":
+          "linear-gradient(to bottom right, #1399FF, #0063EE, #4A20E3)",
+      },
       keyframes: {
         navbarSlideDown: {
           "0%": { transform: "translateY(-100%)", opacity: "0" },

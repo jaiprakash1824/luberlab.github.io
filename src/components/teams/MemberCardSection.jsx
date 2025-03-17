@@ -53,7 +53,7 @@ const MemberCardSection = ({ title, members }) => {
   return (
     <div className="w-full p-5 box-border bg-black" ref={sectionRef}>
       <TitleSection titleText={title} isVisible={isTitleVisible} />
-      <div className="grid gap-5 w-full max-w-screen-xl mx-auto grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 justify-center">
+      <div className="grid gap-10 w-full max-w-screen-xl mx-auto grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 justify-center">
         {members.map((member, index) => (
           <TeamCard
             key={index}
