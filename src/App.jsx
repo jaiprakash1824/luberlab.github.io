@@ -7,7 +7,7 @@ import NewsPage from "./pages/news/News.jsx";
 import Publications from "./pages/publications/Publications.jsx";
 import { HomeNewsCardContext } from "./context/HomeNewsContext.jsx";
 // import JobListings from "./Pages/JoinUs/JoinUs.jsx";
-// import ResearchPage from "./Pages/Research/Research.jsx";
+import Research from "./pages/research/Research.jsx";
 import Navbar from "./components/header/NavBar";
 import { MemberProvider } from "./context/MemberContext";
 import Teams from "./pages/teams/Teams.jsx";
@@ -35,6 +35,7 @@ function App() {
           />
 
           <Route path="/publications" element={<Publications />} />
+          <Route path="/research" element={<Research />} />
           {/* <Route path="/contact" element={<JobListings />} />
           <Route path="/research" element={<ResearchPage />} /> */}
         </Routes>
