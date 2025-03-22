@@ -37,7 +37,7 @@ const WavesBackground = () => {
       particles = new Array(numParticles);
 
       const material = new THREE.PointsMaterial({
-        color: 0x0064b1,
+        color: 0x01067e2,
         size: 2,
         opacity: 0.7,
       });

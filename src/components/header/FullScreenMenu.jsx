@@ -1,118 +1,123 @@
-import PropTypes from "prop-types";
 import { useState } from "react";
-import { useLocation } from "react-router-dom";
 
-const FullScreenMenu = ({ isOpen, onClose, menuItems, onMenuItemClick }) => {
-  const [isClosing, setIsClosing] = useState(false);
-  const [hoveredMenu, setHoveredMenu] = useState(null);
-  const location = useLocation();
+const navItems = [
+  {
+    label: "Research",
+    subItems: [
+      "Generative AI",
+      "Computational Microbiology",
+      "Computational Oncology",
+      "Health Systems at scale",
+      "Population Genetics",
+      "Digital Pathology",
+      "Virtual Reality and Human-Computer Interaction",
+    ],
+  },
+  { label: "Publications" },
+  { label: "News" },
+  { label: "Contribute" },
+  { label: "Join Us" },
+];
 
-  // Get the active menu item based on the URL
-  const activeMenu = menuItems.find((menu) => menu.path === location.pathname);
-
-  // Determine which submenu to show (hovered or active)
-  const displayedMenu = hoveredMenu || activeMenu;
-  const baseURL = import.meta.env.BASE_URL;
-  const handleClose = () => {
-    setIsClosing(true);
-    setTimeout(() => {
-      onClose();
-      setIsClosing(false);
-    }, 500);
-  };
-
-  const handleMenuItemClick = (path) => {
-    setIsClosing(true);
-    setTimeout(() => {
-      onMenuItemClick(path);
-      setIsClosing(false);
-    }, 500);
-  };
-
-  if (!isOpen && !isClosing) return null;
+const FullScreenMenu = () => {
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <div
-      className={`fixed top-0 left-0 w-full h-full bg-custom-gradient text-white flex flex-col lg:flex-row items-start justify-start z-[9998] px-6 sm:px-12 lg:px-24 py-8 ${
-        isClosing ? "animate-slideDown" : "animate-slideUp"
-      }`}
-    >
-      {/* Close Button */}
-      <div
-        className="absolute top-5 right-5 w-10 h-10 flex justify-center items-center bg-gray-800 text-gray-400 hover:bg-white hover:text-gray-800 rounded-full cursor-pointer z-[9999] transition-colors duration-300"
-        onClick={handleClose}
-      >
-        ✖
-      </div>
-
-      {/* Main Navigation (First Column) */}
-      <div className="w-full lg:w-1/3 flex flex-col items-start text-left">
-        <div className="w-full max-w-[850px] sm:max-w-[800px] md:max-w-[850px] mb-10">
-          <img
-            src={`${baseURL}assets/bg-logo-white.png`} // Replace with actual path
-            alt="Menu Logo"
-            className="w-full h-auto"
-          />
+    <nav className="w-full bg-white shadow">
+      {/* Top Bar */}
+      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+        {/* Logo + Title */}
+        <div className="flex items-center space-x-2">
+          <img src="/path/to/logo.png" alt="Logo" className="h-8 w-auto" />
+          <span className="font-bold text-lg text-gray-800">
+            Health Data Science Lab
+          </span>
         </div>
 
-        <ul className="flex flex-col items-start text-left gap-4">
-          {menuItems.map((item, index) => {
-            const isActive = location.pathname === item.path;
-            return (
-              <li
-                key={index}
-                className="w-full"
-                onMouseEnter={() => setHoveredMenu(item)} // Show submenu on hover
-                onMouseLeave={() => setHoveredMenu(null)} // Revert to active menu on leave
-              >
-                <div
-                  className="flex items-center space-x-3 cursor-pointer text-[28px] sm:text-[32px] md:text-[36px] font-bold leading-none text-white transition-transform duration-300 hover:scale-105"
-                  onClick={() => handleMenuItemClick(item.path)}
-                >
-                  {/* Active Indicator */}
-                  {isActive && (
-                    <div className="w-[18px] h-[18px] bg-white rounded-[4px] transform rotate-45"></div>
-                  )}
-                  <span>{item.label}</span>
-                </div>
+        {/* Hamburger Toggle (mobile only) */}
+        <button
+          className="md:hidden block text-gray-600 hover:text-gray-800 focus:outline-none"
+          onClick={() => setMobileOpen(!mobileOpen)}
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+            viewBox="0 0 24 24"
+          >
+            {mobileOpen ? (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            ) : (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            )}
+          </svg>
+        </button>
 
-                {/* Submenu Items - Shown Below for Small Screens */}
-                {isActive && (
-                  <ul className="lg:hidden mt-2 pl-6 text-white text-[18px] space-y-2">
-                    {item.subItems.map((subItem, subIndex) => (
-                      <li key={subIndex} className="opacity-80">
-                        {subItem}
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </li>
-            );
-          })}
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex md:space-x-8">
+          {navItems.map((item, idx) => (
+            <li key={idx} className="relative group">
+              <span className="cursor-pointer text-gray-700 hover:text-blue-600 font-semibold">
+                {item.label}
+              </span>
+              {/* Hover Dropdown for sub-items */}
+              {item.subItems && (
+                <ul
+                  className="
+                    absolute left-0 mt-2 w-56 bg-white border border-gray-200
+                    shadow-lg rounded-md hidden group-hover:block
+                  "
+                >
+                  {item.subItems.map((sub, subIdx) => (
+                    <li
+                      key={subIdx}
+                      className="
+                        px-4 py-2 text-gray-700
+                        hover:bg-gray-100
+                        cursor-default
+                      "
+                    >
+                      {sub}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          ))}
         </ul>
       </div>
 
-      {/* Submenu (Second Column - Aligns with First Column) */}
-      {displayedMenu?.subItems.length > 0 && (
-        <div className="hidden lg:flex flex-col w-2/3 pl-12 mt-24 self-start">
-          <ul className="text-white text-[18px] space-y-4">
-            {displayedMenu.subItems.map((subItem, subIndex) => (
-              <li key={subIndex} className="opacity-80">
-                {subItem}
-              </li>
-            ))}
-          </ul>
-        </div>
+      {/* Mobile Menu (collapsible) */}
+      {mobileOpen && (
+        <ul className="md:hidden px-4 pb-4 space-y-2 border-t border-gray-200">
+          {navItems.map((item, idx) => (
+            <li key={idx}>
+              <div className="font-semibold text-gray-700">{item.label}</div>
+              {/* Sub-items always shown or we can toggle them */}
+              {item.subItems && (
+                <ul className="pl-4 mt-1 space-y-1">
+                  {item.subItems.map((sub, subIdx) => (
+                    <li key={subIdx} className="text-gray-600 cursor-default">
+                      {sub}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          ))}
+        </ul>
       )}
-    </div>
+    </nav>
   );
-};
-
-FullScreenMenu.propTypes = {
-  isOpen: PropTypes.bool.isRequired,
-  onClose: PropTypes.func.isRequired,
-  menuItems: PropTypes.array.isRequired,
-  onMenuItemClick: PropTypes.func.isRequired,
 };
 
 export default FullScreenMenu;

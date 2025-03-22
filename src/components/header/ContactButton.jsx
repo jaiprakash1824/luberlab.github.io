@@ -9,8 +9,8 @@ const ContactButton = ({ title, onClick }) => {
 
   return (
     <button
-      className={`relative inline-block h-12 px-8 py-2 font-bold uppercase border-2 border-white rounded-full overflow-hidden transition-all duration-300 ease-in-out sm:inline-block ${
-        hovering ? "text-black" : "text-white"
+      className={`relative inline-block h-12 px-8 py-2 font-bold uppercase border-2 rounded-full overflow-hidden transition-all duration-300 ease-in-out sm:inline-block ${
+        hovering ? "text-white border-blue-700" : "text-black border-black"
       }`}
       onClick={onClick}
       onMouseEnter={handleMouseEnter}
@@ -21,7 +21,7 @@ const ContactButton = ({ title, onClick }) => {
 
       {/* Background animation */}
       <span
-        className={`absolute inset-0 transition-transform duration-300 ease-in-out bg-white ${
+        className={`absolute inset-0 transition-transform duration-300 ease-in-out bg-custom-gradient ${
           hovering ? "translate-y-0" : "translate-y-full"
         }`}
         style={{ zIndex: 10 }}

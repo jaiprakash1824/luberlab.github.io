@@ -3,12 +3,13 @@ export default {
   content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
     extend: {
+      colors: {
+        primary: "#1067E2",
+      },
       fontFamily: {
         bricky: ["Bricolage Grotesque", "sans-serif"], // or any other font family
       },
-      height: {
-        "screen-minus-70": "calc(100vh - 70px)",
-      },
+
       backgroundImage: {
         "custom-gradient":
           "linear-gradient(to bottom right, #1399FF, #0063EE, #4A20E3)",
@@ -53,22 +54,22 @@ export default {
         buttonHide: "buttonHide 0.5s ease-in-out forwards",
       },
       animationDelay: {
-        '100': '100ms',
-        '200': '200ms',
-        '300': '300ms',
-        '400': '400ms',
-        '500': '500ms',
-        '600': '600ms',
-        '700': '700ms',
-        '800': '800ms',
-        '900': '900ms',
-        '1000': '1000ms',
+        100: "100ms",
+        200: "200ms",
+        300: "300ms",
+        400: "400ms",
+        500: "500ms",
+        600: "600ms",
+        700: "700ms",
+        800: "800ms",
+        900: "900ms",
+        1000: "1000ms",
       },
     },
   },
   variants: {
     extend: {
-      animationDelay: ['responsive'],
+      animationDelay: ["responsive"],
     },
   },
   plugins: [
@@ -76,10 +77,10 @@ export default {
       const newUtilities = {};
       for (let i = 100; i <= 1000; i += 100) {
         newUtilities[`.delay-${i}`] = {
-          'animation-delay': `${i}ms`,
+          "animation-delay": `${i}ms`,
         };
       }
-      addUtilities(newUtilities, ['responsive', 'hover']);
+      addUtilities(newUtilities, ["responsive", "hover"]);
     },
   ],
 };

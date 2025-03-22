@@ -50,9 +50,9 @@ const HomeResearchSection = () => {
   }, []);
 
   return (
-    <div
-      ref={sectionRef}
-      className="w-full min-h-screen flex flex-col justify-center items-center text-center bg-[#1d1b1b] "
+    <section
+      id="researchSection"
+      className="w-[85%] mx-auto py-8 min-h-screen flex flex-col justify-center items-center text-center bg-[#1d1b1b] "
     >
       <div>
         <TitleSection titleText="OUR RESEARCH" />
@@ -80,7 +80,7 @@ const HomeResearchSection = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
